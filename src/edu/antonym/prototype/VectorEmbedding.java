@@ -1,7 +1,8 @@
-package edu.antonym;
+package edu.antonym.prototype;
 
-public interface VectorDictionary {
+public interface VectorEmbedding {
 
+	int getDimension();
 	public float[] getVectorRep(int word);
 	public int findClosestWord(float[] vector);
 }

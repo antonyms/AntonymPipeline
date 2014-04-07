@@ -1,9 +1,9 @@
-package edu.antonym;
+package edu.antonym.prototype;
 
 import java.util.List;
 
 public interface Thesaurus {
-
+	
 	public List<Integer> getAntonyms(int word);
 	public List<Integer> getSynonyms(int word);
 	
