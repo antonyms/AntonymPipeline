@@ -11,8 +11,13 @@ import edu.antonym.RawPILSAVec;
 
 /**
  * This is the test case for antonyms, ant0.txt and ant1.txt.
- * Because if there are three columns in antonym data file, the last two columns represent two synonyms, 
- * mse for synonym is also measured.
+ * Each line represents one single test.
+ * If there are two columns of words, the third column corresponds to the cosine-similarity of the two words.
+ * If there are three columns of words, the fourth column represents cosine-similarity of word0 and word1,
+ * fifth column word0 and word2, sixth column word1 and word2.
+ * Mean squared error of antonym/synonym is also measured at the last.
+ * ant: -1
+ * syn: 1
  * 
  */
 public class TestCase1 {
@@ -20,7 +25,7 @@ public class TestCase1 {
 	public static void main(String[] args) throws IOException{
 		
 		String test_folder = "test-data/";
-		String result_folder = "result-data/";	// create this folder for output
+		String result_folder = "result-data/";	// create this folder in advance for output
 		
 		String ant0 = "ant0.txt";
 		String ant1 = "ant1.txt";
