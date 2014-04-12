@@ -6,21 +6,23 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
 
 import edu.antonym.RawPILSAVec;
 
 /**
  * This is the test case for synonyms, syn0.txt and syn1.txt.
+ * Each line represents one single test.
+ * Each two words of a line are compared.
+ * Mean squared error of synonym is also measured at the last.
+ * syn: 1
  * 
- *
  */
 public class TestCase2 {
 	
 	public static void main(String[] args) throws IOException{
 		
 		String test_folder = "test-data/";
-		String result_folder = "result-data/";	// create this folder for output
+		String result_folder = "result-data/";	// create this folder in advance for output
 		
 		String syn0 = "syn0.txt";
 		String syn1 = "syn1.txt";
