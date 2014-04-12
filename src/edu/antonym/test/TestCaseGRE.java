@@ -9,11 +9,22 @@ import java.util.ArrayList;
 
 import edu.antonym.RawPILSAVec;
 
+/**
+ * This is the test case for gre. 
+ * The first word is the target word.
+ * The last word is the true results.
+ * Calculate the cosine-similarity of the five choices of words to the target word.
+ * Display the word with smallest distance to -1. 
+ * Compare the test result with the true answer.
+ * Calculate the accuracy at last.
+ * 
+ */
 public class TestCaseGRE {
+	
 	public static void main(String[] args) throws IOException{
 		
 		String test_folder = "test-data/";
-		String result_folder = "result-data/";	// create this folder for output
+		String result_folder = "result-data/";	// create this folder in advance for output
 		
 		String test0 = "gre_testset.txt";
 		
