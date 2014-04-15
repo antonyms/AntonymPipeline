@@ -69,7 +69,10 @@ public class RawPILSAVec implements VectorEmbedding {
 		return vectors.get(word);
 	}
 
-
+	public int getWordId(String word){
+		return ids.get(word);
+	}
+	
 	@Override
 	public int findClosestWord(float[] vector) {
 		// TODO Auto-generated method stub
