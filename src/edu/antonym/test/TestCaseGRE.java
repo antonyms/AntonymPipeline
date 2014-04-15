@@ -6,8 +6,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
 import edu.antonym.RawPILSAVec;
+import edu.antonym.Util;
+import edu.antonym.prototype.EmbeddingEvaluator;
+import edu.antonym.prototype.VectorEmbedding;
+import edu.antonym.prototype.Vocabulary;
 
 /**
  * This is the test case for gre. 
@@ -19,9 +24,10 @@ import edu.antonym.RawPILSAVec;
  * Calculate the accuracy at last.
  * 
  */
-public class TestCaseGRE {
+public class TestCaseGRE implements EmbeddingEvaluator {
 	
-	public static void main(String[] args) throws IOException{
+	@Override
+	public List<Float> score(VectorEmbedding pilsaVect) throws IOException {
 		
 		String test_folder = "test-data/";
 		String result_folder = "result-data/";	// create this folder in advance for output
@@ -29,9 +35,12 @@ public class TestCaseGRE {
 		String test0 = "gre_testset.txt";
 		
 		ArrayList<String> gres = new ArrayList<String>();
+		List<Float> acc = new ArrayList<Float>();
 		gres.add(test0);	//add more file if needed
-
-		RawPILSAVec pilsaVect = new RawPILSAVec(false);
+		
+		
+		Vocabulary vocab = pilsaVect.getVocab();
+		int OOV = vocab.OOVindex();
 		
 		for(int i=0;i<gres.size();i++){
 			int accuracy_pos = 0;
@@ -49,11 +58,12 @@ public class TestCaseGRE {
 				String[] choices = choice.split("\\s+");
 				
 				float[] target_vec = new float[300];
-				try{
-					target_vec = pilsaVect.getVectorRep(pilsaVect.getWordId(target));
+				int wordID = vocab.lookupWord(target);
+				if (wordID != OOV) {
+					target_vec = pilsaVect.getVectorRep(wordID);
 					out.append(target+" ");
 				}
-				catch(NullPointerException e){
+				else {
 					out.append("Cannot find target: " + target);
 					out.append(" WRONG ");
 					accuracy_neg++;
@@ -67,17 +77,18 @@ public class TestCaseGRE {
 				String test_answer = null;
 				
 				for(int j=0;j<choices.length;j++){
-					try{
-						float[] vect = pilsaVect.getVectorRep(pilsaVect.getWordId(choices[j]));
+					wordID = vocab.lookupWord(choices[j]);
+					if (wordID != OOV) {
+						float[] vect = pilsaVect.getVectorRep(wordID);
 						out.append(choices[j]+" ");
-						double cs = new CosineSimilarity().cosineSimilarity(target_vec, vect);
+						double cs = Util.cosineSimilarity(target_vec, vect);
 						double current_dist = Math.abs(-1-cs);
 						if(current_dist<closest){
 							closest = current_dist;
 							test_answer = choices[j];
 						}
 					}
-					catch(NullPointerException e){
+					else {
 						out.append("Cannot find: " + choices[j]+ " ");
 					}
 				}	
@@ -105,12 +116,14 @@ public class TestCaseGRE {
 			if((accuracy_pos+accuracy_neg)!=0){
 				accuracy = ((double)accuracy_pos)/(double)(accuracy_pos+accuracy_neg);
 			}
-			
+			acc.add((float) accuracy);
 			out.append("Final accuracy = "+ Double.toString(accuracy));
+			System.out.println("[GRE TEST] Final accuracy = " + Double.toString(accuracy));
 			br.close();
 			out.close();
 		}
-		System.out.println("finished!");
+		
+		return acc;
 	}
 	
 	

@@ -6,8 +6,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.List;
 
-import edu.antonym.RawPILSAVec;
+import edu.antonym.Util;
+import edu.antonym.prototype.EmbeddingEvaluator;
+import edu.antonym.prototype.VectorEmbedding;
+import edu.antonym.prototype.Vocabulary;
 
 /**
  * This is the test case for synonyms, syn0.txt and syn1.txt.
@@ -17,9 +21,10 @@ import edu.antonym.RawPILSAVec;
  * syn: 1
  * 
  */
-public class TestCase2 {
+public class TestCase2 implements EmbeddingEvaluator {
 	
-	public static void main(String[] args) throws IOException{
+	@Override
+	public List<Float> score(VectorEmbedding pilsaVect) throws IOException {
 		
 		String test_folder = "test-data/";
 		String result_folder = "result-data/";	// create this folder in advance for output
@@ -28,13 +33,14 @@ public class TestCase2 {
 		String syn1 = "syn1.txt";
 		
 		ArrayList<String> syns = new ArrayList<String>();
+		List<Float> acc = new ArrayList<Float>();
 		syns.add(syn0);
 		syns.add(syn1);		//add more file if needed
 		
-		RawPILSAVec pilsaVect = new RawPILSAVec(false);
+		Vocabulary vocab = pilsaVect.getVocab();
+		int OOV = vocab.OOVindex();
 		
 		for(int i=0;i<syns.size();i++){
-
 			int syn_num = 0;
 			double mse_syn = 0.0;
 			
@@ -46,17 +52,18 @@ public class TestCase2 {
 				String[] words = line.split("\\s+");
 				ArrayList<float[]> vectors = new ArrayList<float[]>();
 				for(int j=0;j<words.length;j++){
-					try{
-						vectors.add(pilsaVect.getVectorRep(pilsaVect.getWordId(words[j])));
+					int wordID = vocab.lookupWord(words[j]);
+					if (wordID != OOV) {
+						vectors.add(pilsaVect.getVectorRep(wordID));
 						out.append(words[j]+" ");
 					}
-					catch(NullPointerException e){
+					else {
 						out.append("No such word: " + words[j]+ " ");
 					}
 				}	
 				
 				for(int k=0;k<vectors.size();k++){
-					double cs = new CosineSimilarity().cosineSimilarity(vectors.get(k%vectors.size()), vectors.get((k+1)%vectors.size()));
+					double cs = Util.cosineSimilarity(vectors.get(k%vectors.size()), vectors.get((k+1)%vectors.size()));
 					syn_num++;
 					mse_syn+= Math.pow(1-cs,2);
 					out.append(Double.toString(cs)+" ");
@@ -66,15 +73,14 @@ public class TestCase2 {
 				line = br.readLine();
 			}
 			mse_syn = mse_syn/syn_num;
+			acc.add((float) mse_syn);
 			out.append("\n");
 			out.append("Mean squared error for synonym is: " + mse_syn +"\n");
+			System.out.println("[SIMPLE SNY TEST" + i + "] Mean squared error for synonym is: " + Double.toString(mse_syn));
 			out.close();
 			br.close();
 			
 		}
-		System.out.println("finished!");			
-		
-		
-		
+		return acc;		
 	}
 }

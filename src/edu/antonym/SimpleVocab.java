@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -19,10 +21,10 @@ public class SimpleVocab implements Vocabulary {
 	
 
 	public SimpleVocab(File f) throws FileNotFoundException {
-		this(f,0);
+		this(f,-1);
 	}
 	public SimpleVocab(InputStream stream) {
-		this(stream,0);
+		this(stream,-1);
 	}
 	public SimpleVocab(File f,int OOVindex) throws FileNotFoundException {
 		this(new FileInputStream(f),OOVindex);
@@ -33,6 +35,8 @@ public class SimpleVocab implements Vocabulary {
 	 */
 	
 	public SimpleVocab(InputStream stream, int OOVindex) {
+		words = new ArrayList<String>();
+		ids = new HashMap<String, Integer>();
 		Scanner scan=new Scanner(stream);
 		int index=0;
 		while(scan.hasNextLine()) {
@@ -63,7 +67,12 @@ public class SimpleVocab implements Vocabulary {
 
 	@Override
 	public int lookupWord(String word) {
-		return ids.get(word);
+		if (ids.containsKey(word))
+			return ids.get(word);
+		return OOVindex;
 	}
 
+	public int getVocabSize() {
+		return words.size();
+	}
 }

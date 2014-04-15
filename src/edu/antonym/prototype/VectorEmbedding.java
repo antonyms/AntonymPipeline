@@ -5,4 +5,5 @@ public interface VectorEmbedding {
 	int getDimension();
 	public float[] getVectorRep(int word);
 	public int findClosestWord(float[] vector);
+	Vocabulary getVocab();
 }

@@ -1,6 +1,7 @@
 package edu.antonym;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,22 +11,20 @@ import java.util.List;
 import java.util.Map;
 
 import edu.antonym.prototype.VectorEmbedding;
+import edu.antonym.prototype.Vocabulary;
 
 public class RawPILSAVec implements VectorEmbedding {
-
-	List<String> words;
-	Map<String, Integer> ids;
+	
+	Vocabulary vocab; // May change to share one vocabulary for all method
 	Map<Integer, float[]> vectors;
-	int OOVindex;
 	
 	static final int dim = 300;
 	static final String lsaPath = "data/PILSA/s03.04b--06.lsa.k300.txt";
-	static final String s2netPath = "s03.04b--06.s2net.fromLSA.k300.pickle.r11.txt";
-	
+	static final String s2netPath = "data/PILSA/s03.04b--06.s2net.fromLSA.k300.pickle.r11.txt";
+	static final String vocPath = "data/PILSA/s03.04b.matrix_sparse_tfidf.voc";
 
 	public RawPILSAVec(Boolean useS2net) throws IOException {
-		words = new ArrayList<String>();
-		ids = new HashMap<String, Integer>();
+		vocab = new SimpleVocab(new File(vocPath));
 		vectors = new HashMap<Integer, float[]>();
 		
 		String line;
@@ -36,7 +35,7 @@ public class RawPILSAVec implements VectorEmbedding {
 		else {
 			br = new BufferedReader(new InputStreamReader(new FileInputStream(s2netPath)));
 		}
-		int index = 0; // TODO for now create own lookup dictionary
+		
 		while ((line = br.readLine()) != null) {
 		    int pos = line.indexOf('\t');
 		    String word = line.substring(0, pos);
@@ -44,11 +43,9 @@ public class RawPILSAVec implements VectorEmbedding {
 		    float[] vec = new float[300];
 		    for (int i = 0; i < dim; i++) {
 		    	vec[i] = Float.parseFloat(svec[i]);
-		    }
-		    words.add(word);
-		    ids.put(word, index);
-		    index++;
-		    vectors.put(ids.get(word), vec);
+		    }		    
+		    int index = vocab.lookupWord(word);
+		    vectors.put(index, vec);
 		}
 		br.close();
 	}
@@ -59,19 +56,16 @@ public class RawPILSAVec implements VectorEmbedding {
 		return dim;
 	}
 	
-	public int getVocabSize() {
-		return words.size();
+	@Override
+	public Vocabulary getVocab() {
+		return vocab;
 	}
-
 
 	@Override
 	public float[] getVectorRep(int word) {		
 		return vectors.get(word);
 	}
 
-	public int getWordId(String word){
-		return ids.get(word);
-	}
 	
 	@Override
 	public int findClosestWord(float[] vector) {
@@ -82,7 +76,8 @@ public class RawPILSAVec implements VectorEmbedding {
 
 	public static void main(String[] args) throws IOException {
 		RawPILSAVec word2vec = new RawPILSAVec(false);
-		System.out.println(word2vec.getVocabSize());
+		Vocabulary voc = word2vec.getVocab();
+		System.out.println(voc.getVocabSize());
 	    System.exit(0);
 	}
 }
