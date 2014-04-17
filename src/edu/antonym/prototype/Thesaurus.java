@@ -4,6 +4,12 @@ import java.util.List;
 
 public interface Thesaurus {
 	
+	public Vocabulary getVocab();
+	
+	//Returns the words included in the Thesaurus
+	public int numEntries();
+	public int getEntry(int entryn);
+	
 	public List<Integer> getAntonyms(int word);
 	public List<Integer> getSynonyms(int word);
 	

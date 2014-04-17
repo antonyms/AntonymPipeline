@@ -16,7 +16,7 @@ import edu.antonym.prototype.Vocabulary;
 public class RawPILSAVec implements VectorEmbedding {
 	
 	Vocabulary vocab; // May change to share one vocabulary for all method
-	Map<Integer, float[]> vectors;
+	Map<Integer, double[]> vectors;
 	
 	static final int dim = 300;
 	static final String lsaPath = "data/PILSA/s03.04b--06.lsa.k300.txt";
@@ -25,7 +25,7 @@ public class RawPILSAVec implements VectorEmbedding {
 
 	public RawPILSAVec(Boolean useS2net) throws IOException {
 		vocab = new SimpleVocab(new File(vocPath));
-		vectors = new HashMap<Integer, float[]>();
+		vectors = new HashMap<Integer, double[]>();
 		
 		String line;
 		BufferedReader br;
@@ -40,7 +40,7 @@ public class RawPILSAVec implements VectorEmbedding {
 		    int pos = line.indexOf('\t');
 		    String word = line.substring(0, pos);
 		    String[] svec = line.substring(pos+1).split(" ", dim);
-		    float[] vec = new float[300];
+		    double[] vec = new double[300];
 		    for (int i = 0; i < dim; i++) {
 		    	vec[i] = Float.parseFloat(svec[i]);
 		    }		    
@@ -62,13 +62,13 @@ public class RawPILSAVec implements VectorEmbedding {
 	}
 
 	@Override
-	public float[] getVectorRep(int word) {		
+	public double[] getVectorRep(int word) {		
 		return vectors.get(word);
 	}
 
 	
 	@Override
-	public int findClosestWord(float[] vector) {
+	public int findClosestWord(double[] vector) {
 		// TODO Auto-generated method stub
 		return 0;
 	}	

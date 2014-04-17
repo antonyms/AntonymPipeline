@@ -15,7 +15,7 @@ public class Util {
 		PrintStream ps=new PrintStream(out);
 		ps.println(dim);
 		for(int i=0; i<vocab.size(); i++) {
-			float[] vect=embed.getVectorRep(i);
+			double[] vect=embed.getVectorRep(i);
 			for(int j=0; j<dim; j++) {
 				ps.print(vect[j]);
 				ps.print(' ');
