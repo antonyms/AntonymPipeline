@@ -15,13 +15,8 @@ import edu.mit.jwi.item.IWord;
 import edu.mit.jwi.item.IWordID;
 import edu.mit.jwi.item.POS;
 import edu.mit.jwi.item.Pointer;
-import edu.smu.tspell.wordnet.NounSynset;
-import edu.smu.tspell.wordnet.Synset;
-import edu.smu.tspell.wordnet.SynsetType;
-import edu.smu.tspell.wordnet.WordNetDatabase;
 public class TrainDataPrepare {
-	NounSynset nounSynset;
-	NounSynset[] hyponyms;
+
 	public TrainDataPrepare () {
 		
 	}
@@ -57,20 +52,7 @@ public class TrainDataPrepare {
 			//System.out.println(ip.toString());
 		}
 	}
-	/***
-	 * test for jaws api
-	 */
-	public void jawsTest() {
-		System.setProperty("wordnet.database.dir", "C:\\Program Files (x86)\\WordNet\\2.1\\dict\\");
-		WordNetDatabase database = WordNetDatabase.getFileInstance();
-		Synset[] synsets = database.getSynsets("fly", SynsetType.NOUN);
-		for (int i = 0; i < synsets.length; i++) {
-			nounSynset = (NounSynset) (synsets[i]);
-			hyponyms = nounSynset.getHypernyms();
-			System.err.println(nounSynset.getWordForms()[0] + ": " + nounSynset.getDefinition() + ") has " + hyponyms.length + "hyponyms");
-		}
-		
-	}
+	
 	public static void main(String [] args) throws IOException {
 		TrainDataPrepare trainDataPrepare = new TrainDataPrepare();
 		trainDataPrepare.jwiTest();
