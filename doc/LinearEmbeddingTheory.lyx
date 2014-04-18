@@ -145,8 +145,8 @@ Applying this, we have
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\frac{\partial\left(\frac{v\cdot w}{\sqrt{v\cdot v*w\cdot w}}\right)}{\partial M_{ij}} & =\frac{\frac{\partial\left(v\cdot w\right)}{\partial M_{ij}}}{\sqrt{v\cdot v*w\cdot w}}-\frac{v\cdot w}{\left(v\cdot v*w\cdot w\right)^{\frac{3}{2}}}\frac{\partial\left(v\cdot v*w\cdot w\right)}{\partial M_{ij}}\\
- & =\frac{\sum_{k}\delta_{ik}x_{j}w_{k}+v_{k}\delta_{ik}y_{j}}{\sqrt{v\cdot v*w\cdot w}}-\frac{v\cdot w}{\left(v\cdot v*w\cdot w\right)^{\frac{3}{2}}}\left(\sum_{k}\delta_{ik}x_{j}v_{k}*w\cdot w+v\cdot v*\sum_{k}\delta_{ik}y_{j}w_{k}\right)\\
+\frac{\partial\left(\frac{v\cdot w}{\sqrt{v\cdot v*w\cdot w}}\right)}{\partial M_{ij}} & =\frac{\frac{\partial\left(v\cdot w\right)}{\partial M_{ij}}}{\sqrt{v\cdot v*w\cdot w}}-\frac{v\cdot w}{2\left(v\cdot v*w\cdot w\right)^{\frac{3}{2}}}\frac{\partial\left(v\cdot v*w\cdot w\right)}{\partial M_{ij}}\\
+ & =\frac{\sum_{k}\delta_{ik}x_{j}w_{k}+v_{k}\delta_{ik}y_{j}}{\sqrt{v\cdot v*w\cdot w}}-\frac{v\cdot w}{2\left(v\cdot v*w\cdot w\right)^{\frac{3}{2}}}\left(\sum_{k}2\delta_{ik}x_{j}v_{k}*w\cdot w+v\cdot v*\sum_{k}2\delta_{ik}y_{j}w_{k}\right)\\
  & =\frac{x_{j}w_{i}+v_{i}y_{j}}{\sqrt{v\cdot v*w\cdot w}}-\frac{v\cdot w}{\left(v\cdot v*w\cdot w\right)^{\frac{3}{2}}}\left(x_{j}v_{i}*w\cdot w+v\cdot v*y_{j}w_{i}\right)\\
  & =\frac{x_{j}w_{i}+v_{i}y_{j}}{\left(v\cdot v*w\cdot w\right)^{3/2}}\left(v\cdot v*w\cdot w\right)-\frac{v\cdot w}{\left(v\cdot v*w\cdot w\right)^{\frac{3}{2}}}\left(x_{j}v_{i}*w\cdot w+v\cdot v*y_{j}w_{i}\right)\\
  & =\frac{\left(x_{j}w_{i}+v_{i}y_{j}\right)v\cdot v*w\cdot w-v\cdot w\left(x_{j}v_{i}*w\cdot w+v\cdot v*y_{j}w_{i}\right)}{\left(v\cdot v*w\cdot w\right)^{3/2}}
