@@ -49,7 +49,7 @@ public class Util {
         }
         return cosineSimilarity;
     }
-	static Random r;
+	static Random r=new Random();
 	
 	public static int hashInteger(int i, int max) {
 		r.setSeed(i);
