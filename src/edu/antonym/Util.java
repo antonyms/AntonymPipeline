@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
+import java.util.Random;
 
 import edu.antonym.prototype.VectorEmbedding;
 import edu.antonym.prototype.Vocabulary;
@@ -48,4 +49,14 @@ public class Util {
         }
         return cosineSimilarity;
     }
+	static Random r;
+	
+	public static int hashInteger(int i, int max) {
+		r.setSeed(i);
+		return r.nextInt(max);
+	}
+
+	public static int hashIntegerPair(int i, int j, int max) {
+		return hashInteger(31*i+j, max);
+	}
 }
