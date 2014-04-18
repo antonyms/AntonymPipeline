@@ -3,24 +3,24 @@ package edu.antonym.nn;
 import java.util.Arrays;
 import java.util.List;
 
-import org.netlib.util.doubleW;
-
 import cc.mallet.optimize.Optimizable;
 import cc.mallet.types.MatrixOps;
 import edu.antonym.Util;
 import edu.antonym.prototype.Thesaurus;
 import edu.antonym.prototype.VectorEmbedding;
+import edu.antonym.prototype.Vocabulary;
 
-public class LinearEmbedding implements Optimizable.ByGradientValue {
+public class LinearEmbedding implements VectorEmbedding,
+		Optimizable.ByGradientValue {
 	Thesaurus th;
 	VectorEmbedding orig;
 	int newdim;
 	// Column major matrix
 	double[] parameters;
-	
+
 	int vocabSize;
-	
-	double regularizationStrength=1;
+
+	double regularizationStrength = 1;
 
 	// Beginning and end index
 	int activeThesaurusStart;
@@ -31,17 +31,31 @@ public class LinearEmbedding implements Optimizable.ByGradientValue {
 	double cachedValue;
 	double[] cachedGradient;
 
-	public LinearEmbedding(VectorEmbedding orig, Thesaurus th, int ndim) {
+	public LinearEmbedding(VectorEmbedding orig, int ndim) {
 		this.orig = orig;
-		this.th = th;
 		this.newdim = ndim;
 		parameters = new double[orig.getDimension() * ndim];
-		this.activeThesaurusStart = 0;
-		this.vocabSize=orig.getVocab().getVocabSize();
-		this.activeThesaurusEnd = vocabSize;
+		this.vocabSize = orig.getVocab().getVocabSize();
+
+		// Initialize the embedding to the "identity" matrix
+		int mindim = ndim < orig.getDimension() ? ndim : orig.getDimension();
+		for (int i = 0; i < mindim; i++) {
+			parameters[i * ndim + i] = 1.0d;
+		}
 
 		cacheDirty = true;
 		cachedGradient = new double[orig.getDimension() * ndim];
+	}
+
+	public void setThesaurus(Thesaurus th) {
+		this.th = th;
+		this.activeThesaurusStart = 0;
+		this.activeThesaurusEnd = th.numEntries();
+	}
+	
+	public void setActiveEntries(int start, int end) {
+		this.activeThesaurusStart=start;
+		this.activeThesaurusEnd=end;
 	}
 
 	@Override
@@ -80,7 +94,6 @@ public class LinearEmbedding implements Optimizable.ByGradientValue {
 		}
 	}
 
-
 	
 	double cosineSimGradAndValue(int w1ind, int w2ind, double[] oldvec1, double[] newvec1, double[] newvec2,double[] gradOut) {
 		double[] oldvec2 = orig.getVectorRep(w2ind);
@@ -110,6 +123,7 @@ public class LinearEmbedding implements Optimizable.ByGradientValue {
 		}
 		return value;
 	}
+
 	void computeGradientAndValue() {
 		cacheDirty = false;
 		cachedValue = 0;
@@ -117,7 +131,7 @@ public class LinearEmbedding implements Optimizable.ByGradientValue {
 
 		double[] newvec1 = new double[newdim];
 		double[] newvec2 = new double[newdim];
-		
+
 		double[] gradTmp1 = new double[parameters.length];
 		double[] gradTmp2 = new double[parameters.length];
 
@@ -194,6 +208,29 @@ public class LinearEmbedding implements Optimizable.ByGradientValue {
 		}
 		return cachedValue;
 
+	}
+
+	@Override
+	public int getDimension() {
+		return newdim;
+	}
+
+	@Override
+	public double[] getVectorRep(int word) {
+		double[] newec = new double[newdim];
+		transformVec(orig.getVectorRep(word), newec);
+		return newec;
+	}
+
+	@Override
+	public int findClosestWord(double[] vector) {
+		// TODO Implement later
+		return 0;
+	}
+
+	@Override
+	public Vocabulary getVocab() {
+		return orig.getVocab();
 	}
 
 }
