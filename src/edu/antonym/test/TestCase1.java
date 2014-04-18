@@ -55,7 +55,7 @@ public class TestCase1 implements EmbeddingEvaluator{
 			String line = br.readLine();
 			while(line!=null){
 				String[] words = line.split("\\s+");
-				ArrayList<float[]> vectors = new ArrayList<float[]>();
+				ArrayList<double[]> vectors = new ArrayList<double[]>();
 				for(int j=0;j<words.length;j++){
 					int wordID = vocab.lookupWord(words[j]);
 					if (wordID != OOV) {

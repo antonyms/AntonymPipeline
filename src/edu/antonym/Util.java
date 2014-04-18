@@ -25,7 +25,7 @@ public class Util {
 		ps.close();
 	}
 	
-	public static double cosineSimilarity(float[] vector1, float[] vector2) {
+	public static double cosineSimilarity(double[] vector1, double[] vector2) {
 		double dotProduct = 0.0;
 		double v1 = 0.0;
 		double v2 = 0.0;

@@ -57,7 +57,7 @@ public class TestCaseGRE implements EmbeddingEvaluator {
 				String answer = line.substring(index_answer+3,line.length());
 				String[] choices = choice.split("\\s+");
 				
-				float[] target_vec = new float[300];
+				double[] target_vec = new double[300];
 				int wordID = vocab.lookupWord(target);
 				if (wordID != OOV) {
 					target_vec = pilsaVect.getVectorRep(wordID);
@@ -79,7 +79,7 @@ public class TestCaseGRE implements EmbeddingEvaluator {
 				for(int j=0;j<choices.length;j++){
 					wordID = vocab.lookupWord(choices[j]);
 					if (wordID != OOV) {
-						float[] vect = pilsaVect.getVectorRep(wordID);
+						double[] vect = pilsaVect.getVectorRep(wordID);
 						out.append(choices[j]+" ");
 						double cs = Util.cosineSimilarity(target_vec, vect);
 						double current_dist = Math.abs(-1-cs);
