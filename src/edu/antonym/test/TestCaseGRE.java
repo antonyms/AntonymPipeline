@@ -1,6 +1,7 @@
 package edu.antonym.test;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -29,8 +30,9 @@ public class TestCaseGRE implements EmbeddingEvaluator {
 	@Override
 	public List<Float> score(VectorEmbedding pilsaVect) throws IOException {
 		
-		String test_folder = "test-data/";
-		String result_folder = "result-data/";	// create this folder in advance for output
+		String test_folder = "data/test-data/";
+		String result_folder = "data/result-data/";
+		new File(result_folder).mkdirs();
 		
 		String test0 = "gre_testset.txt";
 		
