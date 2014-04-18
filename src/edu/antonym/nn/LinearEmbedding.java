@@ -100,9 +100,6 @@ public class LinearEmbedding implements VectorEmbedding,
 		
 		transformVec(oldvec2, newvec2);
 		
-		double synsim = Util.cosineSimilarity(newvec1,
-				newvec2);
-		
 		double vnorm=MatrixOps.twoNormSquared(newvec1);
 		double wnorm=MatrixOps.twoNormSquared(newvec2);
 		double dot=MatrixOps.dotProduct(newvec1, newvec2);
@@ -176,21 +173,7 @@ public class LinearEmbedding implements VectorEmbedding,
 			}
 		}
 
-		// L2 regularization (but we don't want to minimize, we want to make it
-		// close to 1)
-		// Error+=abs(sum(param^2)-1)
-		double norm = MatrixOps.twoNormSquared(parameters) - 1;
-		if (norm > 0) {
-			cachedValue -= norm;
-			for (int i = 0; i < parameters.length; i++) {
-				cachedGradient[i] -= 2 * parameters[i];
-			}
-		} else {
-			cachedValue += norm;
-			for (int i = 0; i < parameters.length; i++) {
-				cachedGradient[i] += 2 * parameters[i];
-			}
-		}
+		cacheDirty=false;
 	}
 
 	@Override
