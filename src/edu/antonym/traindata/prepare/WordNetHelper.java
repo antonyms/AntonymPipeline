@@ -55,9 +55,7 @@ public abstract class WordNetHelper implements Thesaurus{
 					ISynset synset = w.getSynset();
 					
 					for(IWord iWord : synset.getWords()) {
-						/*if(!synonymList.contains(iWord.getLemma())) {
-							synonymList.add(iWord.getLemma());
-						}*/
+
 						synonymSet.add(iWord.getLemma());
 					}
 					synonymSet.remove(w.getLemma());
@@ -96,11 +94,6 @@ public abstract class WordNetHelper implements Thesaurus{
 						// save the word into list as long as it doesnt exist in
 						// the list
 						// and does not equal to the word being searched
-						/*
-						 * if(!synonymList.contains(iWord.getLemma()) &&
-						 * !iWord.getLemma().equalsIgnoreCase(w.getLemma())) {
-						 * synonymList.add(iWord.getLemma()); }
-						 */
 						synonymSet.add(iWord.getLemma());
 					}
 					synonymSet.remove(w.getLemma());
@@ -125,9 +118,7 @@ public abstract class WordNetHelper implements Thesaurus{
 					IWord w = dict.getWord(wordID);
 					
 					for(IWordID antonym : w.getRelatedWords(Pointer.ANTONYM)) {
-						/*if(!antonymList.contains(dict.getWord(antonym).getLemma())) {
-							antonymList.add(dict.getWord(antonym).getLemma());
-						}*/
+
 						antonymSet.add(dict.getWord(antonym).getLemma());
 					}
 				}
@@ -158,14 +149,8 @@ public abstract class WordNetHelper implements Thesaurus{
 					IWord w = dict.getWord(wordID);
 					
 					for(IWordID antonym : w.getRelatedWords(Pointer.ANTONYM)) {
-						/*if(!antonymList.contains(dict.getWord(antonym).getLemma()) && !dict.getWord(antonym).getLemma().equalsIgnoreCase(w.getLemma())) {
-							antonymList.add(dict.getWord(antonym).getLemma());
-						}*/
 						antonymSet.add(dict.getWord(antonym).getLemma());
 					}
-					
-					
-					
 				}
 			}
 	
@@ -256,6 +241,7 @@ public abstract class WordNetHelper implements Thesaurus{
 		File synonymsFile = new File("synonym.txt");
 
 		ThesaurusImp thesaurus = new ThesaurusImp(antonymsFile, synonymsFile);
-		System.out.println(thesaurus.isAntonym(155216, 71511));
+		
 	}
+	public abstract void traverseWords(IDictionary dict);
 }

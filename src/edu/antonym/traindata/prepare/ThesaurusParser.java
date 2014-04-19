@@ -1,5 +1,7 @@
 package edu.antonym.traindata.prepare;
 
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -17,6 +19,10 @@ public class ThesaurusParser {
 	public ThesaurusParser() {
 		this.thesaurusCrwaling = new ThesaurusCrawling();
 		this.content = thesaurusCrwaling.getWordHtmlContentFromThesaurus("large");
+	}
+	public ThesaurusParser(String word) {
+		this.thesaurusCrwaling = new ThesaurusCrawling();
+		this.content = thesaurusCrwaling.getWordHtmlContentFromThesaurus(word);
 	}
 	/**
 	 * parse the crawled web contents, and get the list of the antonym of the word
@@ -75,6 +81,7 @@ public class ThesaurusParser {
 		System.out.println(synonyms);
 		return synonyms;
 	}
+	
 	
 	public static void main(String [] args) {
 		ThesaurusParser t = new ThesaurusParser();
