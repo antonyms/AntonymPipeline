@@ -12,7 +12,7 @@ public class TrainDataPrepare {
 
 	IRAMDictionary dict;
 	public TrainDataPrepare () throws IOException {
-		String path = "C:\\Program Files (x86)\\WordNet\\2.1\\dict\\";
+		String path = "C:\\Program Files (x86)\\WordNet\\2.1\\dict\\"; //data/WordNet-3.0/dict/
 		URL url = new URL("file", null, path);
 		IDictionary dic = new Dictionary(url);
 		dict = new RAMDictionary(dic, ILoadPolicy.NO_LOAD);
@@ -25,15 +25,6 @@ public class TrainDataPrepare {
 	@SuppressWarnings("unused")
 	public void wordNetDataPrepare() throws IOException {
 		//set the path of your wordnet's dict directory
-<<<<<<< HEAD
-		
-=======
-		String path = "data/WordNet-3.0/dict/";
-		URL url = new URL("file", null, path);
-		IDictionary dic = new Dictionary(url);
-		IRAMDictionary dict = new RAMDictionary(dic, ILoadPolicy.NO_LOAD);
-		dict.open();
->>>>>>> 3d7c6448652ab393f3e7ab1d83517bf3553f58b3
 		
 		WordNetHelper.traverseDictionary(dict);
 		WordNetHelper.saveToFile();

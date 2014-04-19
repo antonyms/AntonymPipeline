@@ -186,17 +186,17 @@ public abstract class WordNetHelper implements Thesaurus{
 	}
 	
 	public static void saveToFile() {
-		String vocabularyFilePath = "vocabulary.txt";
-		String synonymFilePath = "synonym.txt";
-		String antonymFilePath = "antonym.txt";
+		String vocabularyFilePath = "data/WordNet-3.0/vocabulary.txt";
+		String synonymFilePath = "data/WordNet-3.0/synonym.txt";
+		String antonymFilePath = "data/WordNet-3.0/antonym.txt";
 		try {
-			FileWriter vocabularyFileWriter = new FileWriter(vocabularyFilePath, true);
+			FileWriter vocabularyFileWriter = new FileWriter(vocabularyFilePath, false);
 			PrintWriter vocabularyPrintWriter = new PrintWriter(vocabularyFileWriter);
 			
-			FileWriter synonymFileWriter = new FileWriter(synonymFilePath, true);
+			FileWriter synonymFileWriter = new FileWriter(synonymFilePath, false);
 			PrintWriter synonymPrintWriter = new PrintWriter(synonymFileWriter);
 			
-			FileWriter antonymFileWriter = new FileWriter(antonymFilePath, true);
+			FileWriter antonymFileWriter = new FileWriter(antonymFilePath, false);
 			PrintWriter antonymPrintWriter = new PrintWriter(antonymFileWriter);
 			
 			if(wordNetAntonymsList.size() != wordNetSynonymsList.size()) {
@@ -256,17 +256,12 @@ public abstract class WordNetHelper implements Thesaurus{
 	}
 	
 	public static void readFile() throws FileNotFoundException {
-		File file = new File("vocabulary.txt");
-		File antonymsFile = new File("antonym.txt");
-		File synonymsFile = new File("synonym.txt");
+		File file = new File("data/WordNet-3.0/vocabulary.txt");
+		File antonymsFile = new File("data/WordNet-3.0/antonym.txt");
+		File synonymsFile = new File("data/WordNet-3.0/synonym.txt");
 
-<<<<<<< HEAD
-		ThesaurusImp thesaurus = new ThesaurusImp(antonymsFile, synonymsFile);
-		
-=======
 		ThesaurusImp thesaurus = new ThesaurusImp(antonymsFile, synonymsFile, file);
-		System.out.println(thesaurus.isAntonym(155216, 71511));
->>>>>>> 3d7c6448652ab393f3e7ab1d83517bf3553f58b3
+
 	}
 	public abstract void traverseWords(IDictionary dict);
 }
