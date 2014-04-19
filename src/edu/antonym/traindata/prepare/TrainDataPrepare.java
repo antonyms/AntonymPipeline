@@ -19,7 +19,7 @@ public class TrainDataPrepare {
 	@SuppressWarnings("unused")
 	public void wordNetDataPrepare() throws IOException {
 		//set the path of your wordnet's dict directory
-		String path = "C:\\Program Files (x86)\\WordNet\\2.1\\dict\\";
+		String path = "data/WordNet-3.0/dict/";
 		URL url = new URL("file", null, path);
 		IDictionary dic = new Dictionary(url);
 		IRAMDictionary dict = new RAMDictionary(dic, ILoadPolicy.NO_LOAD);

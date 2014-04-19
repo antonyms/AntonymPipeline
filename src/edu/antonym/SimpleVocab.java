@@ -62,6 +62,8 @@ public class SimpleVocab implements Vocabulary {
 
 	@Override
 	public String lookupIndex(int index) {
+		if (index == -1) 
+			return "__OUT_OF_VOCABULARY__";
 		return words.get(index);
 	}
 
