@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import edu.antonym.ThesaurusImp;
 import edu.antonym.prototype.Thesaurus;
@@ -207,20 +208,39 @@ public abstract class WordNetHelper implements Thesaurus{
 				antonymPrintWriter.close();
 				return;
 			} else {
+				Set<String> words = new HashSet<String>();
+				//Set<String> test = new HashSet<String>();
 				for(int i = 0; i < wordNetAntonymsList.size(); i++) {
 					wordNetAntonymsList.get(i);
 					wordNetSynonymsList.get(i);
 					for(String key : wordNetAntonymsList.get(i).keySet()) {
-						vocabularyPrintWriter.println(key);
-						for(String antonym : wordNetAntonymsList.get(i).get(key)) {
-							antonymPrintWriter.print(antonym + " ");
+						words.add(key);
+						List<String> ants = wordNetAntonymsList.get(i).get(key);
+						if (!ants.isEmpty()) {
+							/*if (test.contains(key))
+								System.out.println(key);
+							else
+								test.add(key);*/
+							antonymPrintWriter.print(key + " ");
+							for(String antonym : ants) {
+								antonymPrintWriter.print(antonym + " ");
+								words.add(antonym);
+							}
+							antonymPrintWriter.println();
 						}
-						antonymPrintWriter.println();
-						for(String synonym : wordNetSynonymsList.get(i).get(key)) {
-							synonymPrintWriter.print(synonym + " ");
+						List<String> syns = wordNetSynonymsList.get(i).get(key);
+						if (!syns.isEmpty()) {
+							synonymPrintWriter.print(key + " ");
+							for(String synonym : syns) {
+								synonymPrintWriter.print(synonym + " ");
+								words.add(synonym);
+							}							
+							synonymPrintWriter.println();
 						}
-						synonymPrintWriter.println();
-					}
+					}					
+				}
+				for (String w : words) {
+					vocabularyPrintWriter.println(w);
 				}
 			}
 			vocabularyFileWriter.close();
@@ -240,8 +260,13 @@ public abstract class WordNetHelper implements Thesaurus{
 		File antonymsFile = new File("antonym.txt");
 		File synonymsFile = new File("synonym.txt");
 
+<<<<<<< HEAD
 		ThesaurusImp thesaurus = new ThesaurusImp(antonymsFile, synonymsFile);
 		
+=======
+		ThesaurusImp thesaurus = new ThesaurusImp(antonymsFile, synonymsFile, file);
+		System.out.println(thesaurus.isAntonym(155216, 71511));
+>>>>>>> 3d7c6448652ab393f3e7ab1d83517bf3553f58b3
 	}
 	public abstract void traverseWords(IDictionary dict);
 }

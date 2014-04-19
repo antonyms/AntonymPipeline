@@ -6,6 +6,7 @@ import java.util.List;
 import cc.mallet.optimize.Optimizable;
 import cc.mallet.types.MatrixOps;
 import edu.antonym.Util;
+import edu.antonym.prototype.NormalizedVectorEmbedding;
 import edu.antonym.prototype.Thesaurus;
 import edu.antonym.prototype.VectorEmbedding;
 import edu.antonym.prototype.Vocabulary;
@@ -31,7 +32,7 @@ public class LinearEmbedding implements VectorEmbedding,
 	double cachedValue;
 	double[] cachedGradient;
 
-	public LinearEmbedding(VectorEmbedding orig, int ndim) {
+	public LinearEmbedding(NormalizedVectorEmbedding orig, int ndim) {
 		this.orig = orig;
 		this.newdim = ndim;
 		parameters = new double[orig.getDimension() * ndim];

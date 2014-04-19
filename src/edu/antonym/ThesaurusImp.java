@@ -7,22 +7,21 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 
 import edu.antonym.prototype.Thesaurus;
 import edu.antonym.prototype.Vocabulary;
 
 public class ThesaurusImp implements Thesaurus{
 
-	List<String> antonyms;
-	List<String> synonyms;
-	static List<Integer> antonymsId;
-	static List<Integer> synonymsId;
-	static Map<Integer, List<Integer>> lookUpAntonym;
-	static Map<Integer, List<Integer>> lookUpSynonym;
-	SimpleVocab vocab;
+	Map<Integer, List<Integer>> lookUpAntonym;
+	Map<Integer, List<Integer>> lookUpSynonym;
+	List<Integer> entries;
+	Vocabulary vocab;
 	/**
 	 * 
 	 * @param antonymsFile the file of antonyms
@@ -30,8 +29,8 @@ public class ThesaurusImp implements Thesaurus{
 	 * @throws FileNotFoundException
 	 */
 
-	public ThesaurusImp(File antonymsFile, File synonymsFile ) throws FileNotFoundException {
-		this(new FileInputStream(antonymsFile), new FileInputStream(synonymsFile));
+	public ThesaurusImp(File antonymsFile, File synonymsFile, File vocabFile) throws FileNotFoundException {
+		this(new FileInputStream(antonymsFile), new FileInputStream(synonymsFile), vocabFile);
 	}
 	/**
 	 * Creates thesaurus lookup map from newline delimited text stream
@@ -39,62 +38,59 @@ public class ThesaurusImp implements Thesaurus{
 	 * @throws FileNotFoundException 
 	 */
 	
-	public ThesaurusImp(InputStream antonymStream, InputStream synonymStream) throws FileNotFoundException {
-		antonyms = new ArrayList<String>();
-		synonyms = new ArrayList<String>();
-		antonymsId = new ArrayList<Integer>();
-		synonymsId = new ArrayList<Integer>();
+	public ThesaurusImp(InputStream antonymStream, InputStream synonymStream, File vocabFile) throws FileNotFoundException {
+		Set<Integer> entries = new HashSet<Integer>();
 		lookUpAntonym = new HashMap<Integer, List<Integer>>();
-		lookUpSynonym = new HashMap<Integer, List<Integer>>();
-		File file = new File("vocabulary.txt");
-		vocab = new SimpleVocab(file);
+		lookUpSynonym = new HashMap<Integer, List<Integer>>();		
+		vocab = new SimpleVocab(vocabFile);
 		Scanner scanAntonyms=new Scanner(antonymStream);
-		int antonymsIndex=0;
 		while(scanAntonyms.hasNextLine()) {
 			String words=scanAntonyms.nextLine();
-			antonyms.addAll(Arrays.asList(words.split(" ")));
+			List<String> antonyms = Arrays.asList(words.split(" "));;
+			int target = vocab.lookupWord(antonyms.get(0));
+			entries.add(target);
+			antonyms = antonyms.subList(1, antonyms.size());
+			List<Integer> antonymsId = new ArrayList<Integer>();			
 			for(String a : antonyms) {
 				if(a != null) {
 					antonymsId.add(vocab.lookupWord(a));
-				}
-				
-			}
-			
-			lookUpAntonym.put(antonymsIndex, antonymsId);
-			antonymsIndex ++;
-			antonyms.clear();
+				}				
+			}			
+			lookUpAntonym.put(target, antonymsId);
 		}
 		scanAntonyms.close();
 		
 		
 		Scanner scanSynonyms=new Scanner(synonymStream);
-		int synonymIndex=0;
 		while(scanSynonyms.hasNextLine()) {
 			String words=scanSynonyms.nextLine();
-			synonyms.addAll(Arrays.asList(words.split(" ")));
-			for(String s : antonyms) {
+			List<String> synonyms = Arrays.asList(words.split(" "));;
+			int target = vocab.lookupWord(synonyms.get(0));
+			entries.add(target);
+			synonyms = synonyms.subList(1, synonyms.size());
+			List<Integer> synonymsId = new ArrayList<Integer>();
+			for(String s : synonyms) {
 				if(s != null) {
-					antonymsId.add(vocab.lookupWord(s));
+					synonymsId.add(vocab.lookupWord(s));
 				}
 			}
-			lookUpSynonym.put(synonymIndex, synonymsId);
-			synonymIndex ++;
-			synonyms.clear();
+			lookUpSynonym.put(target, synonymsId);
 		}
 		scanSynonyms.close();
 		
+		this.entries = new ArrayList<Integer>(entries);
 	}
 	
 	@Override
 	public List<Integer> getAntonyms(int word) {
 		// TODO Auto-generated method stub
-		return antonymsId;
+		return lookUpAntonym.get(word);
 	}
 
 	@Override
 	public List<Integer> getSynonyms(int word) {
 		// TODO Auto-generated method stub
-		return synonymsId;
+		return lookUpSynonym.get(word);
 	}
 
 	@Override
@@ -138,18 +134,15 @@ public class ThesaurusImp implements Thesaurus{
 	}
 	@Override
 	public Vocabulary getVocab() {
-		// TODO Auto-generated method stub
-		return null;
+		return vocab;
 	}
 	@Override
 	public int numEntries() {
-		// TODO Auto-generated method stub
-		return 0;
+		return entries.size();
 	}
 	@Override
 	public int getEntry(int entryn) {
-		// TODO Auto-generated method stub
-		return 0;
+		return entries.get(entryn);
 	}
 
 }
