@@ -344,7 +344,7 @@ If we consider the fact that the parameters
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{dsim}{dA_{ij}}=\frac{2\left(y_{i}x_{j}+y_{j}x_{i}\right)nm-2lmx_{i}x_{j}-2lny_{i}y_{j}}{2\left(nm\right)^{\left(\frac{3}{2}\right)}}=\frac{\left(y_{i}x_{j}+y_{j}x_{i}\right)nm-lmx_{i}x_{j}-lny_{i}y_{j}}{\left(nm\right)^{\left(\frac{3}{2}\right)}}
+\frac{dsim}{dA_{ij}}=\frac{2\left(y_{i}x_{j}+y_{j}x_{i}\right)nm-2lmx_{i}x_{j}-2lny_{i}y_{j}}{2\left(nm\right)^{\left(\frac{3}{2}\right)}}=\frac{nm\left(y_{i}x_{j}+y_{j}x_{i}\right)-lmx_{i}x_{j}-lny_{i}y_{j}}{\left(nm\right)^{\left(\frac{3}{2}\right)}}
 \]
 
 \end_inset
@@ -359,7 +359,7 @@ And for the on-diagonal elements, we get
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{dsim}{dA_{ii}}=\frac{2y_{i}x_{i}nm-lmx_{i}^{2}-lny_{i}^{2}}{2\left(nm\right)^{\left(\frac{3}{2}\right)}}
+\frac{dsim}{dA_{ii}}=\frac{y_{i}x_{i}nm-\frac{1}{2}lmx_{i}^{2}-\frac{1}{2}lny_{i}^{2}}{\left(nm\right)^{\left(\frac{3}{2}\right)}}
 \]
 
 \end_inset
