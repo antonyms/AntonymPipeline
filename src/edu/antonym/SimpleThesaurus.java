@@ -44,7 +44,7 @@ public class SimpleThesaurus implements Thesaurus {
 
 	public SimpleThesaurus(Vocabulary vocab, File synonyms, File antonyms) throws FileNotFoundException {
 		this.vocab=vocab;
-		
+
 		Map<Integer, ThesaurusEntry> map = new HashMap<Integer, SimpleThesaurus.ThesaurusEntry>();
 		Scanner s=new Scanner(synonyms);
 		while(s.hasNext()) {
@@ -57,7 +57,7 @@ public class SimpleThesaurus implements Thesaurus {
 				map.put(w1, e);
 			}
 			e.synonyms.add(w2);
-			
+
 			e=map.get(w2);
 			if(e==null) {
 				e=new ThesaurusEntry();
@@ -66,7 +66,7 @@ public class SimpleThesaurus implements Thesaurus {
 			}
 			e.synonyms.add(w1);
 		}
-		
+
 		s=new Scanner(antonyms);
 		while(s.hasNext()) {
 			int w1=vocab.lookupWord(s.next());
@@ -78,7 +78,7 @@ public class SimpleThesaurus implements Thesaurus {
 				map.put(w1, e);
 			}
 			e.antonyms.add(w2);
-			
+
 			e=map.get(w2);
 			if(e==null) {
 				e=new ThesaurusEntry();
