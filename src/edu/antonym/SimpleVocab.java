@@ -21,10 +21,10 @@ public class SimpleVocab implements Vocabulary {
 	
 
 	public SimpleVocab(File f) throws FileNotFoundException {
-		this(f,-1);
+		this(f,0);
 	}
 	public SimpleVocab(InputStream stream) {
-		this(stream,-1);
+		this(stream,0);
 	}
 	public SimpleVocab(File f,int OOVindex) throws FileNotFoundException {
 		this(new FileInputStream(f),OOVindex);
