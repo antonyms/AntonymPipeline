@@ -78,7 +78,7 @@ With
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{v\cdot w}{\sqrt{v\cdot v*w\cdot w}}
+sim\left(x,y\right)\frac{v\cdot w}{\sqrt{v\cdot v*w\cdot w}}
 \]
 
 \end_inset
@@ -101,7 +101,7 @@ Now with a matrix transformation
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{My\cdot Mx}{\sqrt{Mx\cdot Mx*My\cdot My}}
+sim(x,y,M)=\frac{My\cdot Mx}{\sqrt{Mx\cdot Mx*My\cdot My}}
 \]
 
 \end_inset
@@ -159,6 +159,212 @@ Applying this, we have
 
 \begin_layout Standard
 This last formula is the one that is coded
+\end_layout
+
+\begin_layout Section*
+With Normalized vectors
+\end_layout
+
+\begin_layout Standard
+If we normalize 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $y$
+\end_inset
+
+ before computation, we note this does not change the cosine similarity
+ of the original vectors or the transformed vectors
+\end_layout
+
+\begin_layout Section*
+As a Hermitian Inner Product
+\end_layout
+
+\begin_layout Standard
+We note that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{My\cdot Mx}{\sqrt{Mx\cdot Mx*My\cdot My}}=\frac{y^{T}M^{T}Mx}{\sqrt{x^{T}M^{T}Mx*y^{T}M^{T}My}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We note that 
+\begin_inset Formula $M$
+\end_inset
+
+ only shows up in the form 
+\begin_inset Formula $M^{T}M$
+\end_inset
+
+.
+ So we actually don't need to treat 
+\begin_inset Formula $M$
+\end_inset
+
+ as a transformation, but a normal inner product 
+\begin_inset Formula $A=M^{T}M$
+\end_inset
+
+.
+ We note that 
+\begin_inset Formula $M^{T}M$
+\end_inset
+
+ will be symmetric for any 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ Thus instead of optimizing over 
+\begin_inset Formula $M$
+\end_inset
+
+ as an arbitrary matrix, we optimize over 
+\begin_inset Formula $A$
+\end_inset
+
+ as a symmetric matrix, reducing the number of parameters by half.
+ Thus the similarity measure is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+sim\left(x,y,A\right)=\frac{y^{T}Ax}{\sqrt{x^{T}Ax*y^{T}Ay}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To optimize over 
+\begin_inset Formula $A$
+\end_inset
+
+, we need to calculate the derivative of 
+\begin_inset Formula $sim$
+\end_inset
+
+ wrt the components of 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ First we note
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial a^{T}Ab}{\partial A_{ij}}=a_{i}b_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial sim}{\partial A_{ij}} & =\frac{y_{i}x_{j}}{\sqrt{x^{T}Ax*y^{T}Ay}}-\frac{y^{T}Ax}{2\left(x^{T}Ax*y^{T}Ay\right)^{\left(\frac{3}{2}\right)}}\left(x_{i}x_{j}y^{T}Ay+x^{T}Axy_{i}y_{j}\right)\\
+ & =\frac{2y_{i}x_{j}\left(x^{T}Ax*y^{T}Ay\right)-y^{T}Ax\left(x_{i}x_{j}y^{T}Ay+x^{T}Axy_{i}y_{j}\right)}{2\left(x^{T}Ax*y^{T}Ay\right)^{\left(\frac{3}{2}\right)}}\\
+ & =\frac{2y_{i}x_{j}\left(x^{T}Ax*y^{T}Ay\right)-y^{T}Ax\left(x_{i}x_{j}y^{T}Ay+x^{T}Axy_{i}y_{j}\right)}{2\left(x^{T}Ax*y^{T}Ay\right)^{\left(\frac{3}{2}\right)}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can simplify this calculation by defining 
+\begin_inset Formula $n=x^{T}Ax$
+\end_inset
+
+, 
+\begin_inset Formula $m=y^{T}Ay$
+\end_inset
+
+, 
+\begin_inset Formula $l=x^{T}Ay$
+\end_inset
+
+.
+ Yielding
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+sim\left(x,y,A\right)=\frac{l}{\sqrt{nm}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial sim}{\partial A_{ij}} & =\frac{2y_{i}x_{j}nm-lmx_{i}x_{j}-lny_{i}y_{j}}{2\left(nm\right)^{\left(\frac{3}{2}\right)}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we consider the fact that the parameters 
+\begin_inset Formula $A_{ij}$
+\end_inset
+
+ and 
+\begin_inset Formula $A_{ji}$
+\end_inset
+
+ are tied together, we can calculate a total gradient for the off-diagonal
+ elements of
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dsim}{dA_{ij}}=\frac{2\left(y_{i}x_{j}+y_{j}x_{i}\right)nm-2lmx_{i}x_{j}-2lny_{i}y_{j}}{2\left(nm\right)^{\left(\frac{3}{2}\right)}}=\frac{\left(y_{i}x_{j}+y_{j}x_{i}\right)nm-lmx_{i}x_{j}-lny_{i}y_{j}}{\left(nm\right)^{\left(\frac{3}{2}\right)}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And for the on-diagonal elements, we get
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dsim}{dA_{ii}}=\frac{2y_{i}x_{i}nm-lmx_{i}^{2}-lny_{i}^{2}}{2\left(nm\right)^{\left(\frac{3}{2}\right)}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
