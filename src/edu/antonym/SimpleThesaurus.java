@@ -47,47 +47,53 @@ public class SimpleThesaurus implements Thesaurus {
 
 		Map<Integer, ThesaurusEntry> map = new HashMap<Integer, SimpleThesaurus.ThesaurusEntry>();
 		Scanner s=new Scanner(synonyms);
-		while(s.hasNext()) {
-			int w1=vocab.lookupWord(s.next());
-			int w2=vocab.lookupWord(s.next());
+		while(s.hasNextLine()) {
+			String[] wordz=s.nextLine().split("\\s");
+			int w1=vocab.lookupWord(wordz[0]);
 			ThesaurusEntry e=map.get(w1);
 			if(e==null) {
 				e=new ThesaurusEntry();
 				e.word=w1;
 				map.put(w1, e);
 			}
-			e.synonyms.add(w2);
-
-			e=map.get(w2);
-			if(e==null) {
-				e=new ThesaurusEntry();
-				e.word=w2;
-				map.put(w2,e);
+			for(int i=1; i<wordz.length; i++) {
+				int w2=vocab.lookupWord(wordz[i]);
+				e.synonyms.add(w2);
+				e=map.get(w2);
+				if(e==null) {
+					e=new ThesaurusEntry();
+					e.word=w2;
+					map.put(w2,e);
+				}
+				e.synonyms.add(w1);
 			}
-			e.synonyms.add(w1);
+			
 		}
 
 		s=new Scanner(antonyms);
 		while(s.hasNext()) {
-			int w1=vocab.lookupWord(s.next());
-			int w2=vocab.lookupWord(s.next());
+			String[] wordz=s.nextLine().split("\\s");
+			int w1=vocab.lookupWord(wordz[0]);
 			ThesaurusEntry e=map.get(w1);
 			if(e==null) {
 				e=new ThesaurusEntry();
 				e.word=w1;
 				map.put(w1, e);
 			}
-			e.antonyms.add(w2);
-
-			e=map.get(w2);
-			if(e==null) {
-				e=new ThesaurusEntry();
-				e.word=w2;
-				map.put(w2, e);
+			for(int i=1; i<wordz.length; i++) {
+				int w2=vocab.lookupWord(wordz[i]);
+				e.antonyms.add(w2);
+				e=map.get(w2);
+				if(e==null) {
+					e=new ThesaurusEntry();
+					e.word=w2;
+					map.put(w2,e);
+				}
+				e.antonyms.add(w1);
 			}
-			e.antonyms.add(w1);
 		}
 		entries=map.values().toArray(new ThesaurusEntry[map.size()]);
+		Arrays.sort(entries);
 	}
 
 	@Override
