@@ -3,6 +3,7 @@ package edu.antonym.nn.training;
 import cc.mallet.optimize.LimitedMemoryBFGS;
 import cc.mallet.optimize.Optimizer;
 import edu.antonym.nn.LinearEmbedding;
+import edu.antonym.prototype.NormalizedVectorEmbedding;
 import edu.antonym.prototype.Thesaurus;
 import edu.antonym.prototype.VectorEmbedding;
 
@@ -14,7 +15,7 @@ public class LinearEmbeddingBatchTrainer implements EmbeddingTrainer {
 	int batchsize;
 	int numiterations = Integer.MAX_VALUE;
 
-	public LinearEmbeddingBatchTrainer(VectorEmbedding orig, int ndim,
+	public LinearEmbeddingBatchTrainer(NormalizedVectorEmbedding orig, int ndim,
 			int batchsize) {
 		this.embedding = new LinearEmbedding(orig, ndim);
 		this.batchsize = batchsize;

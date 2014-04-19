@@ -7,15 +7,17 @@ public class RegularizedOptimizable implements Optimizable.ByGradientValue {
 	Optimizable.ByGradientValue base;
 
 	double target;
+	double weight;
 
 	boolean cacheDirty;
 	double cachedValue;
 	double[] cachedGradient;
 
 	public RegularizedOptimizable(Optimizable.ByGradientValue base,
-			double target) {
+			double target, double weight) {
 		this.base = base;
 		this.target = target;
+		this.weight = weight;
 
 		this.cacheDirty = true;
 
@@ -45,7 +47,7 @@ public class RegularizedOptimizable implements Optimizable.ByGradientValue {
 
 	@Override
 	public void setParameters(double[] arg0) {
-		setParameters(arg0);
+		base.setParameters(arg0);
 		cacheDirty = true;
 	}
 
@@ -53,16 +55,17 @@ public class RegularizedOptimizable implements Optimizable.ByGradientValue {
 		cachedValue = base.getValue();
 		base.getValueGradient(cachedGradient);
 		double[] parameters = new double[base.getNumParameters()];
+		base.getParameters(parameters);
 		double norm = MatrixOps.twoNormSquared(parameters) - target;
 		if (norm > 0) {
-			cachedValue -= norm;
+			cachedValue -= weight * norm;
 			for (int i = 0; i < parameters.length; i++) {
-				cachedGradient[i] -= 2 * parameters[i];
+				cachedGradient[i] -= weight * 2 * parameters[i];
 			}
 		} else {
-			cachedValue += norm;
+			cachedValue += weight * norm;
 			for (int i = 0; i < parameters.length; i++) {
-				cachedGradient[i] += 2 * parameters[i];
+				cachedGradient[i] += weight * 2 * parameters[i];
 			}
 		}
 		cacheDirty = false;
