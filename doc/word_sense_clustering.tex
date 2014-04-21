@@ -1,0 +1,19 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\begin{document}
+    \begin{itemize}
+        \item input: words list (of a word sense)
+        \item output: partition of the list (one or two)
+    \end{itemize}
+    \paragraph{MCMC sampling}~
+    
+    The optimal partition is: ($G_i$ can be empty)
+    $$\{G\} = \text{argmax}_{G_1,G_2}\sum_{i=1,2}\sum_{a,b\in G_i, a<b}\text{cosSim}(a,b)-\sum_{a\in G_1, b\in G_2}\text{cosSim}(a,b)$$
+    \begin{enumerate}
+        \item Start with random partition.
+        \item Do 3-4 until convergence.
+        \item Create a new partition $\{G\}'$ by moving a random selected word $l$ from $G_i$ to $G_j$.
+        \item Accept this with probability $\min(1, p)$, where
+        $$\log p=\gamma \left(\sum_{m\in G_j,m\neq l} \text{cosSim}(l,m)-\sum_{n\in G_i,n\neq l}\text{cosSim}(l,n)\right)$$
+    \end{enumerate}
+\end{document}
