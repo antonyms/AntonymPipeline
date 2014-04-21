@@ -4,9 +4,11 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import edu.antonym.prototype.Vocabulary;
 import edu.mit.jwi.IDictionary;
@@ -65,44 +67,72 @@ public class AutomaticalCrawling extends WordNetHelper{
 		// TODO Auto-generated method stub
 		List<String> antonymList = new ArrayList<String>();
 		List<String> synonymList = new ArrayList<String>();
-		String vocabularyFilePath = "vocabulary1.txt";
-		String synonymFilePath = "synonym1.txt";
-		String antonymFilePath = "antonym1.txt";
+		String vocabularyFilePath = "data/Rogets/vocabulary.txt";
+		String synonymFilePath = "data/Rogets/synonym.txt";
+		String antonymFilePath = "data/Rogets/antonym.txt";
+		String wordnetVocab = "data/Rogets/WordNetVocab.txt";
 
 		try {
-			FileWriter vocabularyFileWriter = new FileWriter(vocabularyFilePath, true);
+			FileWriter vocabularyFileWriter = new FileWriter(vocabularyFilePath, false);
 			PrintWriter vocabularyPrintWriter = new PrintWriter(vocabularyFileWriter);
+			
+			FileWriter wordNetWordsFileWriter = new FileWriter(wordnetVocab, false);
+			PrintWriter wordNetWordsPrintWriter = new PrintWriter(wordNetWordsFileWriter);
 
-			FileWriter synonymFileWriter = new FileWriter(synonymFilePath, true);
+			FileWriter synonymFileWriter = new FileWriter(synonymFilePath, false);
 			PrintWriter synonymPrintWriter = new PrintWriter(synonymFileWriter);
 
-			FileWriter antonymFileWriter = new FileWriter(antonymFilePath, true);
+			FileWriter antonymFileWriter = new FileWriter(antonymFilePath, false);
 			PrintWriter antonymPrintWriter = new PrintWriter(antonymFileWriter);
 
-			for (POS pos : POS.values()) {
+			Set<String> words = new HashSet<String>();
+			Set<String> wordNetWords = new HashSet<String>();
+			//int count = 1;
+			for (POS pos : POS.values()) {						
 				Iterator<?> iterator = dict.getIndexWordIterator(pos);
 				while (iterator.hasNext()) {
+					//System.out.print('.');
+					//if (count++ % 100 == 0) System.out.print('\n');		
 					IIndexWord iIndexWord = (IIndexWord) iterator.next();
-					if(iIndexWord.getLemma().matches("[a-zA-Z]+")) {
-						ThesaurusParser parser = new ThesaurusParser(iIndexWord.getLemma());
+					String target = iIndexWord.getLemma();
+					wordNetWords.add(target);
+					if(target.matches("[^/]+")) {						
+						words.add(target);						
+						target = target.replaceAll("_", " ");
+						System.out.println(target);
+						ThesaurusParser parser = new ThesaurusParser(target);
 						antonymList = parser.antonymsParse();
 						synonymList = parser.synonymsParse();
-
-						vocabularyPrintWriter.println(iIndexWord.getLemma());
-						for(String a : antonymList) {
-							antonymPrintWriter.print(a + " ");
+						
+						if (!antonymList.isEmpty()) {
+							antonymPrintWriter.print(target + "\t");
+							for(String a : antonymList) {
+								words.add(a);
+								antonymPrintWriter.print(a + "\t");
+							}
+							antonymPrintWriter.println();
 						}
-						antonymPrintWriter.println();
-
-						for(String s : synonymList) {
-							synonymPrintWriter.print(s + " ");
+						if (!synonymList.isEmpty()) {
+							synonymPrintWriter.print(target + "\t");
+							for(String s : synonymList) {
+								words.add(s);
+								synonymPrintWriter.print(s + "\t");
+							}
+							synonymPrintWriter.println();
 						}
-						synonymPrintWriter.println();
 					}
 				}
 			}
+			for (String w : words) {
+				vocabularyPrintWriter.println(w);
+			}
+			for (String w : wordNetWords) {
+				wordNetWordsPrintWriter.println(w);
+			}
 			vocabularyFileWriter.close();
 			vocabularyPrintWriter.close();
+			wordNetWordsFileWriter.close();
+			wordNetWordsPrintWriter.close();
 			synonymFileWriter.close();
 			synonymPrintWriter.close();
 			antonymFileWriter.close();
@@ -111,9 +141,6 @@ public class AutomaticalCrawling extends WordNetHelper{
 		} catch(Exception e) {
 			e.getMessage();
 		}
-
-
-
 
 	}
 

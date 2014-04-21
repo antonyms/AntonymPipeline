@@ -17,11 +17,12 @@ public class ThesaurusCrawling {
 	        URL url;
 	        String temp;
 	        StringBuffer sb = new StringBuffer();
+	        word = word.replaceAll(" ", "%20");
 	        try {
-	            url = new URL("http://thesaurus.com/browse/" + word);
+	            url = new URL("http://m.dictionary.com/synonym/" + word);
 	            BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream(), "gbk"));// read the webpage
 	            while ((temp = in.readLine()) != null) {
-	                sb.append(temp);
+	                sb.append(temp+'\n');
 	            }
 	            in.close();
 	        } catch (final MalformedURLException me) {
