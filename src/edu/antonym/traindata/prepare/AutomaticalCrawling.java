@@ -96,7 +96,7 @@ public class AutomaticalCrawling extends WordNetHelper{
 					IIndexWord iIndexWord = (IIndexWord) iterator.next();
 					String target = iIndexWord.getLemma();
 					wordNetWords.add(target);
-					if(target.matches("[^/]+")) {						
+					if(target.matches("[^/]+") && !wordNetWords.contains(target)) {						
 						words.add(target);						
 						target = target.replaceAll("_", " ");
 						System.out.println(target);
