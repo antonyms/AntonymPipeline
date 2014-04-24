@@ -1,4 +1,4 @@
-package edu.antonym.nn;
+package edu.antonym.metric;
 
 import java.util.Arrays;
 import java.util.List;
@@ -12,7 +12,7 @@ import edu.antonym.prototype.Thesaurus;
 import edu.antonym.prototype.VectorEmbedding;
 import edu.antonym.prototype.Vocabulary;
 
-public class LinearVectorMetric implements Optimizable.ByGradientValue,WordMetric {
+public class LinearVectorMetric implements Optimizable.ByGradientValue, WordMetric {
 	Thesaurus th;
 	VectorEmbedding orig;
 	// lower diagonal half of symmetric matrix

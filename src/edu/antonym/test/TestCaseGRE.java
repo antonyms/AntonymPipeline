@@ -83,9 +83,8 @@ public class TestCaseGRE implements MetricEvaluator {
 					if (choiceID != OOV) {
 						out.append(choices[j]+" ");
 						double cs = metric.similarity(wordID, choiceID);
-						double current_dist = Math.abs(-1-cs);
-						if(current_dist<closest){
-							closest = current_dist;
+						if(cs<closest){
+							closest = cs;
 							test_answer = choices[j];
 						}
 					}
@@ -97,6 +96,7 @@ public class TestCaseGRE implements MetricEvaluator {
 				out.append("result: " +test_answer);
 				out.append("("+Double.toString(closest)+") ");
 				out.append("true: "+answer);
+				out.append("("+metric.similarity(wordID, vocab.lookupWord(answer))+") ");
 				
 				//accuracy
 				if(test_answer.equals(answer)){

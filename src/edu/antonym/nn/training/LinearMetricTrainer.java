@@ -9,7 +9,7 @@ import cc.mallet.optimize.Optimizer;
 import edu.antonym.NormalizedTextFileEmbedding;
 import edu.antonym.SimpleThesaurus;
 import edu.antonym.SimpleVocab;
-import edu.antonym.nn.LinearVectorMetric;
+import edu.antonym.metric.LinearVectorMetric;
 import edu.antonym.prototype.NormalizedVectorEmbedding;
 import edu.antonym.prototype.Thesaurus;
 import edu.antonym.prototype.Vocabulary;

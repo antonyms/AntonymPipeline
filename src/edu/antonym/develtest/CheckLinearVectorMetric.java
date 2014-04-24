@@ -8,7 +8,7 @@ import cc.mallet.optimize.tests.TestOptimizable;
 import edu.antonym.NormalizedTextFileEmbedding;
 import edu.antonym.SimpleThesaurus;
 import edu.antonym.SimpleVocab;
-import edu.antonym.nn.LinearVectorMetric;
+import edu.antonym.metric.LinearVectorMetric;
 import edu.antonym.nn.training.RegularizedOptimizable;
 import edu.antonym.prototype.NormalizedVectorEmbedding;
 import edu.antonym.prototype.Thesaurus;
