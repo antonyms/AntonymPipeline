@@ -33,9 +33,9 @@ public class PipelineForTest {
 			System.out.println(voc.lookupIndex(w));
 		}
 		
-//		VectorEmbedding embedding = new RawPILSAVec(false);
-//		EmbeddingEvaluator evaluator = new TestCaseGRE();
-//		evaluator.score(embedding);
+		VectorEmbedding embedding = new RawPILSAVec(false);
+		EmbeddingEvaluator evaluator = new TestCaseGRE();
+		evaluator.score(embedding);
 //		evaluator = new TestCase1();
 //		evaluator.score(embedding);
 //		evaluator = new TestCase2();

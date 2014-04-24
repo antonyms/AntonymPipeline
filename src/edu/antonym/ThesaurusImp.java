@@ -83,14 +83,20 @@ public class ThesaurusImp implements Thesaurus{
 	
 	@Override
 	public List<Integer> getAntonyms(int word) {
-		// TODO Auto-generated method stub
-		return lookUpAntonym.get(word);
+		List<Integer> res=lookUpAntonym.get(word);
+		if(res == null) {
+			return new ArrayList<Integer>();
+		}
+		return res;
 	}
 
 	@Override
 	public List<Integer> getSynonyms(int word) {
-		// TODO Auto-generated method stub
-		return lookUpSynonym.get(word);
+		List<Integer> res=lookUpSynonym.get(word);
+		if(res == null) {
+			return new ArrayList<Integer>();
+		}
+		return res;
 	}
 
 	@Override
