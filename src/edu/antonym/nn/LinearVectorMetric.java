@@ -6,12 +6,13 @@ import java.util.List;
 import cc.mallet.optimize.Optimizable;
 import cc.mallet.types.MatrixOps;
 import edu.antonym.Util;
+import edu.antonym.prototype.WordMetric;
 import edu.antonym.prototype.NormalizedVectorEmbedding;
 import edu.antonym.prototype.Thesaurus;
 import edu.antonym.prototype.VectorEmbedding;
 import edu.antonym.prototype.Vocabulary;
 
-public class LinearVectorMetric implements Optimizable.ByGradientValue {
+public class LinearVectorMetric implements Optimizable.ByGradientValue,WordMetric {
 	Thesaurus th;
 	VectorEmbedding orig;
 	// lower diagonal half of symmetric matrix
@@ -131,15 +132,17 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue {
 			for (int j = 0; j < i; j++) {
 				// Off diagonal elements
 				gradOut[ind] = n * m * (vec1[i] * vec2[j] + vec1[j] * vec2[i])
-						- l * m * vec1[i] * vec1[j] - l * n * vec2[i] * vec2[j];
+						     - l * m *  vec1[i] * vec1[j] 
+						     - l * n *  vec2[i] * vec2[j];
 				gradOut[ind] /= denom;
 				
 				gradOut[ind]=vec1[i]*vec2[j]+vec1[j]*vec2[i];
 				ind++;
 			}
 			// on diagonal elements
-			gradOut[ind] = n * m * vec1[i] * vec2[i] - 0.5 * l * m * vec1[i]
-					* vec1[i] - 0.5 * l * n * vec2[i] * vec2[i];
+			gradOut[ind] = 		n * m * vec1[i] * vec2[i] 
+						- 0.5 * l * m * vec1[i] * vec1[i] 
+						- 0.5 * l * n * vec2[i] * vec2[i];
 			gradOut[ind] /= denom;
 			
 			gradOut[ind]=vec1[i]*vec2[i];
@@ -213,5 +216,17 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue {
 		}
 		return cachedValue;
 
+	}
+
+	@Override
+	public Vocabulary getVocab() {
+		return orig.getVocab();
+	}
+
+	@Override
+	public double distance(int word1, int word2) {
+		double[] d1 = orig.getVectorRep(word1);
+		double[] d2 = orig.getVectorRep(word2);
+		return innerProd(d1, d2);
 	}
 }

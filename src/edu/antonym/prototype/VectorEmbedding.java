@@ -1,6 +1,6 @@
 package edu.antonym.prototype;
 
-public interface VectorEmbedding {
+public interface VectorEmbedding extends WordMetric {
 
 	int getDimension();
 	public double[] getVectorRep(int word);

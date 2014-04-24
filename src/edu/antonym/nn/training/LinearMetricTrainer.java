@@ -34,7 +34,7 @@ public class LinearMetricTrainer {
 	public Optimizer getOptimizer() {
 		if (cachedOptimizer == null) {
 			cachedOptimizer = new GradientAscent(new RegularizedOptimizable(
-					embedding, 1, 1));
+					embedding, 1, 0.1));
 		}
 		return cachedOptimizer;
 	}
@@ -105,5 +105,33 @@ public class LinearMetricTrainer {
 		System.out.println(m.innerProd(
 				origEmbed.getVectorRep(vocab.lookupWord("ask")),
 				origEmbed.getVectorRep(vocab.lookupWord("cat"))));
+		
+		System.out.println("GRE...");
+		
+		System.out.println(m.innerProd(
+				origEmbed.getVectorRep(vocab.lookupWord("adroit")),
+				origEmbed.getVectorRep(vocab.lookupWord("prim"))));
+
+
+		System.out.println(m.innerProd(
+				origEmbed.getVectorRep(vocab.lookupWord("adroit")),
+				origEmbed.getVectorRep(vocab.lookupWord("unskillful"))));
+
+
+		System.out.println(m.innerProd(
+				origEmbed.getVectorRep(vocab.lookupWord("adroit")),
+				origEmbed.getVectorRep(vocab.lookupWord("correct"))));
+
+
+		System.out.println(m.innerProd(
+				origEmbed.getVectorRep(vocab.lookupWord("adroit")),
+				origEmbed.getVectorRep(vocab.lookupWord("strong"))));
+
+
+		System.out.println(m.innerProd(
+				origEmbed.getVectorRep(vocab.lookupWord("adroit")),
+				origEmbed.getVectorRep(vocab.lookupWord("apt"))));
+
+
 	}
 }
