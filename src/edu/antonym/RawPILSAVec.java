@@ -81,7 +81,7 @@ public class RawPILSAVec implements VectorEmbedding {
 	}
 
 	@Override
-	public double distance(int word1, int word2) {
+	public double similarity(int word1, int word2) {
 		return Util.cosineSimilarity(vectors.get(word1), vectors.get(word2));
 	}
 

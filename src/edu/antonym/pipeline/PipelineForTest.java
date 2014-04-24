@@ -6,7 +6,7 @@ import java.util.List;
 
 import edu.antonym.RawPILSAVec;
 import edu.antonym.ThesaurusImp;
-import edu.antonym.prototype.EmbeddingEvaluator;
+import edu.antonym.prototype.MetricEvaluator;
 import edu.antonym.prototype.Thesaurus;
 import edu.antonym.prototype.VectorEmbedding;
 import edu.antonym.prototype.Vocabulary;
@@ -34,7 +34,7 @@ public class PipelineForTest {
 		}
 		
 		VectorEmbedding embedding = new RawPILSAVec(false);
-		EmbeddingEvaluator evaluator = new TestCaseGRE();
+		MetricEvaluator evaluator = new TestCaseGRE();
 		evaluator.score(embedding);
 //		evaluator = new TestCase1();
 //		evaluator.score(embedding);

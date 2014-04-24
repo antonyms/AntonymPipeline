@@ -62,7 +62,7 @@ public class TextFileEmbedding implements VectorEmbedding {
 	}
 
 	@Override
-	public double distance(int word1, int word2) {
+	public double similarity(int word1, int word2) {
 		return Util.cosineSimilarity(embeddings[word1], embeddings[word2]);
 	}
 

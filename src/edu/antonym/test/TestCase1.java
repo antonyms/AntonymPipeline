@@ -11,9 +11,10 @@ import java.util.List;
 
 import edu.antonym.RawPILSAVec;
 import edu.antonym.Util;
-import edu.antonym.prototype.EmbeddingEvaluator;
+import edu.antonym.prototype.MetricEvaluator;
 import edu.antonym.prototype.VectorEmbedding;
 import edu.antonym.prototype.Vocabulary;
+import edu.antonym.prototype.WordMetric;
 
 /**
  * This is the test case for antonyms, ant0.txt and ant1.txt.
@@ -26,10 +27,10 @@ import edu.antonym.prototype.Vocabulary;
  * syn: 1
  * 
  */
-public class TestCase1 implements EmbeddingEvaluator{
+public class TestCase1 implements MetricEvaluator{
 	
 	@Override
-	public List<Float> score(VectorEmbedding pilsaVect) throws IOException {
+	public double score(WordMetric metric) throws IOException {
 		
 		String test_folder = "data/test-data/";
 		String result_folder = "data/result-data/";
@@ -39,11 +40,11 @@ public class TestCase1 implements EmbeddingEvaluator{
 		String ant1 = "ant1.txt";
 		
 		ArrayList<String> ants = new ArrayList<String>();
-		List<Float> acc = new ArrayList<Float>();
+		double acc =0.0d;
 		ants.add(ant0);
 		ants.add(ant1);		//add more file if needed
 		
-		Vocabulary vocab = pilsaVect.getVocab();
+		Vocabulary vocab = metric.getVocab();
 		int OOV = vocab.OOVindex();
 		
 		for(int i=0;i<ants.size();i++){
@@ -57,33 +58,33 @@ public class TestCase1 implements EmbeddingEvaluator{
 			String line = br.readLine();
 			while(line!=null){
 				String[] words = line.split("\\s+");
-				ArrayList<double[]> vectors = new ArrayList<double[]>();
+				ArrayList<Integer> wids = new ArrayList<Integer>();
 				for(int j=0;j<words.length;j++){
 					int wordID = vocab.lookupWord(words[j]);
 					if (wordID != OOV) {
-						vectors.add(pilsaVect.getVectorRep(wordID));
+						wids.add(wordID);
 						out.append(words[j]+" ");
 					}
 					else {
 						out.append("No such word: " + words[j]+ " ");
 					}
 				}	
-				if(vectors.size()==2 && words.length==2){
-					double cs = Util.cosineSimilarity(vectors.get(0), vectors.get(1));
+				if(wids.size()==2 && words.length==2){
+					double cs = metric.similarity(wids.get(0), wids.get(1));
 					ant_num++;
 					mse_ant+= Math.pow(-1-cs,2);
 					out.append(Double.toString(cs));
 				}
-				else if(vectors.size()==3){
-					double cs = Util.cosineSimilarity(vectors.get(0), vectors.get(1));
+				else if(wids.size()==3){
+					double cs = metric.similarity(wids.get(0), wids.get(1));
 					ant_num++;
 					mse_ant+= Math.pow(-1-cs,2);
 					out.append(Double.toString(cs)+" ");
-					cs = Util.cosineSimilarity(vectors.get(0), vectors.get(2));
+					cs =metric.similarity(wids.get(0), wids.get(2));
 					ant_num++;
 					mse_ant+= Math.pow(-1-cs,2);
 					out.append(Double.toString(cs)+" ");
-					cs = Util.cosineSimilarity(vectors.get(1), vectors.get(2));
+					cs = metric.similarity(wids.get(1), wids.get(2));
 					syn_num++;
 					mse_syn+= Math.pow(1-cs,2);
 					out.append(Double.toString(cs)+" ");
@@ -94,7 +95,7 @@ public class TestCase1 implements EmbeddingEvaluator{
 			}
 			mse_ant = mse_ant/ant_num;
 			mse_syn = mse_syn/syn_num;
-			acc.add((float) mse_ant);
+			acc-=mse_ant;
 			out.append("\n");
 			out.append("Mean squared error for antonym is: " + mse_ant +"\n");
 			System.out.println("[SIMPLE ANT TEST" + i + "] Mean squared error for antonym is: " + Double.toString(mse_ant));

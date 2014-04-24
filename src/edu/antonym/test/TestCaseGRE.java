@@ -11,9 +11,10 @@ import java.util.List;
 
 import edu.antonym.RawPILSAVec;
 import edu.antonym.Util;
-import edu.antonym.prototype.EmbeddingEvaluator;
+import edu.antonym.prototype.MetricEvaluator;
 import edu.antonym.prototype.VectorEmbedding;
 import edu.antonym.prototype.Vocabulary;
+import edu.antonym.prototype.WordMetric;
 
 /**
  * This is the test case for gre. 
@@ -25,10 +26,10 @@ import edu.antonym.prototype.Vocabulary;
  * Calculate the accuracy at last.
  * 
  */
-public class TestCaseGRE implements EmbeddingEvaluator {
+public class TestCaseGRE implements MetricEvaluator {
 	
 	@Override
-	public List<Float> score(VectorEmbedding pilsaVect) throws IOException {
+	public double score(WordMetric metric) throws IOException {
 		
 		String test_folder = "data/test-data/";
 		String result_folder = "data/result-data/";
@@ -37,11 +38,11 @@ public class TestCaseGRE implements EmbeddingEvaluator {
 		String test0 = "gre_testset.txt";
 		
 		ArrayList<String> gres = new ArrayList<String>();
-		List<Float> acc = new ArrayList<Float>();
+		double acc = 0.0d;
 		gres.add(test0);	//add more file if needed
 		
 		
-		Vocabulary vocab = pilsaVect.getVocab();
+		Vocabulary vocab = metric.getVocab();
 		int OOV = vocab.OOVindex();
 		
 		for(int i=0;i<gres.size();i++){
@@ -59,10 +60,9 @@ public class TestCaseGRE implements EmbeddingEvaluator {
 				String answer = line.substring(index_answer+3,line.length());
 				String[] choices = choice.split("\\s+");
 				
-				double[] target_vec = new double[300];
 				int wordID = vocab.lookupWord(target);
 				if (wordID != OOV) {
-					target_vec = pilsaVect.getVectorRep(wordID);
+					
 					out.append(target+" ");
 				}
 				else {
@@ -79,11 +79,10 @@ public class TestCaseGRE implements EmbeddingEvaluator {
 				String test_answer = null;
 				
 				for(int j=0;j<choices.length;j++){
-					wordID = vocab.lookupWord(choices[j]);
-					if (wordID != OOV) {
-						double[] vect = pilsaVect.getVectorRep(wordID);
+					int choiceID = vocab.lookupWord(choices[j]);
+					if (choiceID != OOV) {
 						out.append(choices[j]+" ");
-						double cs = Util.cosineSimilarity(target_vec, vect);
+						double cs = metric.similarity(wordID, choiceID);
 						double current_dist = Math.abs(-1-cs);
 						if(current_dist<closest){
 							closest = current_dist;
@@ -118,7 +117,7 @@ public class TestCaseGRE implements EmbeddingEvaluator {
 			if((accuracy_pos+accuracy_neg)!=0){
 				accuracy = ((double)accuracy_pos)/(double)(accuracy_pos+accuracy_neg);
 			}
-			acc.add((float) accuracy);
+			acc-=accuracy;
 			out.append("Final accuracy = "+ Double.toString(accuracy));
 			System.out.println("[GRE TEST] Final accuracy = " + Double.toString(accuracy));
 			br.close();

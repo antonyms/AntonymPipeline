@@ -224,7 +224,7 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue,WordMetri
 	}
 
 	@Override
-	public double distance(int word1, int word2) {
+	public double similarity(int word1, int word2) {
 		double[] d1 = orig.getVectorRep(word1);
 		double[] d2 = orig.getVectorRep(word2);
 		return innerProd(d1, d2);
