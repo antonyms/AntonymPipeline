@@ -1,1582 +1,1582 @@
-a la carte	prix_fixe	table_d'hote	
-abandon	pursue	support	cherish	adopt	restraint	favor	assert	retain	uphold	defend	self-restraint	keep	
-abbreviation	extension	augmentation	expansion	enlargement	increase	
-aberrant	normal	true	same	
-abeyance	operation	continuance	action	revival	renewal	continuation	activity	
-ability	weakness	inadequacy	clumsiness	paralysis	inability	impotence	ignorance	limitation	stupidity	incompetence	inanity	
-abnegation	acquiescence	yielding	surrender	admittance	
-abnormality	normalness	standard	sameness	normality	
-abolition	legalization	establishment	promotion	confirmation	institution	
-abomination	love	enjoyment	benefit	joy	esteem	blessing	beauty	right	delight	treat	
-aboriginal	foreign	
-abort	continue	carry_to_term	keep	
-above	deficient	inferior	under	below	fewer	less	
-abrasive	smooth	likeable	pleasant	pleasing	soft	
-abridgment	expansion	
-absence	presence	plenty	enough	abundance	existence	
-absolute	limited	submissive	yielding	dependent	restricted	accountable	partial	imperfect	circumscribed	compliant	conditional	flawed	tractable	complaisant	
-absorbent	impermeable	
-abstainer	drinker	
-absurd	sensible	logical	wise	rational	certain	reasonable	
-absurdity	reasonableness	reason	sense	logic	
-academic	ordinary	untaught	ignoramus	practical	simple	ignorant	plain	
-acceleration	deferral	hindrance	retardation	deceleration	slowing_down	
-accent	unimportance	minimize	disacknowledge	
-acceptance	disbelief	disagreement	dissent	refusal	
-access	egress	outlet	
-accessibility	unapproachability	
-accident	calculation	plan	intention	decree	necessity	decision	provision	intent	
-accidental	decided	designed	essential	intentional	premeditated	intended	planned	
-acclaim	jeering	disapprove	berate	disapproval	vituperate	censure	damn	beratement	denounce	dishonor	vituperation	criticism	
-accomplishment	defeat	nullification	failure	frustration	
-accord	argue	antagonism	disapprove	opposition	contest	disagree	dissension	oppose	withhold	refuse	disallow	challenge	deny	disagreement	question	refusal	denial	
-accretion	shrinkage	deduction	decrease	
-accuracy	mistake	falsehood	erroneousness	inaccuracy	
-accusation	praise	exculpation	
-accused	clear	acquitted	discharged	
-ace	ignoramus	clod	unskilled	inept	
-acerbity	mildness	mellowness	sweetness	kindness	
-ache	comfort	ease	health	relief	
-acid	sweet	basic	nice	bland	kind	
-acme	nadir	
-acquaintance	unfamiliarity	strangeness	ignorance	stranger	
-acrobat	clod	
-acting	permanent	
-active	inert	idle	inactive	immobile	abeyant	disinterested	indifferent	quiet	lazy	sluggish	quiescent	dormant	
-actor	audience	fan	
-acumen	ineptness	inability	obtuseness	denseness	ignorance	stupidity	
-acute	imperceptive	dull	not_serious	stupid	obtuse	blunt	slow	dense	unimportant	insensitive	
-ad-lib	deliberately	rehearsed	plan	written	write	rehearse	deliberate	prepare	prepared	planned	
-adamant	pliant	submissive	yielding	flexible	supple	soft	
-add	subtract	diminish	remove	withdraw	deduct	lessen	decrease	reduce	
-adept	incompetent	awkward	unskilled	clumsy	inept	
-adequacy	inadequacy	inadequateness	insufficiency	
-adhesive	inadhesive	unattachable	open	separated	loose	
-adieu	hello	greeting	
-adjournment	commencement	continuance	beginning	
-administrator	worker	employee	
-admiration	disgust	hate	disregard	contempt	disapproval	loathing	dislike	aversion	hatred	
-admirer	enemy	opponent	critic	
-adolescence	infancy	adulthood	
-adolescent	infant	adult	
-adornment	plainness	
-adulation	abuse	criticism	
-adultery	faithfulness	
-advance	hesitation	turn	stop	hesitate	take_back	yield	recession	withdrawal	behind	block	back_down	stagnation	retrogress	after	retreat	recede	failure	impediment	withdraw	halt	decrease	
-advantage	drawback	loss	restriction	obstacle	hindrance	handicap	disadvantage	
-advent	departure	end	
-adversary	assistant	ally	supporter	helper	backer	helpmate	friend	
-adversity	encouragement	help	good_luck	favor	aid	fortune	prosperity	
-advice	deception	misrepresentation	betrayal	falsehood	misinformation	deceit	lie	
-advisability	inadvisability	
-aerial	ground	
-aesthetic	ugly	unattractive	displeasing	
-affectation	simplicity	naturalness	
-affinity	dissimilarity	dislike	hatred	
-affirmative	dissenting	negative	
-affluent	insufficient	impoverished	penniless	wanting	suffering	destitute	poor	needy	lacking	
-affront	appease	pleasantry	please	satisfy	soothe	compliment	mollify	appeasement	placate	gratify	assuage	
-afterthought	forethought	
-aged	unripe	new	youthful	young	
-agility	clumsiness	stiffness	
-agnostic	believer	
-agony	comfort	peace	happiness	health	success	
-aide-de-camp	saboteur	
-ailment	health	
-aim	purposelessness	thoughtlessness	neglect	aimlessness	avoidance	
-alcoholic	non-alcoholic	
-alien	citizen	appropriate	native	settler	national	countryman	proper	akin	
-alienation	charm	friendliness	endearment	
-allegiance	sedition	treachery	treason	enmity	disloyalty	
-allusion	reality	
-almighty	lay	powerless	weak	lowly	insignificant	
-altitude	depth	
-altogether	partly	incompletely	
-alumnus	undergraduate	
-amazement	cool	preparation	coolness	composure	calmness	indifference	
-ambiguity	clearness	lucidity	certainty	explicitness	definiteness	clarity	
-ambivalence	certainty	decisiveness	
-amble	run	
-ambulatory	unchanging	stiff	steady	
-amendment	worsening	
-amity	hostility	dislike	discord	hatred	
-amour	hate	dislike	hatred	
-amusement	work	boredom	
-anarchy	order	rule	lawfulness	
-ancestor	descendant	
-angel	demon	fiend	devil	
-animosity	love	good_will	
-annexation	detachment	subtraction	
-annotation	blank	
-annoyance	enjoyment	comfort	joy	pleasure	happiness	delight	
-anterior	posterior	subsequent	ending	
-anticipation	sensation	amazement	wonder	doubt	astonishment	unreadiness	surprise	fear	
-anticlimax	climax	
-antiquarian	modern	new	young	
-antiseptic	unsanitary	polluted	unsterile	unclean	contaminated	
-antonym	synonym	
-anxiety	assurance	contentment	composure	calmness	peace	nonchalance	ease	happiness	tranquility	
-apathy	sensitivity	interest	feeling	concern	sympathy	care	warmth	passion	
-aplomb	gaucheness	
-apoplexy	consciousness	
-apostate	faithful	adherent	loyalist	
-appalling	satisfying	comforting	reassuring	encouraging	
-apparition	animate	being	
-appetizer	meal	
-applicant	manager	boss	
-apprentice	mentor	teacher	
-approaching	receding	remote	passing	
-approximation	difference	dissimilarity	
-archetype	atypical	
-arctic	tropic	
-aristocracy	commoners	plebites	proletariat	
-aristocrat	commoner	proletariat	plebian	
-arm's length	near	
-armistice	fight	dispute	war	
-arrogance	meekness	servility	humility	
-artifice	honor	candor	reality	frankness	ingenuousness	sincerity	artlessness	honesty	openness	incapacity	simplicity	inability	truthfulness	innocence	uncleverness	
-ascendency	subordination	
-ascension	descendancy	decline	declension	
-aside	middle	
-aspersion	mildness	calmness	happiness	kindness	
-assassin	victim	
-assemblage	scattering	dispersal	
-assets	liabilities	
-assumption	unexpected	doubt	naturalness	realness	reality	genuineness	
-astringent	mild	bland	
-atheism	religion	piety	belief	godliness	
-attendance	absence	
-attrition	building	strengthening	happiness	
-au revoir	hello	
-audible	inaudible	
-august	undignified	
-austerity	mildness	gentility	luxuriousness	meekness	extravagance	calmness	indulgence	blandness	elaborateness	spending	
-automatic	thought-out	manual	unnatural	stilted	by_hand	
-autonomy	dependence	
-autumn	spring	
-auxiliary	body	main	
-avant-garde	conservative	conventional	
-avocation	work	vocation	profession	
-awakening	sleeping	sleep	
-awkwardness	easiness	grace	handiness	artfulness	convenience	skill	cleverness	elegance	ease	dexterity	straightforwardness	
-babble	wisdom	be_quiet	sense	quiet	
-babe	adolescent	adult	
-baby	adolescent	adult	big	large	giant	
-baby tooth	permanent_tooth	
-babyhood	adulthood	adolescence	
-bachelor	spouse	husband	groom	
-back burner	front_burner	
-back matter	preliminaries	front_matter	
-backbone	weakness	ineptness	powerlessness	spinelessness	
-backside	front	
-backyard	front_yard	
-baffle	relieve	help	support	encourage	abet	clear_up	assist	aid	explain	enlighten	
-ban	allowance	allow	permit	permission	
-banality	nuance	original_saying	coinage	
-bane	advantage	good_luck	blessing	fortune	
-bang	slowly	whimper	tap	
-banishment	welcoming	inclusion	
-bankrupt	solvent	rich	wealthy	
-bankruptcy	richness	wealth	solvency	
-bantam	huge	big	large	
-barbarian	polite	humane	refined	nice	civilized	cultured	educated	sophisticate	sophisticated	kind	
-barbarism	praise	kindness	
-baroque	unadorned	undecorated	plain	
-barrenness	fecundity	fruitfulness	fertility	
-barricade	open	allow	opening	
-basement	attic	
-baseness	goodness	morality	virtue	
-bastard	legitimate	
-bastion	weakness	weak_spot	
-batch	individual	
-bathe	dirty	
-batten	unfasten	loosen	unfix	
-bawdy	decent	chaste	virginal	clean	proper	
-bear	evade	avoid	refuse	take	be_unproductive	dodge	throw_away	shun	
-beating	victory	win	triumph	
-begin	finish	conclude	consummate	complete	die	end	
-believing	uncertain	mistrustful	untrusting	doubtful	doubting	unsure	disbelieving	
-belle	eyesore	dog	
-belligerent	helping	cooperative	nice	kind	
-bellyache	appreciate	praise	be_happy	
-belonging	antipathy	insecurity	
-beloved	hate	hated	despised	disliked	
-bending	unbowed	unbent	straight	
-benediction	execration	anathema	
-benefactor	opponent	antagonist	opposer	
-best	relent	lose	least	worst	surrender	fewest	give_up	incorrect	not_right	
-betrothal	separation	divorce	
-beverage	food	victuals	
-bias	be_impartial	be_just	be_fair	justness	fairness	impartiality	
-bicker	concede	discuss	agree	
-binary	single	lone	singular	
-binge	saving	
-bisexual	homosexual	heterosexual	
-bit part	lead	
-black	Caucasian	clean	hopeful	happy	white	good	optimistic	
-blacklist	allow	accept	permit	welcome	ask_in	
-blackness	lightness	light	
-blah	exciting	full_of_life	spirited	
-blare	toot	
-blasphemy	religion	piety	reverence	religiousness	godliness	
-bleach	darken	yellow	blacken	
-blemish	decorate	beautify	decoration	ornament	embellishment	embellish	adorn	adornment	
-blindness	sight	sightedness	
-blond	brunet	brunette	
-bloodshed	peace	
-blooming	barren	declining	sterile	unfruitful	fading	
-blunder	correct	fix	restore	correction	accuracy	restitution	
-blush	blanch	pale	pallidity	paleness	whiteness	
-boarder	landlord	host	hostess	
-bolster	undermine	hinder	prevent	obstruct	not_support	
-bombast	plain_speaking	
-bondage	freedom	independence	
-borderline	exact	definite	certain	sure	
-bore	charm	amuse	please	interest	pleasure	excite	exciter	charmer	
-borrowing	loaning	
-bound	allowed	permitted	free	allow	unrestrict	permit	let_go	unbind	unobliged	unbounded	unrestricted	
-bourgeois	adventurous	untraditional	nonconforming	original	inspired	imaginative	
-boy	girl	
-bracing	debilitating	tiring	exhausting	
-brag	deprecate	be_quiet	be_modest	
-brain	body	dumdum	simpleton	physicality	dumbo	
-brake	accelerate	accelerator	
-brandish	not_show	
-brat	angel	
-bravado	cowardice	fearfulness	restraint	modesty	fear	
-brawn	slightness	frailness	skinniness	thinness	
-breakable	sturdy	durable	unbreakable	
-breakdown	mental_health	
-breaking	strong	union	enduring	
-breakup	reconciliation	
-brevity	lengthiness	longevity	permanence	
-bridal	divorce	
-bride	bridegroom	groom	
-brief	hide	lasting	lengthy	secret	long	enduring	long-lived	
-brightness	dullness	stupidity	darkness	
-brim	center	interior	middle	
-broach	not_mention	close_up	close	
-broad	narrow	small-minded	restricted	empty	close-minded	small	
-brotherhood	sisterhood	
-bubbly	dull	flat	still	listless	
-bull market	bear_market	
-bumpkin	sophisticate	
-buoyancy	depression	
-burn	cool	put_out	help	extinguish	subdue	stifle	aid	wet	quench	smother	
-burnish	dull	tarnish	
-business	unemployment	avocation	recreation	
-business expense	personal_expense	
-bustle	laziness	relaxation	
-butler	boss	master	
-buyer	marketer	seller	
-buying	selling	
-bygone	modern	new	recent	
-bystander	participant	
-cadaver	being	
-calm	agitated	stormy	passionate	terror	angry	excite	turbulence	irritate	roused	rouse	mad	frenzied	outrage	fierce	turbulent	agitation	restlessness	disquiet	wild	ruffled	inflame	violence	excited	rough	ruffle	excitable	worried	anger	furious	distract	agitate	violent	madness	worry	storminess	
-calming	upsetting	
-camaraderie	hate	dislike	bad_blood	
-cancer	benignity	
-canyon	mountain	
-capitalism	communism	
-capitulation	defending	fight	fighting	
-caprice	steadfastness	constant	dependability	constancy	
-captive	independent	free	uninterested	free_man	loose	disillusioned	
-captivity	liberty	freedom	independence	license	
-capture	lose	free	freeing	liberate	let_go	letting_go	liberalization	release	
-caravan	individual	
-carbon copy	opposite	
-carouse	be_sad	grieve	
-carp	let_go	ignore	
-carping	complimentary	forgiving	
-catalyst	preventer	blockage	prevention	block	
-catching	uncontagious	
-catharsis	dirtying	
-catholic	narrow	specific	narrow-minded	
-catty	nice	pleasant	kind	
-cautious	unobservant	incautious	unguarded	imprudent	careless	thoughtless	rash	hasty	uncareful	heedless	
-cavalier	reticent	humble	shy	
-ceiling	floor	minimum	
-celebrity	obscurity	nobody	
-celibacy	promiscuousness	
-central	minor	exterior	secondary	peripheral	outside	
-ceremonial	unceremonial	informal	
-cessation	commencement	beginning	start	
-characteristic	abnormality	abnormal	uncharacteristic	untypical	
-chic	dull	out-moded	old-fashioned	unfashionable	
-chivalry	cowardice	humility	humbleness	fear	
-choke	unconstrict	unblock	release	
-chosen	ignored	inferior	
-circumlocution	terseness	conciseness	directness	straightforwardness	
-civilian	military	
-civility	discourtesy	rudeness	
-civilization	barbarism	primitiveness	
-clangor	quiet	
-cleanliness	griminess	filth	dirtiness	
-clemency	no_mercy	
-clench	loosen	let_go	loose	release	
-clergyman	layperson	layman	
-clientele	ownership	management	
-clot	opening	thin	loose	
-clutter	tidy	neaten	order	tidiness	neatness	clean_up	array	
-coagulation	melting	thinning	opening	dissolution	
-cogency	weakness	impotence	ineffectiveness	invalidity	
-cognition	unawareness	ignorance	
-coherence	nonsense	incongruity	disagreement	unintelligibility	incoherence	
-cold	zealous	animated	warm	eager	excited	friendly	sympathetic	heat	ardent	interested	enthusiastic	warmth	hot	fervid	
-cold war	hot_war	
-collect	scatter	share	distribute	dispense	give	disseminate	divide	meed	compensate	disperse	
-collective	separate	divided	
-colonial	modern	new	
-colored	real	genuine	white	truthful	honest	
-coma	consciousness	wakefulness	alertness	
-combat	retreat	truce	compromise	peace	surrender	accord	run	agree	
-combustible	nonexplosive	noncombustible	
-come	retreat	recede	leave	depart	go	
-comedy	tragedy	
-commemorative	forgetful	neglecting	neglectful	dishonoring	
-commitment	broken_promise	refusal	denial	
-common sense	insanity	foolishness	impracticality	unreasonableness	
-commonplace	peculiar	uncommon	rare	unusual	exceptional	infrequent	
-communist	conservative	capitalist	fascist	
-comparative	unlike	unequal	
-complaisance	discontent	dissatisfaction	disagreeableness	antagonism	obstinancy	
-complex	direct	clear	obvious	apparent	homogeneous	evident	easy	uniform	simple	plain	discernible	
-complexity	obvious	simplicity	ease	clarity	directness	
-compress	uncondense	loosen	extend	fill	stretch	blow_up	increase	expand	uncompress	
-compulsion	liberty	free_will	freedom	independence	license	
-compulsive	easy-going	independent	free	controlled	
-compunction	no_remorse	meanness	defiance	
-concatenation	interruption	
-concept	being	concrete	
-condescension	friendliness	humility	inferiority	
-confines	open	
-confrontation	calm	peace	
-congratulations	condolences	criticism	commiseration	
-conqueror	loser	
-conquest	failure	yielding	loss	surrender	forfeit	
-conscientiousness	nonchalance	indifference	negligence	
-consensus	disagreement	
-conservation	squandering	waste	neglect	destruction	spending	
-conserve	destroy	waste	neglect	use	squander	spend	
-consolation	trouble	disturbance	upset	antagonism	annoyance	discouragement	agitation	
-console	depress	trouble	discourage	hurt	sadden	antagonize	upset	annoy	agitate	dispirit	disturb	
-consonant	disagreeing	inconsonant	incongruous	inconsistent	incompatible	incongruent	dissonant	
-consternation	calm	composure	happiness	tranquility	peacefulness	
-constriction	opening	
-construct	destroy	break	annihilate	ruin	dismantle	raze	demolish	
-contemplative	scornful	rejecting	shallow	negligent	unreflective	disdainful	disregarding	
-contemporary	old	succeeding	future	preceding	old-fashioned	past	
-content	unhappy	depressed	discontent	displease	wanting	upset	anger	dissatisfied	displeasure	disturbed	uncomfortableness	needy	unhappiness	disturb	disagreeable	
-continent	impure	incontinent	unchaste	
-contortion	beauty	smoothness	
-contraband	legal	allowed	permitted	lawful	legal_goods	
-contradiction	OK	concession	verification	corroboration	confirmation	approval	agreement	acceptance	reconcilement	
-contradictory	reconcilable	confirming	agreeing	reconciled	consistent	vouching	
-contumely	compliment	flattery	
-convalescent	sickly	regressing	faltering	worsening	weak	failing	
-coordinate	different	disintegrate	uncoordinate	dissimilar	mismatch	unequal	unrelate	unparallel	
-cordial	cool	unpleasant	inhospitable	hostile	indifferent	uncordial	unfriendly	disagreeable	unsociable	aloof	
-corporal	cerebral	spiritual	mental	intangible	immaterial	
-correlation	difference	disconnection	imbalance	disassociation	
-corrosive	contributing	supporting	fortifying	
-cosmetic	disfiguring	
-countermand	approve	allow	permit	sanction	
-covenant	break	disagreement	disagree	
-credence	faithlessness	distrust	
-criminal	law	legal	righteous	moral	police	correct	lawful	right	
-cripple	help	encourage	support	allow	enable	assist	aid	capacitate	strengthen	
-critique	compliment	praise	
-crouch	stretch	
-curative	harmful	hurting	painful	injurious	
-curiosity	indifference	normality	disinterest	
-curl	straighten	line	
-cutback	raise	increase	
-cynic	optimist	believer	
-damned	cherished	blessed	likeable	praiseworthy	favored	nice	loveable	welcome	
-damp	dry	dessicated	dried	arid	parched	
-daylight	sunset	night	evening	darkness	
-dazzle	bore	
-deadlock	agreement	breakthrough	
-deaf	hearing	attentive	conscious	aware	listening	willing	
-debacle	miracle	wonder	boon	
-debauchery	mercifulness	benevolence	unselfishness	giving	
-debility	vigor	strength	health	capability	ability	
-debtor	mortgagee	creditor	lender	
-decadence	humility	morality	
-decadent	moral	humble	good	benevolent	kind	
-deceitfulness	honesty	
-deciding	inconclusive	uncritical	trivial	secondary	unimportant	insignificant	
-defection	joining	
-defensive	undefensive	unwatchful	unwary	unprotective	
-delay	further	expedition	expedite	hasten	rush	hurry	speed	furtherance	dispatch	hastening	advance	
-delicious	unpleasant	distasteful	horrible	disagreeable	unsavory	
-delirium	balance	saneness	calmness	
-demise	birth	
-demolition	building	fixing	repair	production	construction	
-demonstration	hiding	concealment	
-demonstrative	cool	anticlimactic	cold	inconclusive	unemotional	restrained	mysterious	uncommunicative	confusing	inexpressive	undemonstrative	reserved	
-denizen	immigrant	foreigner	alien	
-depredation	goodness	miracle	wonder	construction	boon	
-derivative	invention	unborrowed	unique	source	root	inventive	original	
-designing	unplanned	not_clever	aboveboard	artless	honest	
-desperation	calm	collectedness	cautiousness	contentment	peace	security	confidence	peacefulness	
-destination	beginning	source	start	
-destiny	free_will	choice	volition	
-destroyer	author	restorer	creator	
-detection	mistake	failure	miss	
-detriment	profit	help	advantage	benefit	assistance	gain	
-deviate	stay	go_straight	keep	
-dialectic	irrational	illogical	
-diffusion	concentration	collection	
-diligence	inactivity	lethargy	laziness	neglect	indifference	
-dinky	huge	big	large	
-diplomacy	impoliteness	bad_manners	rudeness	
-directive	answer	
-disabled	able	healthy	
-disappearance	appearance	coming	arrival	entrance	
-disarmament	buildup	arming	
-disarming	despicable	disgusting	
-disbursement	deposit	hoard	savings	
-disconnect	hook	plug	connect	attach	link	hitch	couple	join	
-discredit	honor	trust	praise	believe	credit	commend	
-disharmony	compatibility	concord	agreement	harmony	accord	
-disinclination	enthusiasm	leaning	desire	willingness	incentive	inclination	bent	
-dismay	encouragement	assurance	encourage	make_happy	happiness	confidence	assure	
-dismount	mount	get_up	
-disparity	equality	likeness	similarity	sameness	alikeness	
-disrepute	honor	esteem	good_reputation	
-dissident	agreeing	yes-man	conforming	
-dissociation	connection	association	union	attachment	
-dissolve	unite	integrate	assemble	unmix	resolve	appear	concentrate	coagulate	continue	put_together	solidify	marry	
-distortion	perfection	clarity	beauty	
-doctrinaire	submissive	obedient	manageable	amenable	flexible	
-dollar	coin	change	
-domestic	office	industrial	alien	foreign	business	
-dovetail	disunite	disconnect	unlink	
-dowdy	modern	classy	fashionable	chic	
-downcast	glad	satisfied	heartened	happy	cheerful	elated	
-drama	comedy	
-drawl	clip	shorten	
-dreamland	real_world	wakefulness	
-dribble	pour	
-drudgery	snap	
-drunkard	teetotaler	nephalist	abstainer	ascetic	
-drunkenness	soberness	sobriety	temperance	abstinence	
-dud	success	
-dudgeon	teetotaler	
-dumbbell	genius	brain	
-durability	weakness	poorness	unreliability	impermanency	
-dusk	dawn	
-dye	fade	bleach	whiten	whitener	
-earnings	debt	losses	payout	bills	
-east	west	
-eatable	unpalatable	uneatable	undelicious	inedible	unwholesome	
-ebb	rise	increase	flow	incline	
-ebullience	disinterest	apathy	
-effectiveness	uselessness	ineffectiveness	unproductivity	
-effigy	entity	being	
-egocentric	altruistic	submissive	unassuming	humble	shy	selfless	reserved	timid	modest	
-elastic	unadaptable	unflexible	ungiving	tense	intolerant	inflexible	rigid	unyielding	inelastic	difficult	stiff	
-elective	required	
-elevated	lessened	dropped	decreased	undignified	immoral	base	lowered	lowly	
-embarrassment	comfort	confidence	
-embezzlement	compensation	return	pay	reimbursement	
-embodiment	exclusion	
-emigration	remaining	arriving	immigration	
-empathy	unfeelingness	misunderstanding	apathy	
-enlightened	uninformed	in_the_dark	perplexed	confused	confounded	misled	unenlightened	uneducated	
-ennui	vigor	excitement	enthusiasm	liveliness	energy	
-enormity	tininess	goodness	triviality	smallness	
-enterprise	passivity	idleness	inactivity	unemployment	passiveness	indolence	apathy	
-entourage	leader	
-entrant	fan	spectator	
-entreaty	command	answer	demand	
-entryway	exit	
-envy	contentedness	be_content	comfort	pleasure	good_will	confidence	be_confident	kindness	
-epic	short_story	
-equilibrium	imbalance	unevenness	
-equivalence	difference	dissimilarity	unlikeness	inequality	
-ersatz	real	genuine	
-erudition	ignorance	
-euphoria	sorrow	despair	woe	unhappiness	depression	misery	
-evasiveness	directness	
-even	different	agitated	lump	disparate	troubled	uneven	rough	partial	unequal	furrow	broken	break	unfair	roughen	biased	irregular	
-evening star	morning_star	
-excerpt	whole	insert	
-exclamation	silence	quiet	
-exemption	liability	accountability	answerability	responsibility	
-export	buy	import	
-express	indirect	uncertain	imprecise	indefinite	vague	obscure	slow	
-external	inside	intrinsic	internal	
-extrovert	introvert	
-eyeful	eyesore	
-fallow	developed	cultivated	active	used	
-falter	stay	remain	maintain	endure	continue	persist	
-famine	feast	plenty	supply	stores	
-fanaticism	unenthusiasm	impartiality	disinterest	
-far	near	close	
-fascism	democracy	
-fatality	birth	
-fathom	not_get	misunderstand	
-fatty	low-fat	lean	defatted	thin	
-feint	truth	
-feminine	masculine	
-fester	heal	get_better	dissipate	lessen	
-few	many	much	
-fiat	request	question	
-fiction	truth	non-fiction	
-fidget	relax	rest	be_still	
-figment	reality	
-filter	combine	collect	
-finder	loser	owner	stray	
-fine	stormy	reward	rainy	undiscriminating	awkward	poor	award	reimbursement	bad	rough	compensation	thick	uncouth	amends	dark	crude	reimburse	cloudy	compensate	unrefined	coarse	
-finery	rags	
-first name	last_name	surname	
-flaunt	hide	refrain	conceal	
-flex	straighten	extend	be_stiff	
-flightiness	responsibility	
-flirtation	faithfulness	
-floppy	erect	stiff	
-fly-by-night	reliable	responsible	trustworthy	reputable	dependable	
-foible	strength	
-foray	idleness	abstention	laziness	
-forbear	indulge	continue	use	involve	partake	
-foreman	worker	
-foreword	epilogue	postscript	addendum	
-forgetfulness	remembering	attentiveness	heed	mindfulness	
-formative	noninfluential	destructive	
-fraction	total	entirety	whole	
-free-for-all	calm	peace	harmony	
-free fall	upturn	
-frequency	irregularity	infrequency	uncommonness	
-friendship	hate	enmity	hatred	
-frown	approve	encourage	smile	grin	condone	
-frugality	wastefulness	lavishness	generosity	
-fruition	failure	unfulfillment	
-fulminate	support	compliment	praise	defend	flatter	
-fulmination	defense	support	compliment	praise	flattery	
-funny	usual	melancholy	standard	common	sad	normal	dramatic	unfunny	unamusing	serious	tragic	
-gaudy	calm	dull	simple	refined	plain	drab	sophisticated	modest	
-generality	detail	specific	specificity	
-genesis	finish	finale	conclusion	end	
-gentleman	boob	cad	sneak	
-get together	scatter	separate	distribute	divide	disperse	
-gladness	sorrow	woe	unhappiness	
-glimpse	stare	
-glossy	dull	muted	mate	drab	
-glut	need	repress	abstain	diet	moderate	insufficiency	lack	fast	suppress	reduce	want	
-gobble	nibble	
-godsend	setback	bombshell	bad_luck	bad_fortune	blow	
-good-for-nothing	hard_worker	
-good manners	discourtesy	bad_manners	rudeness	
-gospel	theory	hypothesis	
-governed	free	self-determined	autonomous	capricious	unruly	
-gradual	sudden	uneven	intermittent	infrequent	abrupt	
-graphic	implicit	vague	unclear	obscure	
-greed	benevolence	generosity	
-green thumb	brown_thumb	
-grievance	compliment	praise	flattery	
-guru	follower	student	
-gusto	reluctance	unenthusiasm	apathy	
-haggard	strong	fresh	unworn	healthy	hearty	
-hale	weak	unhealthy	sick	
-handful	mass	lot	
-handy	bumbling	unhandy	awkward	inconveniently	faraway	clumsy	bungling	useless	inconvenient	inept	hard	
-hangover	sobriety	
-hankering	hate	dislike	hatred	
-harassment	help	support	assistance	furtherance	facilitation	aid	
-hardy	invalid	tender	weak	unhealthy	sick	infirm	feeble	
-heartbreak	love	joy	happiness	
-heir	heiress	
-here	there	
-heroic	meek	afraid	cowardly	fearful	timid	
-heyday	low_point	
-high profile	low_profile	anonymity	
-homeless	settled	
-homicide	birth	
-hospitality	inhospitality	unsociableness	hostility	unfriendliness	unneighborliness	
-hotfoot	dawdle	
-household	industrial	commercial	business	
-hump	depression	
-hygiene	filth	dirtiness	foulness	
-hyperbole	understatement	
-hypnotic	exciting	inspiring	exhilarating	stimulating	inciteful	
-ill	profit	benefit	strong	sound	privilege	luck	blessing	healthy	happiness	good	well	fortune	prosperity	
-illiterate	learned	able	literate	taught	educated	
-imaginary	real	physical	genuine	existing	true	factual	substantial	
-imbroglio	peacemaking	agreement	
-immune	unprotected	unguarded	vulnerable	susceptible	
-imperative	free	inessential	optional	secondary	unnecessary	unrestrained	voluntary	discretionary	
-impossibility	practicality	feasibility	possibility	probability	
-inaction	action	
-incoming	outgoing	
-incurable	medicable	healable	operable	curable	
-incursion	retreat	
-inequity	equity	
-infection	sanitation	sterility	
-infinity	finiteness	bounds	definiteness	limitation	ending	
-inflation	deflation	shrinkage	compression	decrease	
-ingratitude	appreciation	consideration	gratitude	
-initial	final	last	closing	
-inquiring	incurious	disinterested	unskeptical	
-installment	whole	
-integral	accessory	supplemental	secondary	unnecessary	extrinsic	fractional	supplementary	partial	part	
-intensive	superficial	incomprehensive	surface	incomplete	
-intercept	help	abet	forward	
-international	national	local	
-invariable	varying	changing	variable	changeable	
-iron	weak	flexible	soft	
-irony	deference	consideration	
-jerky	smooth	fluid	
-juggle	be_honest	
-jut	recede	indent	
-knit	unknit	
-knowing	unaware	uncognizant	inexperienced	unknowing	
-laminate	strip	
-latch	unlock	unfasten	loosen	unlatch	loose	key	
-lateness	earliness	promptness	anticipation	
-lateral	centered	central	
-latter	earliest	preceding	former	
-learned person	ignoramus	
-leeward	stormy	windy	windward	downwind	
-left	right	
-left wing	right_wing	
-leisure	work	employment	
-lessor	lessee	
-letup	continuation	
-lifework	task	
-limp	strong	unbending	rigid	inflexible	stiff	hard	straight	
-liquid	condensed	unavailable	solid	firm	frozen	dense	hard	close	
-listener	talker	
-literal	figurative	exaggerated	loose	imaginative	
-long-suffering	impatient	
-lots	little	
-lumber	relieve	glide	unburden	
-lumbering	lithe	agile	gliding	
-lying	direct	frank	honest	
-maiden	final	latest	concluding	
-major	minor	little	small	unimportant	lesser	insignificant	
-makeshift	permanent	complete	finished	ready	
-malfunction	perfection	working	
-mandatory	optional	unnecessary	voluntary	
-marriage	divorce	
-married	single	unwedded	unmarried	
-martial	peaceful	civil	
-masculinity	femininity	
-materialism	spiritualism	
-maternity	paternity	
-matriculate	graduate	
-maximum	minimum	least	smallest	low	lowest	
-mayhem	calm	peace	harmony	
-menial	skilled	superior	talented	elevated	
-metamorphosis	stagnation	
-minuscule	huge	
-misstep	success	
-moneymaking	unprofitable	
-monologue	dialogue	
-more	fewer	less	
-mother	father	
-mourning	cheer	joy	happiness	
-muffle	blab	tell	let_loose	
-muss	fix_up	organization	order	organize	
-mythology	history	actuality	truth	reality	
-nay	yeah	
-neologism	time-worn	
-nerves	calm	coolness	
-neurotic	sane	balanced	adjusted	stable	
-nil	existent	existing	
-nominal	real	significant	important	true	actual	
-nonbeliever	believer	
-noncompliant	obedient	compliant	subservient	willing	
-nondescript	different	remarkable	uncommon	superior	illustrative	distinguished	describable	
-norm	extreme	exception	end	
-north	south	
-null	valuable	valid	effectual	worthwhile	worthy	effective	
-obituary	birth_announcement	
-ogre	humanitarian	philanthropist	
-old hand	greenhorn	amateur	rookie	
-oncoming	preceding	past	
-one	none	
-oppression	cheer	joy	happiness	delight	
-optimism	pessimism	hopelessness	doubt	gloom	
-or	neither	nor	without_choice	
-oral	written	printed	
-ordeal	pleasure	happiness	
-orderly	untidy	unmethodical	disorganized	misbehaving	unsystematic	bad	disorderly	complicated	unruly	
-organic	unnatural	inorganic	man-made	
-organism	inanimate	concept	
-orientation	mix-up	disorientation	
-ornamental	unembellished	plain	
-outskirts	center	downtown	
-overall	narrow	specific	incomplete	
-overlap	separate	divide	
-panache	spiritlessness	
-pander	refuse	deny	dissatisfy	
-paralytic	healthy	uncrippled	
-paraphrase	quote	quotation	
-parenthetical	consequential	basic	important	
-passenger	driver	
-passive	dynamic	lively	active	
-pathos	cheer	joy	happiness	glee	
-pave	dig_up	strip	
-payable	paid	settled	
-peevishness	affableness	
-penitent	happy	unrepentent	unashamed	
-penny-pinching	generous	
-perennial	changing	interrupted	intermittent	
-perishable	endurance	continuation	
-perpendicular	level	horizontal	
-plagiarism	originality	original	
-plaything	tool	
-pleasure principle	reality_principle	
-plow	fill	
-plurality	minority	
-plush	barren	destitute	poor	
-poetry	prose	
-poky	spacious	
-portable	cumbersome	clumsy	
-possible	unrealizable	ungettable	unattainable	unlikely	impossible	
-posterity	past	
-pragmatic	idealistic	unreasonable	
-pretend	tell_truth	be_honest	
-privacy	sociableness	publicness	publicity	
-probity	dishonesty	deceit	unfairness	
-prodigal	careful	poor	thrifty	modest	
-productivity	idleness	unproductivity	
-prowess	cowardice	weakness	inability	
-prowl	rush	
-pygmy	giant	
-racing	creeping	slow	crawling	
-rampage	calm	peace	be_calm	harmony	
-ravel	twist	put_together	
-recessive	prevailing	overbalancing	dominant	
-recipe	ingredient	
-recipient	donor	giver	
-reciprocal	independent	singular	
-reclining	sitting	standing	sitting_up	
-recount	repress	conceal	
-refutation	confirmation	
-regress	progress	grow	develop	
-repulse	please	soothe	enchantment	attract	enchant	attraction	
-repulsion	love	liking	attraction	
-retro	modern	
-retrospect	forethought	prophesy	prospect	
-revere	despise	
-royal	common	
-runaway	controlled	staying	stable	steady	
-sallow	colorful	flushed	dark	healthy	
-salvage	endanger	waste	lose	hurt	harm	injure	
-sanguine	unhappy	pallid	depressed	pessimistic	sallow	sad	pale	
-sectional	universal	widespread	general	
-secular	spiritual	holy	godly	religious	
-seek	answer	neglect	reply	find	
-self-assurance	diffidence	unsureness	
-self-indulgence	abstemiousness	restraint	
-sent	restrained	held_back	kept	
-sentence	accuse	charge	accusation	blame	
-serial	disordered	
-shadow	brightness	information	lighten	brighten	light	
-shoddy	nice	good	fine	
-silhouette	body	
-snug	cool	uncozy	cold	uncomfortable	
-sociable	snobbish	unkind	introverted	unfriendly	unsociable	
-somewhere	nowhere	
-sorority	fraternity	
-sow	dig	harvest	reap	
-spartan	opulent	luxurious	
-splice	separate	divide	sever	
-sprawl	straighten	
-spruce	untidy	unstylish	unkempt	
-stainless	stained	
-starving	satiated	full	
-stimulus	hindrance	discouragement	tranquilizer	
-stymie	help	encourage	assist	aid	
-subconscious	outer	conscious	consciousness	
-sweetness and light	unpleasantness	
-sybarite	puritan	
-taper	go_up	rise	increase	
-tapering	widening	
-technical	unmechanical	untechnical	
-theatrical	real	undramatic	untheatrical	comedic	
-theorem	fact	proof	
-toll road	freeway	
-tow	push	
-traction	slipperiness	
-transplant	save	preserve	
-underestimate	exaggerate	maximize	overestimate	
-underside	ceiling	topside	top	
-unemployed	occupied	employed	
-universe	locality	
-unmentionable	permissible	mentionable	
-unseen	open	visible	seen	
-uphill	easy	downhill	facile	
-uplifting	sad	
-uppercase	small_letter	lowercase_letter	lowercase	minuscule	
-utopia	hell	
-utopian	real	
-vanishing	appearance	materializing	
-variant	root	base	agreeing	same	similar	
-vest	disapprove	
-veto	ratify	approve	ratification	allowance	allow	permit	approval	permission	ok	sanction	
-waterproof	leaky	
-wayfaring	unmoving	
-whittle	increase	build	
-wholesale	partial	part	retail	
-wilt	rise	bloom	
-wishful thinking	reality	
-wobbly	unshaky	stable	steady	
-won	lost	defeated	beaten	
-worrying	happy	lighthearted	upbeat	cheerful	
-yea	no	nay	
-abase	honor	cherish	dignify	extol	exalt	respect	
-abduct	let_go	give_up	release	
-abhor	love	approve	desire	cherish	relish	enjoy	like	admire	adore	
-abolish	ratify	institute	support	promote	legalize	continue	establish	uphold	enact	confirm	
-abound	short	need	deficient	fail	lack	want	
-absolve	charge	impeach	convict	obligate	hold	incriminate	sentence	punish	bind	condemn	blame	
-accompany	desert	leave	withdraw	abandon	
-accomplish	fail	relinquish	nullify	not_finish	give_up	abandon	
-accrue	lose	decrease	
-actuate	stop	impede	
-adapt	dislocate	disorder	disarrange	unfit	disturb	
-administer	refuse	forego	deny	neglect	frustrate	withhold	mismanage	
-adulterate	cleanse	free	clean	clarify	purify	refine	filter	distill	
-aggrandize	depress	degrade	lower	humble	disgrace	belittle	debase	
-agonize	not_worry	
-ameliorate	worsen	
-anneal	soften	weaken	
-antedate	predate	
-apologize	defy	
-arbitrate	let_ride	
-arraign	free	let_go	exonerate	discharge	
-ascend	lower	decline	descend	go_down	
-ask	repudiate	insist	command	answer	reply	tell	disinvite	claim	ignore	
-attest	deny	
-awaken	hypnotize	deaden	go_to_sleep	
-back away	stay	move_forward	
-back off	go_forward	hold_one's_ground	back_up	stand_firm	
-bald	hairy	adorned	decorated	hirsute	
-bawl out	praise	
-bear on	be_immaterial	be_of_no_consequence	be_irrelevant	
-beatify	damn	curse	condemn	
-befriend	neglect	ignore	
-belie	prove	attest	be_honest	
-bequeath	take	
-betroth	separate	leave	divorce	
-bide	hurry	move	go	
-bisect	combine	join	
-blast off	drop	fall	
-bottle up	confide	reveal	tell	
-bring down	help	encourage	raise	aid	
-bring in	lose	decrease	
-broaden	narrow	decrease	restrict	
-buckle down	relax	be_lazy	ignore	
-callous	feeling	tender	nice	compassionate	sympathetic	kind	sensitive	
-capitulate	fight	defend	
-centralize	scatter	decentralize	disperse	
-chasten	help	encourage	embolden	animate	honor	cheer	comfort	assist	boost	aid	uplift	
-chip in	take_away	take	pilfer	
-codify	disorganize	unsystematize	
-collaborate	divorce	disagree	part	
-come back	leave	depart	go	
-come down	boost	improve	
-come in	leave	depart	exit	go	
-commemorate	neglect	dishonor	forget	
-commiserate	be_indifferent	turn_away	
-complicate	facilitate	disentangle	untangle	make_simple	ease	explain	
-comprise	need	except	fall_short	fail	exclude	lack	want	
-condescend	rise_above	
-congratulate	harp	criticize	commiserate	
-convalesce	deteriorate	
-copulate	abstain	refrain	
-corrode	help	fortify	aid	build	
-count on	not_expect	disbelieve	doubt	mistrust	distrust	
-count out	consider	figure_on	regard	include	
-culminate	open	commence	start	begin	
-cut short	continue	prolong	lengthen	
-dabble	take_seriously	
-de-emphasize	emphasize	
-debunk	prove	uphold	
-deepen	soften	quieten	lighten	fill	pale	
-deform	beautify	improve	
-defrost	freeze	
-delete	put_in	add	
-demote	upgrade	rate	promote	improve	
-denigrate	cherish	compliment	boost	praise	
-deplete	give	fill	increase	expand	augment	add	
-deploy	not_use	withhold	
-desiccate	moisturize	moisten	wet	
-dethrone	enthrone	crown	put_in_power	
-diagnose	misdiagnose	
-differentiate	leave	allow	connect	link	confuse	group	mix_up	associate	
-dig in	procrastinate	avoid	postpone	delay	
-dine	abstain	
-disaffect	content	please	make_happy	
-disavow	approve	vouch_for	sanction	agree	vow	
-discolor	color	brighten	
-discommode	please	make_happy	
-disfigure	decorate	beautify	ornament	adorn	
-dish out	take	
-disinherit	give	bequeath	
-disobey	obey	go_along	submit	conform	regard	oblige	
-dispel	garner	recall	gather	accumulate	collect	
-dispense with	take	accept	use	retain	regard	keep	
-disqualify	fit	allow	permit	qualify	capacitate	be_eligible	
-dissuade	incite	talk_into	persuade	
-dizzy	unconfused	clear	sensible	clear-thinking	clear-headed	smart	
-doll up	dress_down	
-donate	renege	keep	
-draw back	go_forward	start	forge	
-drop off	go_up	take_away	wake	rise	increase	awake	receive	
-drum up	repulse	turn_off	dissuade	
-eavesdrop	ignore	
-economize	throw_away	squander	spend	
-eke out	waste	use_up	
-electrify	dull	bore	
-elicit	repress	cover	hide	supress	keep	
-emancipate	hold	imprison	incarcerate	
-embark	stay	disembark	
-embezzle	give	return	reimburse	pay	compensate	
-enamor	hate	dislike	
-enervate	activate	animate	strengthen	liven	invigorate	energize	empower	
-enforce	overlook	disregard	forego	drop	neglect	give_up	abandon	forget	
-enmesh	leave_out	exclude	
-ensue	antecede	precede	
-estrange	unite	engage	marry	
-exacerbate	calm	help	soothe	comfort	aid	
-exclaim	be_quiet	
-exhume	bury	
-exist	die	
-explicate	complicate	mystify	confuse	cloud	obscure	tangle	
-fall for	repulse	
-fend	yield	surrender	
-fend for	neglect	ignore	
-finalize	open	start	introduce	begin	
-fireproof	waterproof	
-flabbergast	expect	
-foment	stop	discourage	dampen	cease	dissuade	
-fraternize	disagree	ignore	
-generalize	except	specifize	
-get across	miscommunicate	
-get at	lose	miss	pass	
-give in	hold_out	
-go far	fail	
-go under	accomplish	succeed	achieve	
-gravitate	retreat	run_away	
-hearten	depress	discourage	bring_down	dishearten	
-hie	go_slowly	amble	
-idolize	despise	
-imperil	save	guard	protect	
-impute	help	guard	defend	protect	
-ingratiate	disgust	deter	repel	
-interact	not_speak	
-intersperse	gather	collect	
-invade	leave_alone	yield	surrender	
-inveigh	praise	flatter	
-iron out	mess_up	make_worse	
-isolate	integrate	incorporate	mingle	join	include	
-keel over	straighten	stand	
-keep up	neglect	let_go	
-kick upstairs	kick_downstairs	demote	
-laden	unladen	unloaded	empty	light	
-lay up	help	heal	
-look out	disregard	neglect	ignore	
-machinate	leave_alone	
-mesmerize	disenchant	turn_off	
-misapprehend	understand	comprehend	apprehend	
-mislay	find	keep	
-modulate	leave_alone	
-monopolize	scatter	share	distribute	
-nauseate	please	soothe	
-nominate	pass_over	ignore	
-off	present	on	here	close	
-officiate	follow	
-orchestrate	disorganize	ignore	
-outlast	lose	fail	shoot	succumb	peter_out	fall_apart	
-owe	resolve	pay	settle	
-palpitate	be_still	
-patch up	bicker	argue	fight	disagree	
-pep up	discourage	wear	tire	
-perjure	certify	prove	attest	
-perpetrate	abstain	
-polish off	save	hoard	
-popularize	discredit	shun	
-predispose	discourage	dissuade	
-reciprocate	refuse	deny	
-reconsider	refuse	ignore	
-refrigerate	warm	heat	
-refute	ratify	prove	support	endorse	sanction	
-reinstate	let_go	fire	
-rely	doubt	be_independent	distrust	
-remunerate	charge	take	seize	withhold	
-replete	wanting	empty	needy	
-rid	get	
-secede	unite	combine	join	come_in	
-seem	be_real	
-shove off	arrive	come	
-shut	open	
-socialize	exclude	shun	
-specialize	broaden	
-stagnate	grow	strengthen	
-stow	waste	use	throw_overboard	
-subjugate	free	liberate	
-tantalize	repulse	disenchant	turn_off	
-tide over	hurt	hinder	
-transact	refuse	deny	
-unbuckle	buckle	fasten	
-unbutton	button	fasten	
-underwrite	refuse	reject	disapprove	invalidate	
-unleash	restrain	
-unsettle	balance	order	compose	settle	
-unzip	zip	fasten	close	
-vend	buy	
-vouch	reject	refute	deny	disavow	renounce	
-whet	dull	dampen	dishearten	blunt	
-a posteriori	a_priori	
-abashed	composed	reassured	emboldened	at_ease	proud	
-abominable	lovable	sweet	likeable	delightful	desirable	appealing	alluring	enjoyable	pleasant	wonderful	
-abortive	effectual	complete	successful	productive	fruitful	efficient	consummated	
-abroad	at_home	
-absentminded	alert	observant	
-absorbed	uninterested	distracted	disinterested	bored	indifferent	
-absorbing	irksome	boring	
-abusive	respectful	complimentary	kind	
-abysmal	infinite	low	
-acceptable	unwelcome	disturbing	unacceptable	unsatisfactory	disagreeable	
-accepted	unorthodox	questionable	unconventional	irregular	
-adrift	anchored	on_course	determined	tied_down	on_target	stable	purposeful	
-adulterous	pure	chaste	virginal	clean	
-advertised	suppressed	unannounced	forgotten	
-advised	ill-advised	
-aft	fore	
-aghast	unsurprised	
-aground	afloat	
-aired	concealed	secret	closed	undisclosed	stuffy	
-alienated	united	
-all-or-nothing	flexible	
-allegorical	not_representative	untypical	
-allowable	prohibited	impermissible	
-alphabetical	unalphabetical	
-altered	retained	sustained	held	preserved	maintained	fixed	continued	kept	
-amorphous	distinctive	definite	shapely	shaped	distinct	
-amused	depressed	bored	
-anecdotal	scientific	
-angelic	demonic	fiendish	unkind	devilish	
-angered	pacified	placated	
-angular	weighted	thick	fat	heavy	straight	
-announced	suppressed	hidden	unannounced	
-annoyed	gratified	pleased	
-anonymous	named	known	identified	
-answerable	unprovable	irrefutable	unaccountable	
-antipathetic	agreeable	friendly	sympathetic	
-antisocial	sociable	participating	friendly	fun-loving	
-applicable	inapplicable	unsuitable	inappropriate	
-appreciable	imperceptible	unappreciable	negligible	inconsiderable	unnoticed	
-appreciative	unappreciative	ungrateful	neglectful	ignorant	
-aquiline	straight	
-arable	infertile	
-archetypal	unique	atypical	
-arguable	untenable	certain	
-armored	unprotected	unarmored	breakable	weak	
-aromatic	acrid	bland	unsavory	
-assailable	safe	protected	secure	guarded	
-assertive	diffident	unconfident	shy	quiet	
-assorted	same	
-astonishing	expected	dull	boring	
-astronomical	small	insignificant	
-asunder	together	
-atheistic	God-fearing	believing	religious	
-athletic	unathletic	
-attachable	detachable._whole	inseparable	
-auspicious	unhappy	unfortunate	ominous	inauspicious	inopportune	unlucky	
-avoidable	inescapable	inevitable	
-awe-inspiring	ordinary	boring	unexciting	unimpressive	blah	
-axiomatic	uncertain	questionable	misunderstood	
-backed	discouraged	backless	opposed	
-bad-tempered	good-humored	affable	
-baffling	clear	comprehensible	
-balky	cooperative	
-banal	new	fresh	original	
-barbed	complimentary	flattering	
-barefoot	shod	
-baseless	based	
-bashful	unabashed	confident	unshy	
-beaming	unhappy	sullen	ugly	sad	frowning	
-bearable	unmanageable	unbearable	unendurable	intolerable	
-bearded	unhirsute	unbearded	
-beefy	tiny	slim	slight	weak	thin	frail	skinny	
-beggarly	luxurious	rich	wealthy	
-bereft	full	happy	
-best-selling	failing	
-bighearted	mean	
-blamable	blameless	innocent	inculpable	
-blanched	darkened	colored	
-blasphemous	respectful	pious	godly	reverent	religious	
-bleary	illuminated	clear	energized	lively	bright	invigorated	full_of_life	distinct	
-blind drunk	sober	
-blissful	unhappy	miserable	wretched	upset	sorrowful	grieving	
-bloodless	sanguine	feeling	flushed	blushing	caring	ruddy	rosy	sensitive	
-blue-blooded	bourgeois	common	lower-class	low	unrefined	
-blue-collar	white-collar	
-boisterous	silent	calm	restrained	quiet	
-bombastic	humble	restrained	quiet	reserved	
-bounded	free	unlimited	unbounded	loose	unconfined	
-brainless	smart	
-breakneck	extremely_slow	
-brokenhearted	happy	lighthearted	pleased	
-brotherly	unneighborly	uncompassionate	antagonistic	sisterly	unfriendly	sororal	uncompanionable	
-bulging	contracting	
-bumptious	uncertain	humble	modest	
-burdensome	unburdensome	helping	relieving	aiding	helpful	
-bushed	invigorated	
-cacophonous	quiet	
-calamitous	blessed	joyous	happy	comforting	fortunate	wonderful	favorable	
-calculable	incalculable	uncomputable	inestimable	
-captious	complimentary	commendatory	laudatory	praising	flattering	encouraging	
-carnivorous	vegetarian	
-catchy	dull	boring	ignorable	
-celebrated	inglorious	inexalted	obscure	unknown	plain	
-centrifugal	centripetal	
-chancy	safe	secure	tried	certain	not_dangerous	sure	
-changed	final	stabilized	permanent	unmodified	unchanged	stored	unvaried	placed	kept	
-charming	irritating	repulsing	repellent	frightening	repulsive	offensive	terrifying	
-childish	sensible	wise	mature	adult	serious	
-choosy	undemanding	unfussy	unfastidious	
-choppy	calm	smooth	
-chummy	unfriendly	unsociable	
-churlish	polite	gentle	nice	pleasant	
-circulating	motionless	stationary	still	
-circumstantial	direct	
-clad	unclad	
-clandestine	open	aboveboard	truthful	forthright	
-clannish	open	friendly	welcoming	
-clinical	passionate	feeling	subjective	
-cloistered	open	free	unsecluded	
-closed-minded	open-minded	
-closemouthed	open	talkative	chatty	
-cloudless	cloudy	
-cocky	uncertain	humble	tentative	shy	unsure	timid	modest	
-cogent	invalid	impotent	weak	ineffective	
-coherent	unintelligible	unrational	incomprehensible	disorganized	unsystematic	irrational	not_understandable	
-coiled	uncoiled	
-colloquial	stilted	formal	standard	correct	
-comical	solemn	sad	unfunny	grave	serious	tragic	
-commendable	poor	unworthy	blameworthy	
-commodious	squeezed	uncomfortable	cramped	confined	inconvenient	small	
-communicative	reticent	close-mouthed	uninformative	reserved	unfriendly	unsociable	
-complaining	enjoying	praising	appreciating	
-concave	distended	convex	
-conciliatory	stubborn	fighting	antagonistic	refusing	
-conducive	unconducive	unhelpful	unfavorable	discouraging	adverse	hindering	
-congested	clear	open	free	unclogged	unblocked	uncongested	uncrowded	
-congruent	unharmonious	incongruent	disagreeable	
-conspicuous	unremarkable	imperceptible	unnoticeable	hidden	concealed	secret	obscure	unknown	unimportant	unseen	inconspicuous	
-constipated	regular	
-contagious	noncommunicable	
-contemptuous	polite	respected	humble	shy	
-corpulent	slight	slender	thin	skinny	
-corrugated	smooth	flat	
-corrupting	purifying	
-countless	countable	limited	counted	calculable	measurable	numerable	numbered	
-courteous	rude	unmannerly	uncourteous	uncivil	bad-mannered	unrefined	discourteous	impolite	
-covetous	giving	benevolent	generous	
-crafty	naive	honest	unclever	
-credulous	suspicious	untrusting	suspecting	skeptical	
-creepy	unscary	normal	nice	pleasant	good	pleasing	
-crippled	walking	healthy	
-crotchety	happy	pleasant	cheerful	
-cuddly	despicable	disgusting	
-cursory	thorough	meticulous	complete	unhurried	perfect	painstaking	
-curvaceous	flat	
-cut-and-dried	vague	
-deathly	benign	animated	healthful	beginning	strengthening	life-giving	lively	blooming	harmless	healthy	blossoming	
-debatable	questionable	incontrovertible	uncontestable	certain	indubious	inarguable	undoubted	sure	
-decayed	flourishing	ripening	developing	growing	germinating	improving	
-decorative	ugly	
-dedicated	apathetic	lazy	
-deep-rooted	superficial	temporary	
-defiant	submissive	respectful	obedient	subordinating	submitting	acquiescent	
-defiled	pure	hallowed	cleansed	clean	sanctified	purified	honorable	
-deflated	inflated	
-delirious	unhappy	sane	unexcited	balanced	collected	normal	
-demonstrable	unverifiable	distorted	doubtful	vague	obscure	undemonstrable	
-deserted	populated	busy	populous	crowded	
-deserved	undue	inordinate	excessive	
-diabolic	moral	gentle	nice	kind	
-diplomatic	rude	artless	tactless	impolite	
-disadvantaged	prosperous	rich	wealthy	privileged	
-disadvantageous	well-timed	convenient	advantageous	helpful	
-discarded	up-to-date	worthwhile	kept	
-discontinuous	ruckus	antagonism	incongruity	connected	clashing	dissension	dissonance	discrepancy	enmity	collision	lack_of_concord	disharmony	continuous	static	inharmony	spat	dispute	discord_[n1]_conflict	fuss	opposition	friction	dissent	disagreement_animosity	incompatibility	row	difference	mischief	hassle	antipathy	discordance	scene	split	hostility	rancor	clash	polarization	unbroken	wrangling;_concept_388_'Ant._accord	dissidence	division	disaccord	disunity	contiguous	cooperation	harmony	regular	agreement	contention	variance	rupture	peace	disunion	strife	
-discovered	lost	hidden	unfound	
-discrete	joined	attached	combined	
-discriminatory	impartial	
-disenchanted	encouraged	enchanted	
-disgraced	in_favor	honored	restored	
-disgruntled	satisfied	contented	uncritical	happy	pleased	
-disgusted	attracted	happy	desirous	pleased	delighted	
-disheveled	orderly	tidy	ordered	neat	unwrinkled	
-disinclined	leaning	enthusiastic	inclined	desirous	willing	disposed	bent	
-disloyal	loyal	faithful	trustworthy	true	
-disobedient	obedient	submitting	nice	accepting	behaving	observant	
-disobliging	polite	mannerly	agreeable	mannered	cooperative	civil	accommodating	courteous	
-dispensable	irreplaceable	indispensable	useful	necessary	needed	
-disproportionate	balanced	even	equal	proportionate	
-disruptive	settling	well-behaved	soothing	calming	disciplined	
-distrustful	faithful	believing	trusting	trustful	unsuspecting	certain	assured	
-divisible	inseparable	indivisible	
-doddering	youthful	agile	young	
-dolorous	cheery	hopeful	happy	
-doting	neglect	ignorance	negligence	
-drowsy	energized	lively	alert	awake	
-dulled	fresh	brightened	
-dusty	clear	clean	
-easygoing	agitated	critical	hyped	nervous	upset	worried	demanding	intolerant	strict	hurried	
-economical	careless	wasteful	uncareful	expensive	uneconomical	unreasonable	
-effortless	demanding	labored	complicated	difficult	hard	effortful	
-egregious	slight	minor	secondary	little	
-eligible	unsuited	ineligible	unfit	unworthy	unsuitable	inappropriate	improper	
-elusive	inviting	encountering	facing	attracting	confronting	enticing	
-embarrassing	unshameful	comfortable	
-emergent	declining	dependent	
-enabling	disabling	
-enamored	hated	disliked	
-enchanting	disgust	disenchanting	repellent	repulsive	bothering	
-endurable	tiring	unendurable	intolerable	changeable	
-enlarged	shrunken	contracted	reduced	
-enviable	unenviable	undesirable	disadvantaged	unfavored	unlucky	undesired	
-errant	righteous	correct	
-erroneous	valid	correct	true	right	
-evasive	direct	forthright	honest	ready	straightforward	straight	
-every	none	
-excusable	inexcusable	blameable	unforgivable	unallowable	unjustifiable	
-expeditious	retarded	slow	pokey	
-expressionless	animated	demonstrative	expressive	
-exultant	unhappy	discouraged	depressed	sad	sorrowful	
-fabled	unheard_of	unknown	
-fallen	honored	lauded	honorable	
-farfetched	realistic	plausible	likely	believable	
-farsighted	nearsighted	unwise	rash	myopic	shortsighted	
-fatherly	motherly	maternally	
-febrile	frigid	cold	freezing	
-feckless	effectual	responsible	competent	strong	useful	purposeful	efficient	effective	
-fecund	sterile	unproductive	impotent	unfruitful	infertile	
-feigned	real	sincere	genuine	
-feverish	easy-going	cool	content	calm	chilled	unexcited	cold	collected	chilly	freezing	
-fibrous	nonfibrous	
-fidgety	resting	relaxed	unmoving	still	restful	quiet	
-firsthand	indirect	impersonal	hearsay	
-flatulent	unpretentious	brief	
-flippant	respectful	serious	reverent	courteous	
-flirtatious	cool	unprovocative	shy	modest	
-fooling	seriousness	
-frustrated	fulfilled	encourage	stimulated	uplifted	inspirited	
-full-blown	partial	
-full-bodied	weak	
-full-scale	incomprehensive	partial	incomplete	
-fulsome	sincere	reasonable	
-fussy	undemanding	uncritical	unfussy	
-gabby	close-mouthed	secretive	quiet	
-gentlemanly	unbecoming	rude	
-gifted	unintelligent	dull	untalented	incapable	inept	
-gnarled	untwisted	uncurled	unbent	straight	
-graceless	charming	dexterous	elegant	beautiful	graceful	sophisticated	
-grammatical	solecistic	ungrammatical	
-granted	unaccepted	
-gratis	expensive	costly	
-guileless	tricky	guileful	deceitful	cunning	crafty	artful	clever	dishonest	
-guiltless	immoral	guilty	blameful	wrong	sinful	corrupt	
-gullible	unbelieving	suspicious	untrusting	astute	wise	knowledgeable	discerning	perceptive	
-half-hearted	enthusiastic	
-halfhearted	enthusiastic	warm	desirous	whole-hearted	interested	
-halfway	total	wholly	complete	whole	totally	completely	
-hapless	lucky	fortuitous	well-off	fortunate	
-hard-to-please	undemanding	
-hardworking	lazy	
-headed	disembarked	stopping	landed	
-heavyhearted	lighthearted	cheerful	
-helter-skelter	carefully	methodical	organized	systematic	straight	
-high-pitched	low-pitched	
-historic	unremarkable	unimportant	
-hoarse	smooth	soothing	soft	
-homologous	dissimilar	unrelated	heterologous	
-huffy	joyful	happy	delighted	cheerful	
-ice-cold	warm	hot	burning_hot	
-icky	nice	good	pleasing	
-ill-defined	sharp	well-defined	
-ill at ease	content	at_ease	comfortable	
-illegible	understandable	legible	decipherable	readible	
-immemorial	new	current	memorable	lately	young	recent	
-impassable	traveled	open	passable	
-impecunious	rich	wealthy	moneyed	
-impolitic	discreet	cautious	politic	wise	careful	
-imported	exported	
-impracticable	practicable	
-impressionable	unresponsive	insusceptible	obstinate	stubborn	unimpressionable	
-improved	damaged	injured	worsened	
-inaccessible	reachable	approachable	accessible	
-inalienable	transitory	impermanent	alienable	acquired	changeable	
-inapt	suitable	competent	apt	happy	suited	
-inattentive	looking	noticing	attentive	heedful	observant	
-incensed	joyous	happy	pleased	cheerful	
-included	left_out	excluded	rejected	
-incognizant	cognizant	
-inconceivable	fathomable	conceivable	imaginable	believable	reasonable	
-incorrigible	obedient	reformable	manageable	nice	good	
-incredulous	believing	convinced	credulous	
-indefensible	defensible	justified	justifiable	excusable	
-indelible	delible	destructible	impermanent	erasable	
-indissoluble	dissoluble	
-ineffable	utterable	definable	describable	
-inefficient	expert	competent	able	useful	capable	efficient	
-inexplicable	explainable	intelligible	explicable	comprehendible	
-inflammatory	mitigating	calming	pleasing	placating	tranquilizing	
-innocuous	harmful	damaging	hurtful	destructive	bad	injurious	
-instrumental	unhelpful	useless	
-intoxicating	sobering	saddening	
-invaluable	worthless	
-invidious	lovable	likeable	delightful	
-inward	outward	public	outgoing	
-irrelevant	appropriate	pertinent	necessary	relevant	related	
-jaunty	depressed	lethargic	lifeless	
-kind-hearted	hard-hearted	
-kindhearted	unsympathetic	nasty	uncompassionate	
-knavish	virtuous	noble	honorable	
-lacy	thick	heavy	
-leafy	leafless	
-lengthwise	crosswise	side_to_side	across	
-level-headed	excitable	
-licit	illicit	forbidden	
-lionhearted	fearful	
-lissome	portly	
-literary	illiterate	
-lonesome	unlonesome	loved	befriended	
-lurid	humble	clean	modest	
-malformed	undistorted	regular	perfect	shapely	
-mangy	neat	kempt	
-masked	unmasked	
-matched	different	unlike	mismatched	unequal	
-matted	unknotted	untangled	
-measly	sufficient	abundant	satisfactory	plenty	proficient	
-meaty	thin	insignificant	
-medieval	modern	
-mincing	unpretentious	extroverted	unaffected	
-missed	hated	located	remembered	disliked	unwanted	found	
-mossy	modern	new	dry	fresh	prickly	bare	
-mounted	unhorsed	dismounted	afoot	
-muffled	clear	unblocked	
-multiplied	decreased	reduced	divided	
-murderous	easy	pleasant	facile	
-nerveless	brave	nervous	nervy	disconcerted	unafraid	courageous	
-nightly	daily	
-noncommittal	decisive	committal	judgemental	definite	willing	
-noteworthy	ordinary	inconsequential	common	unimportant	insignificant	
-odorless	smelly	odorous	aromatic	perfumed	scented	
-off-key	concordant	on-key	harmonious	
-off-line	on-line	
-officious	shy	timid	modest	
-offshore	onshore	
-older	younger	
-open-ended	fixed	
-outdoor	indoor	
-outrageous	magnificent	sensible	acceptable	delightful	mild	good	pleasing	reasonable	wonderful	
-over-the-top	understated	
-overt	hidden	concealed	secret	private	
-patchy	continuous	regular	unspotted	consistent	
-pending	unlikely	improbable	
-pent-up	released	public	
-personable	unfriendly	disagreeable	unsociable	
-persuadable	dissuadable	
-pervasive	limited	narrow	light	
-pervious	impervious	
-pesky	pleasing	untroubling	
-platonic	physical	
-pleasurable	unpleasant	disagreeable	
-pornographic	moral	clean	
-precocious	stupid	
-predisposed	disagreeing	unwilling	disinclined	unprepared	
-preparatory	auxiliary	supplementary	
-prepossessing	ugly	unattractive	repulsive	homely	unprepossessing	
-prescribed	unprescribed	
-prestigious	humble	unprestigious	unimportant	modest	insignificant	
-prohibitive	unlimited	unrestrictive	reasonable	
-promiscuous	cool	chaste	frigid	cold	
-psychedelic	normal	
-pudgy	slight	thin	skinny	
-punished	released	cleared	exonerated	
-putative	real	proven	true	
-quasi	total	entire	whole	
-quotidian	exciting	unusual	
-rampant	limited	restrained	controlled	checked	
-ranked	strewn	disordered	disarranged	
-rarefied	commonplace	
-realized	unsubstantiated	unfinished	unfulfilled	incomplete	
-regimented	free	varied	
-relieved	distraught	worried	sad	
-remorseless	remorseful	sad	sorry	guilty	ashamed	
-resourceful	unresourceful	dull	uncreative	unimaginative	
-respective	indefinite	
-rested	tired	fatigued	wearied	
-retired	active	working	employed	
-rewarding	upsetting	troubling	
-rolled	unrolled	spread	straight	
-rough-and-ready	sophisticated	
-rudimentary	derivative	nonessential	additional	extra	developed	advanced	
-sadistic	humane	merciful	kind	
-salubrious	insalubrious	unwholesome	unhealthy	
-saved	squandered	lost_destroyed	wasted	ruined	spent	
-self-explanatory	impenetrable	
-sexual	asexual	nonsexual	
-smoky	clear	clean	unpolluted	
-southern	northern	
-spellbound	disenchanted	disinterested	
-spoken	heard	written	
-spotty	constant	regular	unbroken	
-stocky	lanky	thin	underweight	tall	skinny	
-stringent	inexact	tolerant	flexible	
-suburban	urban	metropolitan	cosmopolitan	
-sunburned	pallid	white-skinned	pale	
-surprised	calm	poised	aware	unsurprised	
-svelte	thick	fat	corpulent	chubby	
-tacit	explicit	express	
-taxable	free	exempt	deductible	tax-exempt	
-teachable	stupid	slow	unskilled	
-thankful	unthankful	critical	thankless	unappreciative	ungrateful	
-theological	irreligious	
-tiresome	easy	nice	fun	stimulating	facile	
-top-heavy	balanced	ballasted	stabilized	equalized	even	
-touchable	untouchable	
-touchy-feely	undemonstrative	
-tough-minded	weak-willed	
-tropical	polar	frigid	arctic	freezing	
-trusted	questionable	untrustworthy	unreliable	shady	false	fake	
-turbid	clear	
-ulterior	overt	expressed	known	public	
-unadvised	advised	wise	
-unanswered	shared	decided	reciprocated	mutual	responded_to	settled	determined	requited	certain	returned	answered	
-unappealing	appealing	
-unbeatable	beatable	
-uncharitable	charitable	generous	
-undamaged	damaged	injured	hurt	impaired	harmed	
-undefeated	defeated	beaten	losing	winless	
-undefended	safe	protected	secure	guarded	defended	
-undefined	clear	limited	bounded	definite	finite	sure	
-underdone	overdone	burnt	well-done	
-underway	stopped	halted	
-undisputed	doubtful	dubious	disputable	disputed	
-unfamiliar	usual	familiar	versed	knowing	experienced	known	
-unfathomed	possible	
-unfeigned	insincere	pretended	
-unfilled	full	overflowing	filled	
-unflattering	becoming	flattering	adultory	
-unflinching	afraid	unsteady	wavering	spineless	weak	
-ungentlemanly	polite	gentlemanly	refined	
-unhealthful	wholesome	salubrious	healthful	salutary	healthy	
-unheard	heard	audible	noisy	talkative	
-unheeded	thought-out	noticed	contemplated	regarded	heeded	considered	
-unheralded	expected	recognized	announced	celebrated	predicted	glorified	
-unholy	sensible	pious	holy	godly	reasonable	religious	
-unilateral	multilateral	many-sided	bilateral	
-unimposing	significant	important	arrogant	flashy	ostentatious	
-unimproved	improved	
-uninhabitable	livable	inhabitable	
-unladylike	ladylike	refined	
-unlisted	listed	registered	recorded	public	
-unmade	made	
-unofficial	authorized	confirmed	official	authoritative	
-unperturbed	anxious	upset	worried	perturbed	
-unprecedented	usual	unremarkable	unexceptional	known	
-unpublished	printed	published	
-unresolved	resolved	solved	settled	definite	certain	sure	
-unscathed	injured	hurt	harmed	
-unsightly	sightly	beautiful	nice	pleasing	pretty	
-unsolicited	asked	requested	solicited	invited	
-untalkative	talkative	
-upside-down	right-side-up	
-upward	downward	
-vengeful	forgiving	liking	pardoning	condoning	
-vernal	autumnal	
-washable	nonwashable	
-watered	dry	thirsty	
-well-advised	unwise	
-well-heeled	poor	
-wide-open	shut	
-wonted	uncommon	unaccustomed	unfamiliar	unused	
-wry	straightforward	straight	
-yonder	near	nearby	close	
-aboard	off	not_on	
-above all	lastly	
-abundantly	meanly	poorly	meagerly	
-adequately	insufficiently	inadequately	unequally	unsatisfactorily	unsuitably	
-afterwards	beforehand	
-agreeably	dissenting	unpleasantly	unwillingly	
-aloud	silently	inaudibly	
-angrily	softly	gently	calmly	
-assuredly	questionably	doubtfully	
-awkwardly	gracefully	adroitly	skillfully	
-between	away	separate	away_from	outside	around	
-blindly	reasonably	sensibly	purposely	carefully	considerately	cautiously	
-boldly	fearfully	cowardly	cautiously	
-bravely	timidly	fearfully	
-brightly	sadly	dully	darkly	miserably	
-briskly	listlessly	slowly	sluggishly	
-brutally	kindly	humanely	nicely	gently	
-busily	inactively	quietly	idly	
-centrally	peripherally	
-comfortably	insufficiently	uncomfortably	inadequately	poorly	
-commonly	uncommonly	unusually	
-confidentially	openly	familiarly	commonly	publicly	
-considerably	unappreciably	insignificantly	unremarkably	slightly	little	
-correctly	wrongly	mistakenly	incorrectly	flawed	inaccurately	
-dangerously	carefully	on_guard	safely	securely	
-deeply	slightly	little	incompletely	
-defensively	offensively	
-delicately	uncarefully	indelicately	strongly	
-designedly	unknowingly	unintentionally	innocently	unwittingly	unconsciously	
-doubtless	doubted	uncertain	questionable	doubtedly	unlikely	dubious	improbably	
-duly	unduly	improperly	unsuitably	
-eminently	unimportantly	unremarkably	
-emphatically	hesitantly	indistinctly	indecisively	
-eternally	transiently	briefly	temporarily	changeably	
-evenly	unjustly	irregularly	roughly	unfairly	inequitably	unevenly	
-evidently	vaguely	mistakably	questionably	doubtfully	obscurely	
-exclusively	unlimited	unrestricted	
-falsely	honestly	truthfully	
-forcibly	weakly	noncompulsorily	
-fortunately	unluckily	unfortunately	sadly	unhappily	
-frankly	secretively	deviously	insincerely	dishonestly	
-gaily	solemnly	sadly	unhappily	
-gladly	sadly	unhappily	
-hopefully	gloomily	doubtfully	hopelessly	
-humbly	haughtily	boastfully	proudly	
-incidentally	purposely	
-independently	dependently	
-indirectly	directly	primarily	immediately	
-legally	illicitly	illegally	unlawfully	
-literally	figuratively	loosely	
-locally	distantly	nationally	widespread	
-luckily	unluckily	unhappily	
-materially	slightly	unsubstantially	immaterially	
-maybe	surely	definitely	certainly	
-mildly	harshly	roughly	violently	
-morally	wrongly	dishonorably	worthlessly	
-naturally	affectedly	unnaturally	
-often	infrequently	seldom	rarely	
-originally	secondarily	
-overly	insufficiently	inadequately	
-pompously	humbly	modestly	quietly	
-possibly	impossibly	unlikely	
-respectfully	rudely	disrespectfully	impudently	
-single-handedly	jointly	
-soberly	hilariously	excitedly	cheerfully	intoxicatedly	drunkenly	
-someday	never	
-somehow	no_way	
-subjectively	objectively	
-summarily	slowly	
-unawares	consciously	knowingly	
-unfavorably	approvingly	favorably	agreeably	positively	
-unnecessarily	necessarily	indispensably	unavoidably	
-unselfishly	egotistically	
-verbally	written	
-voluntarily	involuntarily	obligatory	forced	
+a_la_carte	prix_fixe	table_d'hote
+abandon	pursue	support	cherish	adopt	restraint	favor	assert	retain	uphold	defend	self-restraint	keep
+abbreviation	extension	augmentation	expansion	enlargement	increase
+aberrant	normal	true	same
+abeyance	operation	continuance	action	revival	renewal	continuation	activity
+ability	weakness	inadequacy	clumsiness	paralysis	inability	impotence	ignorance	limitation	stupidity	incompetence	inanity
+abnegation	acquiescence	yielding	surrender	admittance
+abnormality	normalness	standard	sameness	normality
+abolition	legalization	establishment	promotion	confirmation	institution
+abomination	love	enjoyment	benefit	joy	esteem	blessing	beauty	right	delight	treat
+aboriginal	foreign
+abort	continue	carry_to_term	keep
+above	deficient	inferior	under	below	fewer	less
+abrasive	smooth	likeable	pleasant	pleasing	soft
+abridgment	expansion
+absence	presence	plenty	enough	abundance	existence
+absolute	limited	submissive	yielding	dependent	restricted	accountable	partial	imperfect	circumscribed	compliant	conditional	flawed	tractable	complaisant
+absorbent	impermeable
+abstainer	drinker
+absurd	sensible	logical	wise	rational	certain	reasonable
+absurdity	reasonableness	reason	sense	logic
+academic	ordinary	untaught	ignoramus	practical	simple	ignorant	plain
+acceleration	deferral	hindrance	retardation	deceleration	slowing_down
+accent	unimportance	minimize	disacknowledge
+acceptance	disbelief	disagreement	dissent	refusal
+access	egress	outlet
+accessibility	unapproachability
+accident	calculation	plan	intention	decree	necessity	decision	provision	intent
+accidental	decided	designed	essential	intentional	premeditated	intended	planned
+acclaim	jeering	disapprove	berate	disapproval	vituperate	censure	damn	beratement	denounce	dishonor	vituperation	criticism
+accomplishment	defeat	nullification	failure	frustration
+accord	argue	antagonism	disapprove	opposition	contest	disagree	dissension	oppose	withhold	refuse	disallow	challenge	deny	disagreement	question	refusal	denial
+accretion	shrinkage	deduction	decrease
+accuracy	mistake	falsehood	erroneousness	inaccuracy
+accusation	praise	exculpation
+accused	clear	acquitted	discharged
+ace	ignoramus	clod	unskilled	inept
+acerbity	mildness	mellowness	sweetness	kindness
+ache	comfort	ease	health	relief
+acid	sweet	basic	nice	bland	kind
+acme	nadir
+acquaintance	unfamiliarity	strangeness	ignorance	stranger
+acrobat	clod
+acting	permanent
+active	inert	idle	inactive	immobile	abeyant	disinterested	indifferent	quiet	lazy	sluggish	quiescent	dormant
+actor	audience	fan
+acumen	ineptness	inability	obtuseness	denseness	ignorance	stupidity
+acute	imperceptive	dull	not_serious	stupid	obtuse	blunt	slow	dense	unimportant	insensitive
+ad-lib	deliberately	rehearsed	plan	written	write	rehearse	deliberate	prepare	prepared	planned
+adamant	pliant	submissive	yielding	flexible	supple	soft
+add	subtract	diminish	remove	withdraw	deduct	lessen	decrease	reduce
+adept	incompetent	awkward	unskilled	clumsy	inept
+adequacy	inadequacy	inadequateness	insufficiency
+adhesive	inadhesive	unattachable	open	separated	loose
+adieu	hello	greeting
+adjournment	commencement	continuance	beginning
+administrator	worker	employee
+admiration	disgust	hate	disregard	contempt	disapproval	loathing	dislike	aversion	hatred
+admirer	enemy	opponent	critic
+adolescence	infancy	adulthood
+adolescent	infant	adult
+adornment	plainness
+adulation	abuse	criticism
+adultery	faithfulness
+advance	hesitation	turn	stop	hesitate	take_back	yield	recession	withdrawal	behind	block	back_down	stagnation	retrogress	after	retreat	recede	failure	impediment	withdraw	halt	decrease
+advantage	drawback	loss	restriction	obstacle	hindrance	handicap	disadvantage
+advent	departure	end
+adversary	assistant	ally	supporter	helper	backer	helpmate	friend
+adversity	encouragement	help	good_luck	favor	aid	fortune	prosperity
+advice	deception	misrepresentation	betrayal	falsehood	misinformation	deceit	lie
+advisability	inadvisability
+aerial	ground
+aesthetic	ugly	unattractive	displeasing
+affectation	simplicity	naturalness
+affinity	dissimilarity	dislike	hatred
+affirmative	dissenting	negative
+affluent	insufficient	impoverished	penniless	wanting	suffering	destitute	poor	needy	lacking
+affront	appease	pleasantry	please	satisfy	soothe	compliment	mollify	appeasement	placate	gratify	assuage
+afterthought	forethought
+aged	unripe	new	youthful	young
+agility	clumsiness	stiffness
+agnostic	believer
+agony	comfort	peace	happiness	health	success
+aide-de-camp	saboteur
+ailment	health
+aim	purposelessness	thoughtlessness	neglect	aimlessness	avoidance
+alcoholic	non-alcoholic
+alien	citizen	appropriate	native	settler	national	countryman	proper	akin
+alienation	charm	friendliness	endearment
+allegiance	sedition	treachery	treason	enmity	disloyalty
+allusion	reality
+almighty	lay	powerless	weak	lowly	insignificant
+altitude	depth
+altogether	partly	incompletely
+alumnus	undergraduate
+amazement	cool	preparation	coolness	composure	calmness	indifference
+ambiguity	clearness	lucidity	certainty	explicitness	definiteness	clarity
+ambivalence	certainty	decisiveness
+amble	run
+ambulatory	unchanging	stiff	steady
+amendment	worsening
+amity	hostility	dislike	discord	hatred
+amour	hate	dislike	hatred
+amusement	work	boredom
+anarchy	order	rule	lawfulness
+ancestor	descendant
+angel	demon	fiend	devil
+animosity	love	good_will
+annexation	detachment	subtraction
+annotation	blank
+annoyance	enjoyment	comfort	joy	pleasure	happiness	delight
+anterior	posterior	subsequent	ending
+anticipation	sensation	amazement	wonder	doubt	astonishment	unreadiness	surprise	fear
+anticlimax	climax
+antiquarian	modern	new	young
+antiseptic	unsanitary	polluted	unsterile	unclean	contaminated
+antonym	synonym
+anxiety	assurance	contentment	composure	calmness	peace	nonchalance	ease	happiness	tranquility
+apathy	sensitivity	interest	feeling	concern	sympathy	care	warmth	passion
+aplomb	gaucheness
+apoplexy	consciousness
+apostate	faithful	adherent	loyalist
+appalling	satisfying	comforting	reassuring	encouraging
+apparition	animate	being
+appetizer	meal
+applicant	manager	boss
+apprentice	mentor	teacher
+approaching	receding	remote	passing
+approximation	difference	dissimilarity
+archetype	atypical
+arctic	tropic
+aristocracy	commoners	plebites	proletariat
+aristocrat	commoner	proletariat	plebian
+arm's_length	near
+armistice	fight	dispute	war
+arrogance	meekness	servility	humility
+artifice	honor	candor	reality	frankness	ingenuousness	sincerity	artlessness	honesty	openness	incapacity	simplicity	inability	truthfulness	innocence	uncleverness
+ascendency	subordination
+ascension	descendancy	decline	declension
+aside	middle
+aspersion	mildness	calmness	happiness	kindness
+assassin	victim
+assemblage	scattering	dispersal
+assets	liabilities
+assumption	unexpected	doubt	naturalness	realness	reality	genuineness
+astringent	mild	bland
+atheism	religion	piety	belief	godliness
+attendance	absence
+attrition	building	strengthening	happiness
+au_revoir	hello
+audible	inaudible
+august	undignified
+austerity	mildness	gentility	luxuriousness	meekness	extravagance	calmness	indulgence	blandness	elaborateness	spending
+automatic	thought-out	manual	unnatural	stilted	by_hand
+autonomy	dependence
+autumn	spring
+auxiliary	body	main
+avant-garde	conservative	conventional
+avocation	work	vocation	profession
+awakening	sleeping	sleep
+awkwardness	easiness	grace	handiness	artfulness	convenience	skill	cleverness	elegance	ease	dexterity	straightforwardness
+babble	wisdom	be_quiet	sense	quiet
+babe	adolescent	adult
+baby	adolescent	adult	big	large	giant
+baby_tooth	permanent_tooth
+babyhood	adulthood	adolescence
+bachelor	spouse	husband	groom
+back_burner	front_burner
+back_matter	preliminaries	front_matter
+backbone	weakness	ineptness	powerlessness	spinelessness
+backside	front
+backyard	front_yard
+baffle	relieve	help	support	encourage	abet	clear_up	assist	aid	explain	enlighten
+ban	allowance	allow	permit	permission
+banality	nuance	original_saying	coinage
+bane	advantage	good_luck	blessing	fortune
+bang	slowly	whimper	tap
+banishment	welcoming	inclusion
+bankrupt	solvent	rich	wealthy
+bankruptcy	richness	wealth	solvency
+bantam	huge	big	large
+barbarian	polite	humane	refined	nice	civilized	cultured	educated	sophisticate	sophisticated	kind
+barbarism	praise	kindness
+baroque	unadorned	undecorated	plain
+barrenness	fecundity	fruitfulness	fertility
+barricade	open	allow	opening
+basement	attic
+baseness	goodness	morality	virtue
+bastard	legitimate
+bastion	weakness	weak_spot
+batch	individual
+bathe	dirty
+batten	unfasten	loosen	unfix
+bawdy	decent	chaste	virginal	clean	proper
+bear	evade	avoid	refuse	take	be_unproductive	dodge	throw_away	shun
+beating	victory	win	triumph
+begin	finish	conclude	consummate	complete	die	end
+believing	uncertain	mistrustful	untrusting	doubtful	doubting	unsure	disbelieving
+belle	eyesore	dog
+belligerent	helping	cooperative	nice	kind
+bellyache	appreciate	praise	be_happy
+belonging	antipathy	insecurity
+beloved	hate	hated	despised	disliked
+bending	unbowed	unbent	straight
+benediction	execration	anathema
+benefactor	opponent	antagonist	opposer
+best	relent	lose	least	worst	surrender	fewest	give_up	incorrect	not_right
+betrothal	separation	divorce
+beverage	food	victuals
+bias	be_impartial	be_just	be_fair	justness	fairness	impartiality
+bicker	concede	discuss	agree
+binary	single	lone	singular
+binge	saving
+bisexual	homosexual	heterosexual
+bit_part	lead
+black	Caucasian	clean	hopeful	happy	white	good	optimistic
+blacklist	allow	accept	permit	welcome	ask_in
+blackness	lightness	light
+blah	exciting	full_of_life	spirited
+blare	toot
+blasphemy	religion	piety	reverence	religiousness	godliness
+bleach	darken	yellow	blacken
+blemish	decorate	beautify	decoration	ornament	embellishment	embellish	adorn	adornment
+blindness	sight	sightedness
+blond	brunet	brunette
+bloodshed	peace
+blooming	barren	declining	sterile	unfruitful	fading
+blunder	correct	fix	restore	correction	accuracy	restitution
+blush	blanch	pale	pallidity	paleness	whiteness
+boarder	landlord	host	hostess
+bolster	undermine	hinder	prevent	obstruct	not_support
+bombast	plain_speaking
+bondage	freedom	independence
+borderline	exact	definite	certain	sure
+bore	charm	amuse	please	interest	pleasure	excite	exciter	charmer
+borrowing	loaning
+bound	allowed	permitted	free	allow	unrestrict	permit	let_go	unbind	unobliged	unbounded	unrestricted
+bourgeois	adventurous	untraditional	nonconforming	original	inspired	imaginative
+boy	girl
+bracing	debilitating	tiring	exhausting
+brag	deprecate	be_quiet	be_modest
+brain	body	dumdum	simpleton	physicality	dumbo
+brake	accelerate	accelerator
+brandish	not_show
+brat	angel
+bravado	cowardice	fearfulness	restraint	modesty	fear
+brawn	slightness	frailness	skinniness	thinness
+breakable	sturdy	durable	unbreakable
+breakdown	mental_health
+breaking	strong	union	enduring
+breakup	reconciliation
+brevity	lengthiness	longevity	permanence
+bridal	divorce
+bride	bridegroom	groom
+brief	hide	lasting	lengthy	secret	long	enduring	long-lived
+brightness	dullness	stupidity	darkness
+brim	center	interior	middle
+broach	not_mention	close_up	close
+broad	narrow	small-minded	restricted	empty	close-minded	small
+brotherhood	sisterhood
+bubbly	dull	flat	still	listless
+bull_market	bear_market
+bumpkin	sophisticate
+buoyancy	depression
+burn	cool	put_out	help	extinguish	subdue	stifle	aid	wet	quench	smother
+burnish	dull	tarnish
+business	unemployment	avocation	recreation
+business_expense	personal_expense
+bustle	laziness	relaxation
+butler	boss	master
+buyer	marketer	seller
+buying	selling
+bygone	modern	new	recent
+bystander	participant
+cadaver	being
+calm	agitated	stormy	passionate	terror	angry	excite	turbulence	irritate	roused	rouse	mad	frenzied	outrage	fierce	turbulent	agitation	restlessness	disquiet	wild	ruffled	inflame	violence	excited	rough	ruffle	excitable	worried	anger	furious	distract	agitate	violent	madness	worry	storminess
+calming	upsetting
+camaraderie	hate	dislike	bad_blood
+cancer	benignity
+canyon	mountain
+capitalism	communism
+capitulation	defending	fight	fighting
+caprice	steadfastness	constant	dependability	constancy
+captive	independent	free	uninterested	free_man	loose	disillusioned
+captivity	liberty	freedom	independence	license
+capture	lose	free	freeing	liberate	let_go	letting_go	liberalization	release
+caravan	individual
+carbon_copy	opposite
+carouse	be_sad	grieve
+carp	let_go	ignore
+carping	complimentary	forgiving
+catalyst	preventer	blockage	prevention	block
+catching	uncontagious
+catharsis	dirtying
+catholic	narrow	specific	narrow-minded
+catty	nice	pleasant	kind
+cautious	unobservant	incautious	unguarded	imprudent	careless	thoughtless	rash	hasty	uncareful	heedless
+cavalier	reticent	humble	shy
+ceiling	floor	minimum
+celebrity	obscurity	nobody
+celibacy	promiscuousness
+central	minor	exterior	secondary	peripheral	outside
+ceremonial	unceremonial	informal
+cessation	commencement	beginning	start
+characteristic	abnormality	abnormal	uncharacteristic	untypical
+chic	dull	out-moded	old-fashioned	unfashionable
+chivalry	cowardice	humility	humbleness	fear
+choke	unconstrict	unblock	release
+chosen	ignored	inferior
+circumlocution	terseness	conciseness	directness	straightforwardness
+civilian	military
+civility	discourtesy	rudeness
+civilization	barbarism	primitiveness
+clangor	quiet
+cleanliness	griminess	filth	dirtiness
+clemency	no_mercy
+clench	loosen	let_go	loose	release
+clergyman	layperson	layman
+clientele	ownership	management
+clot	opening	thin	loose
+clutter	tidy	neaten	order	tidiness	neatness	clean_up	array
+coagulation	melting	thinning	opening	dissolution
+cogency	weakness	impotence	ineffectiveness	invalidity
+cognition	unawareness	ignorance
+coherence	nonsense	incongruity	disagreement	unintelligibility	incoherence
+cold	zealous	animated	warm	eager	excited	friendly	sympathetic	heat	ardent	interested	enthusiastic	warmth	hot	fervid
+cold_war	hot_war
+collect	scatter	share	distribute	dispense	give	disseminate	divide	meed	compensate	disperse
+collective	separate	divided
+colonial	modern	new
+colored	real	genuine	white	truthful	honest
+coma	consciousness	wakefulness	alertness
+combat	retreat	truce	compromise	peace	surrender	accord	run	agree
+combustible	nonexplosive	noncombustible
+come	retreat	recede	leave	depart	go
+comedy	tragedy
+commemorative	forgetful	neglecting	neglectful	dishonoring
+commitment	broken_promise	refusal	denial
+common_sense	insanity	foolishness	impracticality	unreasonableness
+commonplace	peculiar	uncommon	rare	unusual	exceptional	infrequent
+communist	conservative	capitalist	fascist
+comparative	unlike	unequal
+complaisance	discontent	dissatisfaction	disagreeableness	antagonism	obstinancy
+complex	direct	clear	obvious	apparent	homogeneous	evident	easy	uniform	simple	plain	discernible
+complexity	obvious	simplicity	ease	clarity	directness
+compress	uncondense	loosen	extend	fill	stretch	blow_up	increase	expand	uncompress
+compulsion	liberty	free_will	freedom	independence	license
+compulsive	easy-going	independent	free	controlled
+compunction	no_remorse	meanness	defiance
+concatenation	interruption
+concept	being	concrete
+condescension	friendliness	humility	inferiority
+confines	open
+confrontation	calm	peace
+congratulations	condolences	criticism	commiseration
+conqueror	loser
+conquest	failure	yielding	loss	surrender	forfeit
+conscientiousness	nonchalance	indifference	negligence
+consensus	disagreement
+conservation	squandering	waste	neglect	destruction	spending
+conserve	destroy	waste	neglect	use	squander	spend
+consolation	trouble	disturbance	upset	antagonism	annoyance	discouragement	agitation
+console	depress	trouble	discourage	hurt	sadden	antagonize	upset	annoy	agitate	dispirit	disturb
+consonant	disagreeing	inconsonant	incongruous	inconsistent	incompatible	incongruent	dissonant
+consternation	calm	composure	happiness	tranquility	peacefulness
+constriction	opening
+construct	destroy	break	annihilate	ruin	dismantle	raze	demolish
+contemplative	scornful	rejecting	shallow	negligent	unreflective	disdainful	disregarding
+contemporary	old	succeeding	future	preceding	old-fashioned	past
+content	unhappy	depressed	discontent	displease	wanting	upset	anger	dissatisfied	displeasure	disturbed	uncomfortableness	needy	unhappiness	disturb	disagreeable
+continent	impure	incontinent	unchaste
+contortion	beauty	smoothness
+contraband	legal	allowed	permitted	lawful	legal_goods
+contradiction	OK	concession	verification	corroboration	confirmation	approval	agreement	acceptance	reconcilement
+contradictory	reconcilable	confirming	agreeing	reconciled	consistent	vouching
+contumely	compliment	flattery
+convalescent	sickly	regressing	faltering	worsening	weak	failing
+coordinate	different	disintegrate	uncoordinate	dissimilar	mismatch	unequal	unrelate	unparallel
+cordial	cool	unpleasant	inhospitable	hostile	indifferent	uncordial	unfriendly	disagreeable	unsociable	aloof
+corporal	cerebral	spiritual	mental	intangible	immaterial
+correlation	difference	disconnection	imbalance	disassociation
+corrosive	contributing	supporting	fortifying
+cosmetic	disfiguring
+countermand	approve	allow	permit	sanction
+covenant	break	disagreement	disagree
+credence	faithlessness	distrust
+criminal	law	legal	righteous	moral	police	correct	lawful	right
+cripple	help	encourage	support	allow	enable	assist	aid	capacitate	strengthen
+critique	compliment	praise
+crouch	stretch
+curative	harmful	hurting	painful	injurious
+curiosity	indifference	normality	disinterest
+curl	straighten	line
+cutback	raise	increase
+cynic	optimist	believer
+damned	cherished	blessed	likeable	praiseworthy	favored	nice	loveable	welcome
+damp	dry	dessicated	dried	arid	parched
+daylight	sunset	night	evening	darkness
+dazzle	bore
+deadlock	agreement	breakthrough
+deaf	hearing	attentive	conscious	aware	listening	willing
+debacle	miracle	wonder	boon
+debauchery	mercifulness	benevolence	unselfishness	giving
+debility	vigor	strength	health	capability	ability
+debtor	mortgagee	creditor	lender
+decadence	humility	morality
+decadent	moral	humble	good	benevolent	kind
+deceitfulness	honesty
+deciding	inconclusive	uncritical	trivial	secondary	unimportant	insignificant
+defection	joining
+defensive	undefensive	unwatchful	unwary	unprotective
+delay	further	expedition	expedite	hasten	rush	hurry	speed	furtherance	dispatch	hastening	advance
+delicious	unpleasant	distasteful	horrible	disagreeable	unsavory
+delirium	balance	saneness	calmness
+demise	birth
+demolition	building	fixing	repair	production	construction
+demonstration	hiding	concealment
+demonstrative	cool	anticlimactic	cold	inconclusive	unemotional	restrained	mysterious	uncommunicative	confusing	inexpressive	undemonstrative	reserved
+denizen	immigrant	foreigner	alien
+depredation	goodness	miracle	wonder	construction	boon
+derivative	invention	unborrowed	unique	source	root	inventive	original
+designing	unplanned	not_clever	aboveboard	artless	honest
+desperation	calm	collectedness	cautiousness	contentment	peace	security	confidence	peacefulness
+destination	beginning	source	start
+destiny	free_will	choice	volition
+destroyer	author	restorer	creator
+detection	mistake	failure	miss
+detriment	profit	help	advantage	benefit	assistance	gain
+deviate	stay	go_straight	keep
+dialectic	irrational	illogical
+diffusion	concentration	collection
+diligence	inactivity	lethargy	laziness	neglect	indifference
+dinky	huge	big	large
+diplomacy	impoliteness	bad_manners	rudeness
+directive	answer
+disabled	able	healthy
+disappearance	appearance	coming	arrival	entrance
+disarmament	buildup	arming
+disarming	despicable	disgusting
+disbursement	deposit	hoard	savings
+disconnect	hook	plug	connect	attach	link	hitch	couple	join
+discredit	honor	trust	praise	believe	credit	commend
+disharmony	compatibility	concord	agreement	harmony	accord
+disinclination	enthusiasm	leaning	desire	willingness	incentive	inclination	bent
+dismay	encouragement	assurance	encourage	make_happy	happiness	confidence	assure
+dismount	mount	get_up
+disparity	equality	likeness	similarity	sameness	alikeness
+disrepute	honor	esteem	good_reputation
+dissident	agreeing	yes-man	conforming
+dissociation	connection	association	union	attachment
+dissolve	unite	integrate	assemble	unmix	resolve	appear	concentrate	coagulate	continue	put_together	solidify	marry
+distortion	perfection	clarity	beauty
+doctrinaire	submissive	obedient	manageable	amenable	flexible
+dollar	coin	change
+domestic	office	industrial	alien	foreign	business
+dovetail	disunite	disconnect	unlink
+dowdy	modern	classy	fashionable	chic
+downcast	glad	satisfied	heartened	happy	cheerful	elated
+drama	comedy
+drawl	clip	shorten
+dreamland	real_world	wakefulness
+dribble	pour
+drudgery	snap
+drunkard	teetotaler	nephalist	abstainer	ascetic
+drunkenness	soberness	sobriety	temperance	abstinence
+dud	success
+dudgeon	teetotaler
+dumbbell	genius	brain
+durability	weakness	poorness	unreliability	impermanency
+dusk	dawn
+dye	fade	bleach	whiten	whitener
+earnings	debt	losses	payout	bills
+east	west
+eatable	unpalatable	uneatable	undelicious	inedible	unwholesome
+ebb	rise	increase	flow	incline
+ebullience	disinterest	apathy
+effectiveness	uselessness	ineffectiveness	unproductivity
+effigy	entity	being
+egocentric	altruistic	submissive	unassuming	humble	shy	selfless	reserved	timid	modest
+elastic	unadaptable	unflexible	ungiving	tense	intolerant	inflexible	rigid	unyielding	inelastic	difficult	stiff
+elective	required
+elevated	lessened	dropped	decreased	undignified	immoral	base	lowered	lowly
+embarrassment	comfort	confidence
+embezzlement	compensation	return	pay	reimbursement
+embodiment	exclusion
+emigration	remaining	arriving	immigration
+empathy	unfeelingness	misunderstanding	apathy
+enlightened	uninformed	in_the_dark	perplexed	confused	confounded	misled	unenlightened	uneducated
+ennui	vigor	excitement	enthusiasm	liveliness	energy
+enormity	tininess	goodness	triviality	smallness
+enterprise	passivity	idleness	inactivity	unemployment	passiveness	indolence	apathy
+entourage	leader
+entrant	fan	spectator
+entreaty	command	answer	demand
+entryway	exit
+envy	contentedness	be_content	comfort	pleasure	good_will	confidence	be_confident	kindness
+epic	short_story
+equilibrium	imbalance	unevenness
+equivalence	difference	dissimilarity	unlikeness	inequality
+ersatz	real	genuine
+erudition	ignorance
+euphoria	sorrow	despair	woe	unhappiness	depression	misery
+evasiveness	directness
+even	different	agitated	lump	disparate	troubled	uneven	rough	partial	unequal	furrow	broken	break	unfair	roughen	biased	irregular
+evening_star	morning_star
+excerpt	whole	insert
+exclamation	silence	quiet
+exemption	liability	accountability	answerability	responsibility
+export	buy	import
+express	indirect	uncertain	imprecise	indefinite	vague	obscure	slow
+external	inside	intrinsic	internal
+extrovert	introvert
+eyeful	eyesore
+fallow	developed	cultivated	active	used
+falter	stay	remain	maintain	endure	continue	persist
+famine	feast	plenty	supply	stores
+fanaticism	unenthusiasm	impartiality	disinterest
+far	near	close
+fascism	democracy
+fatality	birth
+fathom	not_get	misunderstand
+fatty	low-fat	lean	defatted	thin
+feint	truth
+feminine	masculine
+fester	heal	get_better	dissipate	lessen
+few	many	much
+fiat	request	question
+fiction	truth	non-fiction
+fidget	relax	rest	be_still
+figment	reality
+filter	combine	collect
+finder	loser	owner	stray
+fine	stormy	reward	rainy	undiscriminating	awkward	poor	award	reimbursement	bad	rough	compensation	thick	uncouth	amends	dark	crude	reimburse	cloudy	compensate	unrefined	coarse
+finery	rags
+first_name	last_name	surname
+flaunt	hide	refrain	conceal
+flex	straighten	extend	be_stiff
+flightiness	responsibility
+flirtation	faithfulness
+floppy	erect	stiff
+fly-by-night	reliable	responsible	trustworthy	reputable	dependable
+foible	strength
+foray	idleness	abstention	laziness
+forbear	indulge	continue	use	involve	partake
+foreman	worker
+foreword	epilogue	postscript	addendum
+forgetfulness	remembering	attentiveness	heed	mindfulness
+formative	noninfluential	destructive
+fraction	total	entirety	whole
+free-for-all	calm	peace	harmony
+free_fall	upturn
+frequency	irregularity	infrequency	uncommonness
+friendship	hate	enmity	hatred
+frown	approve	encourage	smile	grin	condone
+frugality	wastefulness	lavishness	generosity
+fruition	failure	unfulfillment
+fulminate	support	compliment	praise	defend	flatter
+fulmination	defense	support	compliment	praise	flattery
+funny	usual	melancholy	standard	common	sad	normal	dramatic	unfunny	unamusing	serious	tragic
+gaudy	calm	dull	simple	refined	plain	drab	sophisticated	modest
+generality	detail	specific	specificity
+genesis	finish	finale	conclusion	end
+gentleman	boob	cad	sneak
+get_together	scatter	separate	distribute	divide	disperse
+gladness	sorrow	woe	unhappiness
+glimpse	stare
+glossy	dull	muted	mate	drab
+glut	need	repress	abstain	diet	moderate	insufficiency	lack	fast	suppress	reduce	want
+gobble	nibble
+godsend	setback	bombshell	bad_luck	bad_fortune	blow
+good-for-nothing	hard_worker
+good_manners	discourtesy	bad_manners	rudeness
+gospel	theory	hypothesis
+governed	free	self-determined	autonomous	capricious	unruly
+gradual	sudden	uneven	intermittent	infrequent	abrupt
+graphic	implicit	vague	unclear	obscure
+greed	benevolence	generosity
+green_thumb	brown_thumb
+grievance	compliment	praise	flattery
+guru	follower	student
+gusto	reluctance	unenthusiasm	apathy
+haggard	strong	fresh	unworn	healthy	hearty
+hale	weak	unhealthy	sick
+handful	mass	lot
+handy	bumbling	unhandy	awkward	inconveniently	faraway	clumsy	bungling	useless	inconvenient	inept	hard
+hangover	sobriety
+hankering	hate	dislike	hatred
+harassment	help	support	assistance	furtherance	facilitation	aid
+hardy	invalid	tender	weak	unhealthy	sick	infirm	feeble
+heartbreak	love	joy	happiness
+heir	heiress
+here	there
+heroic	meek	afraid	cowardly	fearful	timid
+heyday	low_point
+high_profile	low_profile	anonymity
+homeless	settled
+homicide	birth
+hospitality	inhospitality	unsociableness	hostility	unfriendliness	unneighborliness
+hotfoot	dawdle
+household	industrial	commercial	business
+hump	depression
+hygiene	filth	dirtiness	foulness
+hyperbole	understatement
+hypnotic	exciting	inspiring	exhilarating	stimulating	inciteful
+ill	profit	benefit	strong	sound	privilege	luck	blessing	healthy	happiness	good	well	fortune	prosperity
+illiterate	learned	able	literate	taught	educated
+imaginary	real	physical	genuine	existing	true	factual	substantial
+imbroglio	peacemaking	agreement
+immune	unprotected	unguarded	vulnerable	susceptible
+imperative	free	inessential	optional	secondary	unnecessary	unrestrained	voluntary	discretionary
+impossibility	practicality	feasibility	possibility	probability
+inaction	action
+incoming	outgoing
+incurable	medicable	healable	operable	curable
+incursion	retreat
+inequity	equity
+infection	sanitation	sterility
+infinity	finiteness	bounds	definiteness	limitation	ending
+inflation	deflation	shrinkage	compression	decrease
+ingratitude	appreciation	consideration	gratitude
+initial	final	last	closing
+inquiring	incurious	disinterested	unskeptical
+installment	whole
+integral	accessory	supplemental	secondary	unnecessary	extrinsic	fractional	supplementary	partial	part
+intensive	superficial	incomprehensive	surface	incomplete
+intercept	help	abet	forward
+international	national	local
+invariable	varying	changing	variable	changeable
+iron	weak	flexible	soft
+irony	deference	consideration
+jerky	smooth	fluid
+juggle	be_honest
+jut	recede	indent
+knit	unknit
+knowing	unaware	uncognizant	inexperienced	unknowing
+laminate	strip
+latch	unlock	unfasten	loosen	unlatch	loose	key
+lateness	earliness	promptness	anticipation
+lateral	centered	central
+latter	earliest	preceding	former
+learned_person	ignoramus
+leeward	stormy	windy	windward	downwind
+left	right
+left_wing	right_wing
+leisure	work	employment
+lessor	lessee
+letup	continuation
+lifework	task
+limp	strong	unbending	rigid	inflexible	stiff	hard	straight
+liquid	condensed	unavailable	solid	firm	frozen	dense	hard	close
+listener	talker
+literal	figurative	exaggerated	loose	imaginative
+long-suffering	impatient
+lots	little
+lumber	relieve	glide	unburden
+lumbering	lithe	agile	gliding
+lying	direct	frank	honest
+maiden	final	latest	concluding
+major	minor	little	small	unimportant	lesser	insignificant
+makeshift	permanent	complete	finished	ready
+malfunction	perfection	working
+mandatory	optional	unnecessary	voluntary
+marriage	divorce
+married	single	unwedded	unmarried
+martial	peaceful	civil
+masculinity	femininity
+materialism	spiritualism
+maternity	paternity
+matriculate	graduate
+maximum	minimum	least	smallest	low	lowest
+mayhem	calm	peace	harmony
+menial	skilled	superior	talented	elevated
+metamorphosis	stagnation
+minuscule	huge
+misstep	success
+moneymaking	unprofitable
+monologue	dialogue
+more	fewer	less
+mother	father
+mourning	cheer	joy	happiness
+muffle	blab	tell	let_loose
+muss	fix_up	organization	order	organize
+mythology	history	actuality	truth	reality
+nay	yeah
+neologism	time-worn
+nerves	calm	coolness
+neurotic	sane	balanced	adjusted	stable
+nil	existent	existing
+nominal	real	significant	important	true	actual
+nonbeliever	believer
+noncompliant	obedient	compliant	subservient	willing
+nondescript	different	remarkable	uncommon	superior	illustrative	distinguished	describable
+norm	extreme	exception	end
+north	south
+null	valuable	valid	effectual	worthwhile	worthy	effective
+obituary	birth_announcement
+ogre	humanitarian	philanthropist
+old_hand	greenhorn	amateur	rookie
+oncoming	preceding	past
+one	none
+oppression	cheer	joy	happiness	delight
+optimism	pessimism	hopelessness	doubt	gloom
+or	neither	nor	without_choice
+oral	written	printed
+ordeal	pleasure	happiness
+orderly	untidy	unmethodical	disorganized	misbehaving	unsystematic	bad	disorderly	complicated	unruly
+organic	unnatural	inorganic	man-made
+organism	inanimate	concept
+orientation	mix-up	disorientation
+ornamental	unembellished	plain
+outskirts	center	downtown
+overall	narrow	specific	incomplete
+overlap	separate	divide
+panache	spiritlessness
+pander	refuse	deny	dissatisfy
+paralytic	healthy	uncrippled
+paraphrase	quote	quotation
+parenthetical	consequential	basic	important
+passenger	driver
+passive	dynamic	lively	active
+pathos	cheer	joy	happiness	glee
+pave	dig_up	strip
+payable	paid	settled
+peevishness	affableness
+penitent	happy	unrepentent	unashamed
+penny-pinching	generous
+perennial	changing	interrupted	intermittent
+perishable	endurance	continuation
+perpendicular	level	horizontal
+plagiarism	originality	original
+plaything	tool
+pleasure_principle	reality_principle
+plow	fill
+plurality	minority
+plush	barren	destitute	poor
+poetry	prose
+poky	spacious
+portable	cumbersome	clumsy
+possible	unrealizable	ungettable	unattainable	unlikely	impossible
+posterity	past
+pragmatic	idealistic	unreasonable
+pretend	tell_truth	be_honest
+privacy	sociableness	publicness	publicity
+probity	dishonesty	deceit	unfairness
+prodigal	careful	poor	thrifty	modest
+productivity	idleness	unproductivity
+prowess	cowardice	weakness	inability
+prowl	rush
+pygmy	giant
+racing	creeping	slow	crawling
+rampage	calm	peace	be_calm	harmony
+ravel	twist	put_together
+recessive	prevailing	overbalancing	dominant
+recipe	ingredient
+recipient	donor	giver
+reciprocal	independent	singular
+reclining	sitting	standing	sitting_up
+recount	repress	conceal
+refutation	confirmation
+regress	progress	grow	develop
+repulse	please	soothe	enchantment	attract	enchant	attraction
+repulsion	love	liking	attraction
+retro	modern
+retrospect	forethought	prophesy	prospect
+revere	despise
+royal	common
+runaway	controlled	staying	stable	steady
+sallow	colorful	flushed	dark	healthy
+salvage	endanger	waste	lose	hurt	harm	injure
+sanguine	unhappy	pallid	depressed	pessimistic	sallow	sad	pale
+sectional	universal	widespread	general
+secular	spiritual	holy	godly	religious
+seek	answer	neglect	reply	find
+self-assurance	diffidence	unsureness
+self-indulgence	abstemiousness	restraint
+sent	restrained	held_back	kept
+sentence	accuse	charge	accusation	blame
+serial	disordered
+shadow	brightness	information	lighten	brighten	light
+shoddy	nice	good	fine
+silhouette	body
+snug	cool	uncozy	cold	uncomfortable
+sociable	snobbish	unkind	introverted	unfriendly	unsociable
+somewhere	nowhere
+sorority	fraternity
+sow	dig	harvest	reap
+spartan	opulent	luxurious
+splice	separate	divide	sever
+sprawl	straighten
+spruce	untidy	unstylish	unkempt
+stainless	stained
+starving	satiated	full
+stimulus	hindrance	discouragement	tranquilizer
+stymie	help	encourage	assist	aid
+subconscious	outer	conscious	consciousness
+sweetness_and_light	unpleasantness
+sybarite	puritan
+taper	go_up	rise	increase
+tapering	widening
+technical	unmechanical	untechnical
+theatrical	real	undramatic	untheatrical	comedic
+theorem	fact	proof
+toll_road	freeway
+tow	push
+traction	slipperiness
+transplant	save	preserve
+underestimate	exaggerate	maximize	overestimate
+underside	ceiling	topside	top
+unemployed	occupied	employed
+universe	locality
+unmentionable	permissible	mentionable
+unseen	open	visible	seen
+uphill	easy	downhill	facile
+uplifting	sad
+uppercase	small_letter	lowercase_letter	lowercase	minuscule
+utopia	hell
+utopian	real
+vanishing	appearance	materializing
+variant	root	base	agreeing	same	similar
+vest	disapprove
+veto	ratify	approve	ratification	allowance	allow	permit	approval	permission	ok	sanction
+waterproof	leaky
+wayfaring	unmoving
+whittle	increase	build
+wholesale	partial	part	retail
+wilt	rise	bloom
+wishful_thinking	reality
+wobbly	unshaky	stable	steady
+won	lost	defeated	beaten
+worrying	happy	lighthearted	upbeat	cheerful
+yea	no	nay
+abase	honor	cherish	dignify	extol	exalt	respect
+abduct	let_go	give_up	release
+abhor	love	approve	desire	cherish	relish	enjoy	like	admire	adore
+abolish	ratify	institute	support	promote	legalize	continue	establish	uphold	enact	confirm
+abound	short	need	deficient	fail	lack	want
+absolve	charge	impeach	convict	obligate	hold	incriminate	sentence	punish	bind	condemn	blame
+accompany	desert	leave	withdraw	abandon
+accomplish	fail	relinquish	nullify	not_finish	give_up	abandon
+accrue	lose	decrease
+actuate	stop	impede
+adapt	dislocate	disorder	disarrange	unfit	disturb
+administer	refuse	forego	deny	neglect	frustrate	withhold	mismanage
+adulterate	cleanse	free	clean	clarify	purify	refine	filter	distill
+aggrandize	depress	degrade	lower	humble	disgrace	belittle	debase
+agonize	not_worry
+ameliorate	worsen
+anneal	soften	weaken
+antedate	predate
+apologize	defy
+arbitrate	let_ride
+arraign	free	let_go	exonerate	discharge
+ascend	lower	decline	descend	go_down
+ask	repudiate	insist	command	answer	reply	tell	disinvite	claim	ignore
+attest	deny
+awaken	hypnotize	deaden	go_to_sleep
+back_away	stay	move_forward
+back_off	go_forward	hold_one's_ground	back_up	stand_firm
+bald	hairy	adorned	decorated	hirsute
+bawl_out	praise
+bear_on	be_immaterial	be_of_no_consequence	be_irrelevant
+beatify	damn	curse	condemn
+befriend	neglect	ignore
+belie	prove	attest	be_honest
+bequeath	take
+betroth	separate	leave	divorce
+bide	hurry	move	go
+bisect	combine	join
+blast_off	drop	fall
+bottle_up	confide	reveal	tell
+bring_down	help	encourage	raise	aid
+bring_in	lose	decrease
+broaden	narrow	decrease	restrict
+buckle_down	relax	be_lazy	ignore
+callous	feeling	tender	nice	compassionate	sympathetic	kind	sensitive
+capitulate	fight	defend
+centralize	scatter	decentralize	disperse
+chasten	help	encourage	embolden	animate	honor	cheer	comfort	assist	boost	aid	uplift
+chip_in	take_away	take	pilfer
+codify	disorganize	unsystematize
+collaborate	divorce	disagree	part
+come_back	leave	depart	go
+come_down	boost	improve
+come_in	leave	depart	exit	go
+commemorate	neglect	dishonor	forget
+commiserate	be_indifferent	turn_away
+complicate	facilitate	disentangle	untangle	make_simple	ease	explain
+comprise	need	except	fall_short	fail	exclude	lack	want
+condescend	rise_above
+congratulate	harp	criticize	commiserate
+convalesce	deteriorate
+copulate	abstain	refrain
+corrode	help	fortify	aid	build
+count_on	not_expect	disbelieve	doubt	mistrust	distrust
+count_out	consider	figure_on	regard	include
+culminate	open	commence	start	begin
+cut_short	continue	prolong	lengthen
+dabble	take_seriously
+de-emphasize	emphasize
+debunk	prove	uphold
+deepen	soften	quieten	lighten	fill	pale
+deform	beautify	improve
+defrost	freeze
+delete	put_in	add
+demote	upgrade	rate	promote	improve
+denigrate	cherish	compliment	boost	praise
+deplete	give	fill	increase	expand	augment	add
+deploy	not_use	withhold
+desiccate	moisturize	moisten	wet
+dethrone	enthrone	crown	put_in_power
+diagnose	misdiagnose
+differentiate	leave	allow	connect	link	confuse	group	mix_up	associate
+dig_in	procrastinate	avoid	postpone	delay
+dine	abstain
+disaffect	content	please	make_happy
+disavow	approve	vouch_for	sanction	agree	vow
+discolor	color	brighten
+discommode	please	make_happy
+disfigure	decorate	beautify	ornament	adorn
+dish_out	take
+disinherit	give	bequeath
+disobey	obey	go_along	submit	conform	regard	oblige
+dispel	garner	recall	gather	accumulate	collect
+dispense_with	take	accept	use	retain	regard	keep
+disqualify	fit	allow	permit	qualify	capacitate	be_eligible
+dissuade	incite	talk_into	persuade
+dizzy	unconfused	clear	sensible	clear-thinking	clear-headed	smart
+doll_up	dress_down
+donate	renege	keep
+draw_back	go_forward	start	forge
+drop_off	go_up	take_away	wake	rise	increase	awake	receive
+drum_up	repulse	turn_off	dissuade
+eavesdrop	ignore
+economize	throw_away	squander	spend
+eke_out	waste	use_up
+electrify	dull	bore
+elicit	repress	cover	hide	supress	keep
+emancipate	hold	imprison	incarcerate
+embark	stay	disembark
+embezzle	give	return	reimburse	pay	compensate
+enamor	hate	dislike
+enervate	activate	animate	strengthen	liven	invigorate	energize	empower
+enforce	overlook	disregard	forego	drop	neglect	give_up	abandon	forget
+enmesh	leave_out	exclude
+ensue	antecede	precede
+estrange	unite	engage	marry
+exacerbate	calm	help	soothe	comfort	aid
+exclaim	be_quiet
+exhume	bury
+exist	die
+explicate	complicate	mystify	confuse	cloud	obscure	tangle
+fall_for	repulse
+fend	yield	surrender
+fend_for	neglect	ignore
+finalize	open	start	introduce	begin
+fireproof	waterproof
+flabbergast	expect
+foment	stop	discourage	dampen	cease	dissuade
+fraternize	disagree	ignore
+generalize	except	specifize
+get_across	miscommunicate
+get_at	lose	miss	pass
+give_in	hold_out
+go_far	fail
+go_under	accomplish	succeed	achieve
+gravitate	retreat	run_away
+hearten	depress	discourage	bring_down	dishearten
+hie	go_slowly	amble
+idolize	despise
+imperil	save	guard	protect
+impute	help	guard	defend	protect
+ingratiate	disgust	deter	repel
+interact	not_speak
+intersperse	gather	collect
+invade	leave_alone	yield	surrender
+inveigh	praise	flatter
+iron_out	mess_up	make_worse
+isolate	integrate	incorporate	mingle	join	include
+keel_over	straighten	stand
+keep_up	neglect	let_go
+kick_upstairs	kick_downstairs	demote
+laden	unladen	unloaded	empty	light
+lay_up	help	heal
+look_out	disregard	neglect	ignore
+machinate	leave_alone
+mesmerize	disenchant	turn_off
+misapprehend	understand	comprehend	apprehend
+mislay	find	keep
+modulate	leave_alone
+monopolize	scatter	share	distribute
+nauseate	please	soothe
+nominate	pass_over	ignore
+off	present	on	here	close
+officiate	follow
+orchestrate	disorganize	ignore
+outlast	lose	fail	shoot	succumb	peter_out	fall_apart
+owe	resolve	pay	settle
+palpitate	be_still
+patch_up	bicker	argue	fight	disagree
+pep_up	discourage	wear	tire
+perjure	certify	prove	attest
+perpetrate	abstain
+polish_off	save	hoard
+popularize	discredit	shun
+predispose	discourage	dissuade
+reciprocate	refuse	deny
+reconsider	refuse	ignore
+refrigerate	warm	heat
+refute	ratify	prove	support	endorse	sanction
+reinstate	let_go	fire
+rely	doubt	be_independent	distrust
+remunerate	charge	take	seize	withhold
+replete	wanting	empty	needy
+rid	get
+secede	unite	combine	join	come_in
+seem	be_real
+shove_off	arrive	come
+shut	open
+socialize	exclude	shun
+specialize	broaden
+stagnate	grow	strengthen
+stow	waste	use	throw_overboard
+subjugate	free	liberate
+tantalize	repulse	disenchant	turn_off
+tide_over	hurt	hinder
+transact	refuse	deny
+unbuckle	buckle	fasten
+unbutton	button	fasten
+underwrite	refuse	reject	disapprove	invalidate
+unleash	restrain
+unsettle	balance	order	compose	settle
+unzip	zip	fasten	close
+vend	buy
+vouch	reject	refute	deny	disavow	renounce
+whet	dull	dampen	dishearten	blunt
+a_posteriori	a_priori
+abashed	composed	reassured	emboldened	at_ease	proud
+abominable	lovable	sweet	likeable	delightful	desirable	appealing	alluring	enjoyable	pleasant	wonderful
+abortive	effectual	complete	successful	productive	fruitful	efficient	consummated
+abroad	at_home
+absentminded	alert	observant
+absorbed	uninterested	distracted	disinterested	bored	indifferent
+absorbing	irksome	boring
+abusive	respectful	complimentary	kind
+abysmal	infinite	low
+acceptable	unwelcome	disturbing	unacceptable	unsatisfactory	disagreeable
+accepted	unorthodox	questionable	unconventional	irregular
+adrift	anchored	on_course	determined	tied_down	on_target	stable	purposeful
+adulterous	pure	chaste	virginal	clean
+advertised	suppressed	unannounced	forgotten
+advised	ill-advised
+aft	fore
+aghast	unsurprised
+aground	afloat
+aired	concealed	secret	closed	undisclosed	stuffy
+alienated	united
+all-or-nothing	flexible
+allegorical	not_representative	untypical
+allowable	prohibited	impermissible
+alphabetical	unalphabetical
+altered	retained	sustained	held	preserved	maintained	fixed	continued	kept
+amorphous	distinctive	definite	shapely	shaped	distinct
+amused	depressed	bored
+anecdotal	scientific
+angelic	demonic	fiendish	unkind	devilish
+angered	pacified	placated
+angular	weighted	thick	fat	heavy	straight
+announced	suppressed	hidden	unannounced
+annoyed	gratified	pleased
+anonymous	named	known	identified
+answerable	unprovable	irrefutable	unaccountable
+antipathetic	agreeable	friendly	sympathetic
+antisocial	sociable	participating	friendly	fun-loving
+applicable	inapplicable	unsuitable	inappropriate
+appreciable	imperceptible	unappreciable	negligible	inconsiderable	unnoticed
+appreciative	unappreciative	ungrateful	neglectful	ignorant
+aquiline	straight
+arable	infertile
+archetypal	unique	atypical
+arguable	untenable	certain
+armored	unprotected	unarmored	breakable	weak
+aromatic	acrid	bland	unsavory
+assailable	safe	protected	secure	guarded
+assertive	diffident	unconfident	shy	quiet
+assorted	same
+astonishing	expected	dull	boring
+astronomical	small	insignificant
+asunder	together
+atheistic	God-fearing	believing	religious
+athletic	unathletic
+attachable	detachable._whole	inseparable
+auspicious	unhappy	unfortunate	ominous	inauspicious	inopportune	unlucky
+avoidable	inescapable	inevitable
+awe-inspiring	ordinary	boring	unexciting	unimpressive	blah
+axiomatic	uncertain	questionable	misunderstood
+backed	discouraged	backless	opposed
+bad-tempered	good-humored	affable
+baffling	clear	comprehensible
+balky	cooperative
+banal	new	fresh	original
+barbed	complimentary	flattering
+barefoot	shod
+baseless	based
+bashful	unabashed	confident	unshy
+beaming	unhappy	sullen	ugly	sad	frowning
+bearable	unmanageable	unbearable	unendurable	intolerable
+bearded	unhirsute	unbearded
+beefy	tiny	slim	slight	weak	thin	frail	skinny
+beggarly	luxurious	rich	wealthy
+bereft	full	happy
+best-selling	failing
+bighearted	mean
+blamable	blameless	innocent	inculpable
+blanched	darkened	colored
+blasphemous	respectful	pious	godly	reverent	religious
+bleary	illuminated	clear	energized	lively	bright	invigorated	full_of_life	distinct
+blind_drunk	sober
+blissful	unhappy	miserable	wretched	upset	sorrowful	grieving
+bloodless	sanguine	feeling	flushed	blushing	caring	ruddy	rosy	sensitive
+blue-blooded	bourgeois	common	lower-class	low	unrefined
+blue-collar	white-collar
+boisterous	silent	calm	restrained	quiet
+bombastic	humble	restrained	quiet	reserved
+bounded	free	unlimited	unbounded	loose	unconfined
+brainless	smart
+breakneck	extremely_slow
+brokenhearted	happy	lighthearted	pleased
+brotherly	unneighborly	uncompassionate	antagonistic	sisterly	unfriendly	sororal	uncompanionable
+bulging	contracting
+bumptious	uncertain	humble	modest
+burdensome	unburdensome	helping	relieving	aiding	helpful
+bushed	invigorated
+cacophonous	quiet
+calamitous	blessed	joyous	happy	comforting	fortunate	wonderful	favorable
+calculable	incalculable	uncomputable	inestimable
+captious	complimentary	commendatory	laudatory	praising	flattering	encouraging
+carnivorous	vegetarian
+catchy	dull	boring	ignorable
+celebrated	inglorious	inexalted	obscure	unknown	plain
+centrifugal	centripetal
+chancy	safe	secure	tried	certain	not_dangerous	sure
+changed	final	stabilized	permanent	unmodified	unchanged	stored	unvaried	placed	kept
+charming	irritating	repulsing	repellent	frightening	repulsive	offensive	terrifying
+childish	sensible	wise	mature	adult	serious
+choosy	undemanding	unfussy	unfastidious
+choppy	calm	smooth
+chummy	unfriendly	unsociable
+churlish	polite	gentle	nice	pleasant
+circulating	motionless	stationary	still
+circumstantial	direct
+clad	unclad
+clandestine	open	aboveboard	truthful	forthright
+clannish	open	friendly	welcoming
+clinical	passionate	feeling	subjective
+cloistered	open	free	unsecluded
+closed-minded	open-minded
+closemouthed	open	talkative	chatty
+cloudless	cloudy
+cocky	uncertain	humble	tentative	shy	unsure	timid	modest
+cogent	invalid	impotent	weak	ineffective
+coherent	unintelligible	unrational	incomprehensible	disorganized	unsystematic	irrational	not_understandable
+coiled	uncoiled
+colloquial	stilted	formal	standard	correct
+comical	solemn	sad	unfunny	grave	serious	tragic
+commendable	poor	unworthy	blameworthy
+commodious	squeezed	uncomfortable	cramped	confined	inconvenient	small
+communicative	reticent	close-mouthed	uninformative	reserved	unfriendly	unsociable
+complaining	enjoying	praising	appreciating
+concave	distended	convex
+conciliatory	stubborn	fighting	antagonistic	refusing
+conducive	unconducive	unhelpful	unfavorable	discouraging	adverse	hindering
+congested	clear	open	free	unclogged	unblocked	uncongested	uncrowded
+congruent	unharmonious	incongruent	disagreeable
+conspicuous	unremarkable	imperceptible	unnoticeable	hidden	concealed	secret	obscure	unknown	unimportant	unseen	inconspicuous
+constipated	regular
+contagious	noncommunicable
+contemptuous	polite	respected	humble	shy
+corpulent	slight	slender	thin	skinny
+corrugated	smooth	flat
+corrupting	purifying
+countless	countable	limited	counted	calculable	measurable	numerable	numbered
+courteous	rude	unmannerly	uncourteous	uncivil	bad-mannered	unrefined	discourteous	impolite
+covetous	giving	benevolent	generous
+crafty	naive	honest	unclever
+credulous	suspicious	untrusting	suspecting	skeptical
+creepy	unscary	normal	nice	pleasant	good	pleasing
+crippled	walking	healthy
+crotchety	happy	pleasant	cheerful
+cuddly	despicable	disgusting
+cursory	thorough	meticulous	complete	unhurried	perfect	painstaking
+curvaceous	flat
+cut-and-dried	vague
+deathly	benign	animated	healthful	beginning	strengthening	life-giving	lively	blooming	harmless	healthy	blossoming
+debatable	questionable	incontrovertible	uncontestable	certain	indubious	inarguable	undoubted	sure
+decayed	flourishing	ripening	developing	growing	germinating	improving
+decorative	ugly
+dedicated	apathetic	lazy
+deep-rooted	superficial	temporary
+defiant	submissive	respectful	obedient	subordinating	submitting	acquiescent
+defiled	pure	hallowed	cleansed	clean	sanctified	purified	honorable
+deflated	inflated
+delirious	unhappy	sane	unexcited	balanced	collected	normal
+demonstrable	unverifiable	distorted	doubtful	vague	obscure	undemonstrable
+deserted	populated	busy	populous	crowded
+deserved	undue	inordinate	excessive
+diabolic	moral	gentle	nice	kind
+diplomatic	rude	artless	tactless	impolite
+disadvantaged	prosperous	rich	wealthy	privileged
+disadvantageous	well-timed	convenient	advantageous	helpful
+discarded	up-to-date	worthwhile	kept
+discontinuous	ruckus	antagonism	incongruity	connected	clashing	dissension	dissonance	discrepancy	enmity	collision	lack_of_concord	disharmony	continuous	static	inharmony	spat	dispute	discord_[n1]_conflict	fuss	opposition	friction	dissent	disagreement_animosity	incompatibility	row	difference	mischief	hassle	antipathy	discordance	scene	split	hostility	rancor	clash	polarization	unbroken	wrangling;_concept_388_'Ant._accord	dissidence	division	disaccord	disunity	contiguous	cooperation	harmony	regular	agreement	contention	variance	rupture	peace	disunion	strife
+discovered	lost	hidden	unfound
+discrete	joined	attached	combined
+discriminatory	impartial
+disenchanted	encouraged	enchanted
+disgraced	in_favor	honored	restored
+disgruntled	satisfied	contented	uncritical	happy	pleased
+disgusted	attracted	happy	desirous	pleased	delighted
+disheveled	orderly	tidy	ordered	neat	unwrinkled
+disinclined	leaning	enthusiastic	inclined	desirous	willing	disposed	bent
+disloyal	loyal	faithful	trustworthy	true
+disobedient	obedient	submitting	nice	accepting	behaving	observant
+disobliging	polite	mannerly	agreeable	mannered	cooperative	civil	accommodating	courteous
+dispensable	irreplaceable	indispensable	useful	necessary	needed
+disproportionate	balanced	even	equal	proportionate
+disruptive	settling	well-behaved	soothing	calming	disciplined
+distrustful	faithful	believing	trusting	trustful	unsuspecting	certain	assured
+divisible	inseparable	indivisible
+doddering	youthful	agile	young
+dolorous	cheery	hopeful	happy
+doting	neglect	ignorance	negligence
+drowsy	energized	lively	alert	awake
+dulled	fresh	brightened
+dusty	clear	clean
+easygoing	agitated	critical	hyped	nervous	upset	worried	demanding	intolerant	strict	hurried
+economical	careless	wasteful	uncareful	expensive	uneconomical	unreasonable
+effortless	demanding	labored	complicated	difficult	hard	effortful
+egregious	slight	minor	secondary	little
+eligible	unsuited	ineligible	unfit	unworthy	unsuitable	inappropriate	improper
+elusive	inviting	encountering	facing	attracting	confronting	enticing
+embarrassing	unshameful	comfortable
+emergent	declining	dependent
+enabling	disabling
+enamored	hated	disliked
+enchanting	disgust	disenchanting	repellent	repulsive	bothering
+endurable	tiring	unendurable	intolerable	changeable
+enlarged	shrunken	contracted	reduced
+enviable	unenviable	undesirable	disadvantaged	unfavored	unlucky	undesired
+errant	righteous	correct
+erroneous	valid	correct	true	right
+evasive	direct	forthright	honest	ready	straightforward	straight
+every	none
+excusable	inexcusable	blameable	unforgivable	unallowable	unjustifiable
+expeditious	retarded	slow	pokey
+expressionless	animated	demonstrative	expressive
+exultant	unhappy	discouraged	depressed	sad	sorrowful
+fabled	unheard_of	unknown
+fallen	honored	lauded	honorable
+farfetched	realistic	plausible	likely	believable
+farsighted	nearsighted	unwise	rash	myopic	shortsighted
+fatherly	motherly	maternally
+febrile	frigid	cold	freezing
+feckless	effectual	responsible	competent	strong	useful	purposeful	efficient	effective
+fecund	sterile	unproductive	impotent	unfruitful	infertile
+feigned	real	sincere	genuine
+feverish	easy-going	cool	content	calm	chilled	unexcited	cold	collected	chilly	freezing
+fibrous	nonfibrous
+fidgety	resting	relaxed	unmoving	still	restful	quiet
+firsthand	indirect	impersonal	hearsay
+flatulent	unpretentious	brief
+flippant	respectful	serious	reverent	courteous
+flirtatious	cool	unprovocative	shy	modest
+fooling	seriousness
+frustrated	fulfilled	encourage	stimulated	uplifted	inspirited
+full-blown	partial
+full-bodied	weak
+full-scale	incomprehensive	partial	incomplete
+fulsome	sincere	reasonable
+fussy	undemanding	uncritical	unfussy
+gabby	close-mouthed	secretive	quiet
+gentlemanly	unbecoming	rude
+gifted	unintelligent	dull	untalented	incapable	inept
+gnarled	untwisted	uncurled	unbent	straight
+graceless	charming	dexterous	elegant	beautiful	graceful	sophisticated
+grammatical	solecistic	ungrammatical
+granted	unaccepted
+gratis	expensive	costly
+guileless	tricky	guileful	deceitful	cunning	crafty	artful	clever	dishonest
+guiltless	immoral	guilty	blameful	wrong	sinful	corrupt
+gullible	unbelieving	suspicious	untrusting	astute	wise	knowledgeable	discerning	perceptive
+half-hearted	enthusiastic
+halfhearted	enthusiastic	warm	desirous	whole-hearted	interested
+halfway	total	wholly	complete	whole	totally	completely
+hapless	lucky	fortuitous	well-off	fortunate
+hard-to-please	undemanding
+hardworking	lazy
+headed	disembarked	stopping	landed
+heavyhearted	lighthearted	cheerful
+helter-skelter	carefully	methodical	organized	systematic	straight
+high-pitched	low-pitched
+historic	unremarkable	unimportant
+hoarse	smooth	soothing	soft
+homologous	dissimilar	unrelated	heterologous
+huffy	joyful	happy	delighted	cheerful
+ice-cold	warm	hot	burning_hot
+icky	nice	good	pleasing
+ill-defined	sharp	well-defined
+ill_at_ease	content	at_ease	comfortable
+illegible	understandable	legible	decipherable	readible
+immemorial	new	current	memorable	lately	young	recent
+impassable	traveled	open	passable
+impecunious	rich	wealthy	moneyed
+impolitic	discreet	cautious	politic	wise	careful
+imported	exported
+impracticable	practicable
+impressionable	unresponsive	insusceptible	obstinate	stubborn	unimpressionable
+improved	damaged	injured	worsened
+inaccessible	reachable	approachable	accessible
+inalienable	transitory	impermanent	alienable	acquired	changeable
+inapt	suitable	competent	apt	happy	suited
+inattentive	looking	noticing	attentive	heedful	observant
+incensed	joyous	happy	pleased	cheerful
+included	left_out	excluded	rejected
+incognizant	cognizant
+inconceivable	fathomable	conceivable	imaginable	believable	reasonable
+incorrigible	obedient	reformable	manageable	nice	good
+incredulous	believing	convinced	credulous
+indefensible	defensible	justified	justifiable	excusable
+indelible	delible	destructible	impermanent	erasable
+indissoluble	dissoluble
+ineffable	utterable	definable	describable
+inefficient	expert	competent	able	useful	capable	efficient
+inexplicable	explainable	intelligible	explicable	comprehendible
+inflammatory	mitigating	calming	pleasing	placating	tranquilizing
+innocuous	harmful	damaging	hurtful	destructive	bad	injurious
+instrumental	unhelpful	useless
+intoxicating	sobering	saddening
+invaluable	worthless
+invidious	lovable	likeable	delightful
+inward	outward	public	outgoing
+irrelevant	appropriate	pertinent	necessary	relevant	related
+jaunty	depressed	lethargic	lifeless
+kind-hearted	hard-hearted
+kindhearted	unsympathetic	nasty	uncompassionate
+knavish	virtuous	noble	honorable
+lacy	thick	heavy
+leafy	leafless
+lengthwise	crosswise	side_to_side	across
+level-headed	excitable
+licit	illicit	forbidden
+lionhearted	fearful
+lissome	portly
+literary	illiterate
+lonesome	unlonesome	loved	befriended
+lurid	humble	clean	modest
+malformed	undistorted	regular	perfect	shapely
+mangy	neat	kempt
+masked	unmasked
+matched	different	unlike	mismatched	unequal
+matted	unknotted	untangled
+measly	sufficient	abundant	satisfactory	plenty	proficient
+meaty	thin	insignificant
+medieval	modern
+mincing	unpretentious	extroverted	unaffected
+missed	hated	located	remembered	disliked	unwanted	found
+mossy	modern	new	dry	fresh	prickly	bare
+mounted	unhorsed	dismounted	afoot
+muffled	clear	unblocked
+multiplied	decreased	reduced	divided
+murderous	easy	pleasant	facile
+nerveless	brave	nervous	nervy	disconcerted	unafraid	courageous
+nightly	daily
+noncommittal	decisive	committal	judgemental	definite	willing
+noteworthy	ordinary	inconsequential	common	unimportant	insignificant
+odorless	smelly	odorous	aromatic	perfumed	scented
+off-key	concordant	on-key	harmonious
+off-line	on-line
+officious	shy	timid	modest
+offshore	onshore
+older	younger
+open-ended	fixed
+outdoor	indoor
+outrageous	magnificent	sensible	acceptable	delightful	mild	good	pleasing	reasonable	wonderful
+over-the-top	understated
+overt	hidden	concealed	secret	private
+patchy	continuous	regular	unspotted	consistent
+pending	unlikely	improbable
+pent-up	released	public
+personable	unfriendly	disagreeable	unsociable
+persuadable	dissuadable
+pervasive	limited	narrow	light
+pervious	impervious
+pesky	pleasing	untroubling
+platonic	physical
+pleasurable	unpleasant	disagreeable
+pornographic	moral	clean
+precocious	stupid
+predisposed	disagreeing	unwilling	disinclined	unprepared
+preparatory	auxiliary	supplementary
+prepossessing	ugly	unattractive	repulsive	homely	unprepossessing
+prescribed	unprescribed
+prestigious	humble	unprestigious	unimportant	modest	insignificant
+prohibitive	unlimited	unrestrictive	reasonable
+promiscuous	cool	chaste	frigid	cold
+psychedelic	normal
+pudgy	slight	thin	skinny
+punished	released	cleared	exonerated
+putative	real	proven	true
+quasi	total	entire	whole
+quotidian	exciting	unusual
+rampant	limited	restrained	controlled	checked
+ranked	strewn	disordered	disarranged
+rarefied	commonplace
+realized	unsubstantiated	unfinished	unfulfilled	incomplete
+regimented	free	varied
+relieved	distraught	worried	sad
+remorseless	remorseful	sad	sorry	guilty	ashamed
+resourceful	unresourceful	dull	uncreative	unimaginative
+respective	indefinite
+rested	tired	fatigued	wearied
+retired	active	working	employed
+rewarding	upsetting	troubling
+rolled	unrolled	spread	straight
+rough-and-ready	sophisticated
+rudimentary	derivative	nonessential	additional	extra	developed	advanced
+sadistic	humane	merciful	kind
+salubrious	insalubrious	unwholesome	unhealthy
+saved	squandered	lost_destroyed	wasted	ruined	spent
+self-explanatory	impenetrable
+sexual	asexual	nonsexual
+smoky	clear	clean	unpolluted
+southern	northern
+spellbound	disenchanted	disinterested
+spoken	heard	written
+spotty	constant	regular	unbroken
+stocky	lanky	thin	underweight	tall	skinny
+stringent	inexact	tolerant	flexible
+suburban	urban	metropolitan	cosmopolitan
+sunburned	pallid	white-skinned	pale
+surprised	calm	poised	aware	unsurprised
+svelte	thick	fat	corpulent	chubby
+tacit	explicit	express
+taxable	free	exempt	deductible	tax-exempt
+teachable	stupid	slow	unskilled
+thankful	unthankful	critical	thankless	unappreciative	ungrateful
+theological	irreligious
+tiresome	easy	nice	fun	stimulating	facile
+top-heavy	balanced	ballasted	stabilized	equalized	even
+touchable	untouchable
+touchy-feely	undemonstrative
+tough-minded	weak-willed
+tropical	polar	frigid	arctic	freezing
+trusted	questionable	untrustworthy	unreliable	shady	false	fake
+turbid	clear
+ulterior	overt	expressed	known	public
+unadvised	advised	wise
+unanswered	shared	decided	reciprocated	mutual	responded_to	settled	determined	requited	certain	returned	answered
+unappealing	appealing
+unbeatable	beatable
+uncharitable	charitable	generous
+undamaged	damaged	injured	hurt	impaired	harmed
+undefeated	defeated	beaten	losing	winless
+undefended	safe	protected	secure	guarded	defended
+undefined	clear	limited	bounded	definite	finite	sure
+underdone	overdone	burnt	well-done
+underway	stopped	halted
+undisputed	doubtful	dubious	disputable	disputed
+unfamiliar	usual	familiar	versed	knowing	experienced	known
+unfathomed	possible
+unfeigned	insincere	pretended
+unfilled	full	overflowing	filled
+unflattering	becoming	flattering	adultory
+unflinching	afraid	unsteady	wavering	spineless	weak
+ungentlemanly	polite	gentlemanly	refined
+unhealthful	wholesome	salubrious	healthful	salutary	healthy
+unheard	heard	audible	noisy	talkative
+unheeded	thought-out	noticed	contemplated	regarded	heeded	considered
+unheralded	expected	recognized	announced	celebrated	predicted	glorified
+unholy	sensible	pious	holy	godly	reasonable	religious
+unilateral	multilateral	many-sided	bilateral
+unimposing	significant	important	arrogant	flashy	ostentatious
+unimproved	improved
+uninhabitable	livable	inhabitable
+unladylike	ladylike	refined
+unlisted	listed	registered	recorded	public
+unmade	made
+unofficial	authorized	confirmed	official	authoritative
+unperturbed	anxious	upset	worried	perturbed
+unprecedented	usual	unremarkable	unexceptional	known
+unpublished	printed	published
+unresolved	resolved	solved	settled	definite	certain	sure
+unscathed	injured	hurt	harmed
+unsightly	sightly	beautiful	nice	pleasing	pretty
+unsolicited	asked	requested	solicited	invited
+untalkative	talkative
+upside-down	right-side-up
+upward	downward
+vengeful	forgiving	liking	pardoning	condoning
+vernal	autumnal
+washable	nonwashable
+watered	dry	thirsty
+well-advised	unwise
+well-heeled	poor
+wide-open	shut
+wonted	uncommon	unaccustomed	unfamiliar	unused
+wry	straightforward	straight
+yonder	near	nearby	close
+aboard	off	not_on
+above_all	lastly
+abundantly	meanly	poorly	meagerly
+adequately	insufficiently	inadequately	unequally	unsatisfactorily	unsuitably
+afterwards	beforehand
+agreeably	dissenting	unpleasantly	unwillingly
+aloud	silently	inaudibly
+angrily	softly	gently	calmly
+assuredly	questionably	doubtfully
+awkwardly	gracefully	adroitly	skillfully
+between	away	separate	away_from	outside	around
+blindly	reasonably	sensibly	purposely	carefully	considerately	cautiously
+boldly	fearfully	cowardly	cautiously
+bravely	timidly	fearfully
+brightly	sadly	dully	darkly	miserably
+briskly	listlessly	slowly	sluggishly
+brutally	kindly	humanely	nicely	gently
+busily	inactively	quietly	idly
+centrally	peripherally
+comfortably	insufficiently	uncomfortably	inadequately	poorly
+commonly	uncommonly	unusually
+confidentially	openly	familiarly	commonly	publicly
+considerably	unappreciably	insignificantly	unremarkably	slightly	little
+correctly	wrongly	mistakenly	incorrectly	flawed	inaccurately
+dangerously	carefully	on_guard	safely	securely
+deeply	slightly	little	incompletely
+defensively	offensively
+delicately	uncarefully	indelicately	strongly
+designedly	unknowingly	unintentionally	innocently	unwittingly	unconsciously
+doubtless	doubted	uncertain	questionable	doubtedly	unlikely	dubious	improbably
+duly	unduly	improperly	unsuitably
+eminently	unimportantly	unremarkably
+emphatically	hesitantly	indistinctly	indecisively
+eternally	transiently	briefly	temporarily	changeably
+evenly	unjustly	irregularly	roughly	unfairly	inequitably	unevenly
+evidently	vaguely	mistakably	questionably	doubtfully	obscurely
+exclusively	unlimited	unrestricted
+falsely	honestly	truthfully
+forcibly	weakly	noncompulsorily
+fortunately	unluckily	unfortunately	sadly	unhappily
+frankly	secretively	deviously	insincerely	dishonestly
+gaily	solemnly	sadly	unhappily
+gladly	sadly	unhappily
+hopefully	gloomily	doubtfully	hopelessly
+humbly	haughtily	boastfully	proudly
+incidentally	purposely
+independently	dependently
+indirectly	directly	primarily	immediately
+legally	illicitly	illegally	unlawfully
+literally	figuratively	loosely
+locally	distantly	nationally	widespread
+luckily	unluckily	unhappily
+materially	slightly	unsubstantially	immaterially
+maybe	surely	definitely	certainly
+mildly	harshly	roughly	violently
+morally	wrongly	dishonorably	worthlessly
+naturally	affectedly	unnaturally
+often	infrequently	seldom	rarely
+originally	secondarily
+overly	insufficiently	inadequately
+pompously	humbly	modestly	quietly
+possibly	impossibly	unlikely
+respectfully	rudely	disrespectfully	impudently
+single-handedly	jointly
+soberly	hilariously	excitedly	cheerfully	intoxicatedly	drunkenly
+someday	never
+somehow	no_way
+subjectively	objectively
+summarily	slowly
+unawares	consciously	knowingly
+unfavorably	approvingly	favorably	agreeably	positively
+unnecessarily	necessarily	indispensably	unavoidably
+unselfishly	egotistically
+verbally	written
+voluntarily	involuntarily	obligatory	forced

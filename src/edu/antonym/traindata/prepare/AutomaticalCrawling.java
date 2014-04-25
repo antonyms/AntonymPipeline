@@ -87,27 +87,29 @@ public class AutomaticalCrawling extends WordNetHelper{
 
 			Set<String> words = new HashSet<String>();
 			Set<String> wordNetWords = new HashSet<String>();
-			//int count = 1;
+			int count = 1;
 			for (POS pos : POS.values()) {						
 				Iterator<?> iterator = dict.getIndexWordIterator(pos);
 				while (iterator.hasNext()) {
 					//System.out.print('.');
-					//if (count++ % 100 == 0) System.out.print('\n');		
+					if (count++ % 100 == 0) {
+						synonymPrintWriter.flush();		
+						antonymPrintWriter.flush();
+					}
 					IIndexWord iIndexWord = (IIndexWord) iterator.next();
 					String target = iIndexWord.getLemma();
 					wordNetWords.add(target);
 					if(target.matches("[^/]+") && !words.contains(target)) {						
-						words.add(target);						
-						target = target.replaceAll("_", " ");
+						words.add(target);	
 						System.out.println(target);
-						ThesaurusParser parser = new ThesaurusParser(target);
+						ThesaurusParser parser = new ThesaurusParser(target.replaceAll("_", " "));
 						antonymList = parser.antonymsParse();
 						synonymList = parser.synonymsParse();
 						
 						if (!antonymList.isEmpty()) {
 							antonymPrintWriter.print(target + "\t");
 							for(String a : antonymList) {
-								words.add(a);
+								words.add(a.replaceAll(" ", "_"));
 								antonymPrintWriter.print(a + "\t");
 							}
 							antonymPrintWriter.println();
@@ -115,7 +117,7 @@ public class AutomaticalCrawling extends WordNetHelper{
 						if (!synonymList.isEmpty()) {
 							synonymPrintWriter.print(target + "\t");
 							for(String s : synonymList) {
-								words.add(s);
+								words.add(s.replaceAll(" ", "_"));
 								synonymPrintWriter.print(s + "\t");
 							}
 							synonymPrintWriter.println();
