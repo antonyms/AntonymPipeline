@@ -46,7 +46,7 @@ public class ThesaurusImp implements Thesaurus{
 		Scanner scanAntonyms=new Scanner(antonymStream);
 		while(scanAntonyms.hasNextLine()) {
 			String words=scanAntonyms.nextLine();
-			List<String> antonyms = Arrays.asList(words.split(" "));;
+			List<String> antonyms = Arrays.asList(words.split("\\s"));;
 			int target = vocab.lookupWord(antonyms.get(0));
 			entries.add(target);
 			antonyms = antonyms.subList(1, antonyms.size());
@@ -64,7 +64,7 @@ public class ThesaurusImp implements Thesaurus{
 		Scanner scanSynonyms=new Scanner(synonymStream);
 		while(scanSynonyms.hasNextLine()) {
 			String words=scanSynonyms.nextLine();
-			List<String> synonyms = Arrays.asList(words.split(" "));;
+			List<String> synonyms = Arrays.asList(words.split("\\s"));;
 			int target = vocab.lookupWord(synonyms.get(0));
 			entries.add(target);
 			synonyms = synonyms.subList(1, synonyms.size());
