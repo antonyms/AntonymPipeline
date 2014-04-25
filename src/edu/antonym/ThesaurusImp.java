@@ -42,18 +42,21 @@ public class ThesaurusImp implements Thesaurus{
 		Set<Integer> entries = new HashSet<Integer>();
 		lookUpAntonym = new HashMap<Integer, List<Integer>>();
 		lookUpSynonym = new HashMap<Integer, List<Integer>>();		
-		vocab = new SimpleVocab(vocabFile);
+		vocab = new SimpleVocab(vocabFile, -1);
 		Scanner scanAntonyms=new Scanner(antonymStream);
 		while(scanAntonyms.hasNextLine()) {
 			String words=scanAntonyms.nextLine();
 			List<String> antonyms = Arrays.asList(words.split("\\s"));;
 			int target = vocab.lookupWord(antonyms.get(0));
+			assert target != -1 : antonyms.get(0);
 			entries.add(target);
 			antonyms = antonyms.subList(1, antonyms.size());
 			List<Integer> antonymsId = new ArrayList<Integer>();			
 			for(String a : antonyms) {
 				if(a != null) {
-					antonymsId.add(vocab.lookupWord(a));
+					int idx = vocab.lookupWord(a);
+					assert idx != -1 : "antonym not found: " + a +".";
+					antonymsId.add(idx);
 				}				
 			}			
 			lookUpAntonym.put(target, antonymsId);
@@ -66,18 +69,20 @@ public class ThesaurusImp implements Thesaurus{
 			String words=scanSynonyms.nextLine();
 			List<String> synonyms = Arrays.asList(words.split("\\s"));;
 			int target = vocab.lookupWord(synonyms.get(0));
+			assert target != -1 : synonyms.get(0);
 			entries.add(target);
 			synonyms = synonyms.subList(1, synonyms.size());
 			List<Integer> synonymsId = new ArrayList<Integer>();
 			for(String s : synonyms) {
 				if(s != null) {
-					synonymsId.add(vocab.lookupWord(s));
+					int idx = vocab.lookupWord(s);
+					assert idx != -1 : "synonym not found: " + s +".";
+					synonymsId.add(idx);
 				}
 			}
 			lookUpSynonym.put(target, synonymsId);
 		}
 		scanSynonyms.close();
-		
 		this.entries = new ArrayList<Integer>(entries);
 	}
 	

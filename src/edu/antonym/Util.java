@@ -8,8 +8,10 @@ import java.io.PrintStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 import edu.antonym.prototype.Thesaurus;
 import edu.antonym.prototype.VectorEmbedding;
@@ -75,14 +77,17 @@ public class Util {
 		StringBuffer sbSyn = new StringBuffer();
 		for(int i = 0; i < n; i++) {
 			int idx = th.getEntry(i);
+			assert idx != -1 : "word not found";
 			List<Integer> ants = th.getAntonyms(idx);
 			for(int j : ants) {
+				assert j != -1 : "word not found";
 				count += 2;
 				sbAnt.append(Integer.toString(idx+1) + " " + Integer.toString(j+1) + " -1\n");
 				sbAnt.append(Integer.toString(j+1) + " " + Integer.toString(idx+1) + " -1\n");
 			}
-			List<Integer> syns = th.getAntonyms(idx);
+			List<Integer> syns = th.getSynonyms(idx);
 			for(int j : syns) {
+				assert j != -1 : "word not found";
 				count += 2;
 				sbSyn.append(Integer.toString(idx+1) + " " + Integer.toString(j+1) + " 1\n");
 				sbSyn.append(Integer.toString(j+1) + " " + Integer.toString(idx+1) + " 1\n");
@@ -99,7 +104,8 @@ public class Util {
 	}
 	
 	public static void main(String[] args) throws IOException{
-		Thesaurus t = new ThesaurusImp(new File("data/WordNet-3.0/antonym.txt"), new File("data/WordNet-3.0/synonym.txt"), new File("data/WordNet-3.0/vocabulary.txt"));
-		saveThesaurusAsMatrixMarket(t, new File("wordnet_mm"));
+		//Thesaurus t = new ThesaurusImp(new File("data/WordNet-3.0/antonym.txt"), new File("data/WordNet-3.0/synonym.txt"), new File("data/WordNet-3.0/vocabulary.txt"));
+		Thesaurus t = new ThesaurusImp(new File("data/Rogets/antonym.txt"), new File("data/Rogets/synonym.txt"), new File("data/Rogets/vocabulary.txt"));
+		saveThesaurusAsMatrixMarket(t, new File("roget_mm"));
 	}
 }
