@@ -1195,7 +1195,7 @@ briefcase	folder	baggage	valise	bag	portfolio	attach茅	dispatch	case
 brig	prison	stockade	slammer	guardhouse
 brigand	soldier	freebooter	footpad	pillager	marauder	desperado	thief	bandit	outlaw	robber	highwayman	pirate
 brightness	smarts	IQ	aptitude	shine	illumination	gloss	luster	luminosity	light	acumen	glaze	competence	brilliance
-brilliancy		wisdom	talent	smartness	shine	blaze	sparkle	glow	grandness	smarts	inventiveness	magnificence	excellence	inspiration	radiance	glitter	intelligence	glory	resplendency	luster	grandeur	cleverness	sagacity	resplendence	effulgence	luminosity	brilliance
+brilliancy	wisdom	talent	smartness	shine	blaze	sparkle	glow	grandness	smarts	inventiveness	magnificence	excellence	inspiration	radiance	glitter	intelligence	glory	resplendency	luster	grandeur	cleverness	sagacity	resplendence	effulgence	luminosity	brilliance
 brim	skirt	verge	lip	periphery	teem	run_over	perimeter	fill	fill_up	spill	brink	rim	swell	overflow	margin	border	hold_no_more	fringe	well_over	circumference	hem
 brine	salt_water	brackish_water	pickling_solution	marinade	saline	blue	vinegar	drink	sea_water	ocean	sodium_chloride_solution	alkali	deep	preservative
 briny	saline	sea	ocean
@@ -4017,7 +4017,7 @@ monastic	solitary	reclusive	celibate	secluded	austere	oblate	contemplative	ascet
 moneymaking	going	gainful	profitable	good	advantageous	well-paying	successful	lucrative	remunerative	paying	thriving
 monger	dealer	merchant	hawker	peddler	trader
 monkey_wrench	obstruction_wrench	Stillson_wrench_[tm]	spanner	pipe_wrench
-monocracy	autocracy		autarchy	despotism	dictatorship	tyranny
+monocracy	autocracy	autarchy	despotism	dictatorship	tyranny
 monogram	initials	identification	cipher	design	character
 monograph	treatise	tract	dissertation	essay	discourse	thesis
 monologue	harangue	speech	lecture	soliloquy	descant	address	sermon	stand-up_bit	disquisition	discourse	talk
@@ -5182,7 +5182,7 @@ steel_drum	kettledrum	steel_pan	timpani	pan
 steel_guitar	Hawaiian_guitar	acoustic_guitar
 steering_committee	panel	quango	select_committee	interlocking_directorate	executive_committee	council
 sterileness	boredom	insipidity	sameness	blandness	routine	stodginess	flavorlessness	insipidness	staleness	vapidity	flatness	jejuneness	vapidness	uninterestingness	slowness	drabness	dryness	commonplaceness	aridity	lifelessness	familiarity	dreariness	tedium	sterility	monotomy	asepticism	colorlessness	weariness	tediousness
-stifling		breathless	sultry	muggy	suffocating	unventilated	heavy	humid	stuffy	close	fetid	thick	confined	stagnant
+stifling	breathless	sultry	muggy	suffocating	unventilated	heavy	humid	stuffy	close	fetid	thick	confined	stagnant
 stimulus	flash	encouragement	kick	cause	incentive	motivation	inducement	incitation	push	fillip	impulse	piquing	eye-opener	turn-on	incitement	invitation	bang	stimulant	motive	sting	instigation	urging	shot_in_the_arm	stimulation	impetus	charge	goad	propellant	fireworks	boost	spur	catalyst
 stink_bomb	stinkpot	stink_ball	odorous_bomb
 stirrup_cup	parting_cup	one_for_the_road	nightcap
