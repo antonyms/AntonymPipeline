@@ -1,3 +1,12 @@
+doggedness	hesitance	
+spunk	cowardice	
+piece	separate	whole	divide	
+trace	lot	run_away	ignore	
+shock	expectation	
+beat	lose	retreat	help	cede	relinquish	guard	surrender	assist	aid	protect	rested	
+heed	overlook	disregard	thoughtlessness	neglect	carelessness	indifference	inattention	heedlessness	ignore	negligence	
+muster	separate	division	remove	separation	throw_away	divide	
+practice	stop	abstention	cease	refrain	neglect	ignorance	halt	forget	
 head	lower	follower	second	foot	inferior	trivial	secondary	rear	ignorance	stupidity	ending	obey	finish	inability	auxiliary	bottom	conclusion	unimportant	end	follow	
 riot	cooperate	calm	solemnity	seriousness	make_peace	peace	comply	
 heart	cowardice	surface	periphery	exterior	exteriority	head	outside	fear	
