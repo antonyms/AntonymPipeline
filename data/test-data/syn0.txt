@@ -215,7 +215,6 @@ and plus moreover
 test assessment check
 preliminary basic elementary
 submit abide accede
-firefox bestWebBrowser anExcellentWebBrowser
 contact approach interact
 access admittance avenue
 review analysis audit
@@ -224,7 +223,6 @@ recommend confirm endorse
 ever anytime forever
 tired distressed worn
 searching probing inquiring
-google bestSearchEngine searchEngine
 synonym metonym equivalent
 word term phrase
 try experiment test
