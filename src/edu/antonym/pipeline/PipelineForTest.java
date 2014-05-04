@@ -37,13 +37,9 @@ public class PipelineForTest {
 		System.out.println(t.numEntries());
 		int white = voc.lookupWord("white");				
 		System.out.println(t.isAntonym(black, white));		
-		List<Integer> ants = t.getSynonyms(black);
-		for (int w : ants) {
-			System.out.println(voc.lookupIndex(w));
-		}
-		
+
 		NormalizedVectorEmbedding embedding = new NormalizedTextFileEmbedding(new File("data/huangvectors.txt"), voc);
-		LinearMetricTrainer trainer=new LinearMetricTrainer(embedding, 100);
+		LinearMetricTrainer trainer=new LinearMetricTrainer(embedding);
 		
 		WordMetric metric= trainer.train(t);
 		MetricEvaluator evaluator = new TestCaseGRE();

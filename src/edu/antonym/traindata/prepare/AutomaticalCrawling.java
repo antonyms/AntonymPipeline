@@ -39,18 +39,6 @@ public class AutomaticalCrawling extends WordNetHelper{
 	}
 
 	@Override
-	public List<Integer> getAntonyms(int word) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Integer> getSynonyms(int word) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public boolean isAntonym(int word1, int word2) {
 		// TODO Auto-generated method stub
 		return false;
@@ -61,7 +49,12 @@ public class AutomaticalCrawling extends WordNetHelper{
 		// TODO Auto-generated method stub
 		return false;
 	}
-
+	
+	@Override
+	public int lookupEntry(int word1, int word2, boolean isAnt) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 	@Override
 	public void traverseWords(IDictionary dict) {
 		// TODO Auto-generated method stub
@@ -145,5 +138,7 @@ public class AutomaticalCrawling extends WordNetHelper{
 		}
 
 	}
+
+
 
 }

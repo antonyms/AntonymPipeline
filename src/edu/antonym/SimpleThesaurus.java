@@ -146,7 +146,7 @@ public class SimpleThesaurus implements Thesaurus {
 		}
 	}
 	
-	int lookupEntry(int word1, int word2, boolean isant) {
+	public int lookupEntry(int word1, int word2, boolean isant) {
 		ThesaurusEntry key = new ThesaurusEntry();
 		key.word1 = word1;
 		key.word2 = word2;
@@ -170,12 +170,10 @@ public class SimpleThesaurus implements Thesaurus {
 		return result;
 	}
 
-	@Override
 	public List<Integer> getAntonyms(int word) {
 		return lookupentrylist(word, true);
 	}
 
-	@Override
 	public List<Integer> getSynonyms(int word) {
 		return lookupentrylist(word, false);
 	}

@@ -30,7 +30,6 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue,
 
 	double regularizationStrength = 1;
 
-
 	// cached optimization values;
 	boolean cacheDirty;
 	double cachedValue;
@@ -56,7 +55,6 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue,
 		this.th = th;
 		cacheDirty = true;
 	}
-
 
 	@Override
 	public int getNumParameters() {
@@ -160,22 +158,16 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue,
 
 			double entsim = cosineSimGradAndValue(ent.word1(), ent.word2(),
 					gradTmp1);
-			double rsim = cosineSimGradAndValue(ent.word1(), randSample,
-					gradTmp2);
 
 			if (ent.isAntonym()) {
-				if (rsim < entsim) {
-					cachedValue -= entsim - rsim;
-					for (int p = 0; p < parameters.length; p++) {
-						cachedGradient[p] -= gradTmp1[p] - gradTmp2[p];
-					}
+				cachedValue -= (entsim + 1) * (entsim + 1);
+				for (int p = 0; p < parameters.length; p++) {
+					cachedGradient[p] -= 2 * (entsim + 1) * gradTmp1[p];
 				}
 			} else {
-				if (rsim > entsim) {
-					cachedValue += entsim - rsim;
-					for (int p = 0; p < parameters.length; p++) {
-						cachedGradient[p] += gradTmp1[p] - gradTmp2[p];
-					}
+				cachedValue -= (entsim - 1) * (entsim - 1);
+				for (int p = 0; p < parameters.length; p++) {
+					cachedGradient[p] -= 2 * (entsim - 1) * gradTmp1[p];
 				}
 			}
 

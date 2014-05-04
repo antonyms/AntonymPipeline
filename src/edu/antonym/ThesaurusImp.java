@@ -86,7 +86,6 @@ public class ThesaurusImp implements Thesaurus{
 		this.entries = new ArrayList<Integer>(entries);
 	}
 	
-	@Override
 	public List<Integer> getAntonyms(int word) {
 		List<Integer> res=lookUpAntonym.get(word);
 		if(res == null) {
@@ -95,7 +94,6 @@ public class ThesaurusImp implements Thesaurus{
 		return res;
 	}
 
-	@Override
 	public List<Integer> getSynonyms(int word) {
 		List<Integer> res=lookUpSynonym.get(word);
 		if(res == null) {
@@ -154,6 +152,11 @@ public class ThesaurusImp implements Thesaurus{
 	@Override
 	public Entry getEntry(int entryn) {
 		return null;
+	}
+	@Override
+	public int lookupEntry(int word1, int word2, boolean isAnt) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

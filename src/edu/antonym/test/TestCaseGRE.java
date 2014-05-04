@@ -68,9 +68,13 @@ public class TestCaseGRE implements MetricEvaluator {
 				else {
 					out.append("Cannot find target: " + target);
 					out.append(" WRONG ");
-					accuracy_neg++;
+					//accuracy_neg++;
 					out.append("\n");
 					line = br.readLine();
+					continue;
+				}
+				if(vocab.lookupWord(answer)==OOV) {
+					line=br.readLine();
 					continue;
 				}
 				
@@ -117,7 +121,7 @@ public class TestCaseGRE implements MetricEvaluator {
 			if((accuracy_pos+accuracy_neg)!=0){
 				accuracy = ((double)accuracy_pos)/(double)(accuracy_pos+accuracy_neg);
 			}
-			acc-=accuracy;
+			acc+=accuracy;
 			out.append("Final accuracy = "+ Double.toString(accuracy));
 			System.out.println("[GRE TEST] Final accuracy = " + Double.toString(accuracy));
 			br.close();

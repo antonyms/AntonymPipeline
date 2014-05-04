@@ -2,6 +2,7 @@ package edu.antonym.prototype;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +23,7 @@ public class SubThesaurus implements Thesaurus {
 		super();
 		this.parent = parent;
 		this.indices = indices;
+		Collections.sort(this.indices);
 	}
 
 	public void addEntry(int entry) {
@@ -44,24 +46,21 @@ public class SubThesaurus implements Thesaurus {
 	}
 
 	@Override
-	public List<Integer> getAntonyms(int word) {
-		return parent.getAntonyms(word);
-	}
-
-	@Override
-	public List<Integer> getSynonyms(int word) {
-		return parent.getSynonyms(word);
-	}
-
-	@Override
 	public boolean isAntonym(int word1, int word2) {
-		return parent.isAntonym(word1, word2);
+		return lookupEntry(word1, word2, true)>=0;
 	}
 
 	@Override
 	public boolean isSynonym(int word1, int word2) {
-		return parent.isSynonym(word1, word2);
+		return lookupEntry(word1, word2, false)>=0;
 	}
+
+	@Override
+	public int lookupEntry(int word1, int word2, boolean isAnt) {
+		int ent=parent.lookupEntry(word1, word2, isAnt);
+		return Collections.binarySearch(indices, ent);
+	}
+	
 //Samples a subthesaurus with n entries
 	public static Thesaurus SampleThesaurus(Thesaurus th, int n) {
 		int thsize=th.numEntries();
@@ -141,4 +140,5 @@ public class SubThesaurus implements Thesaurus {
 		}
 		return result;
 	}
+
 }

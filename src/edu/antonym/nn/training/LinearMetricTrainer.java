@@ -4,13 +4,17 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import cc.mallet.optimize.ConjugateGradient;
 import cc.mallet.optimize.GradientAscent;
 import cc.mallet.optimize.LimitedMemoryBFGS;
+import cc.mallet.optimize.Optimizable;
 import cc.mallet.optimize.OptimizationException;
 import cc.mallet.optimize.Optimizer;
+import cc.mallet.optimize.tests.TestOptimizable;
 import edu.antonym.NormalizedTextFileEmbedding;
 import edu.antonym.SimpleThesaurus;
 import edu.antonym.SimpleVocab;
+import edu.antonym.Util;
 import edu.antonym.metric.LinearVectorMetric;
 import edu.antonym.prototype.NormalizedVectorEmbedding;
 import edu.antonym.prototype.SubThesaurus;
@@ -18,6 +22,7 @@ import edu.antonym.prototype.Thesaurus;
 import edu.antonym.prototype.Vocabulary;
 import edu.antonym.test.RandomizedTestCase;
 import edu.antonym.test.TestCase;
+import edu.antonym.test.TestCaseGRE;
 
 public class LinearMetricTrainer {
 
@@ -27,9 +32,19 @@ public class LinearMetricTrainer {
 	int batchsize;
 	int numiterations = Integer.MAX_VALUE;
 
-	public LinearMetricTrainer(NormalizedVectorEmbedding orig, int batchsize) {
+	double regweight;
+	boolean LBFGS;
+
+	public LinearMetricTrainer(NormalizedVectorEmbedding orig) {
+		this(orig, 1000, 0.1, false);
+	}
+
+	public LinearMetricTrainer(NormalizedVectorEmbedding orig, int batchsize,
+			double regweight, boolean LBFGS) {
 		this.embedding = new LinearVectorMetric(orig);
 		this.batchsize = batchsize;
+		this.regweight = regweight;
+		this.LBFGS = LBFGS;
 	}
 
 	public void setNumIterations(int n) {
@@ -38,7 +53,14 @@ public class LinearMetricTrainer {
 
 	public Optimizer getOptimizer() {
 		if (cachedOptimizer == null) {
-			cachedOptimizer = new GradientAscent(new RegularizedOptimizable( embedding, 1, 0.1));
+			Optimizable.ByGradientValue o =embedding;
+					//new RegularizedOptimizable(					embedding, Math.sqrt(embedding.getNumParameters()), regweight);
+			if (LBFGS) {
+				cachedOptimizer = new LimitedMemoryBFGS(o);
+			} else {
+				GradientAscent a=new GradientAscent(o);
+				cachedOptimizer = a;
+			}
 		}
 		return cachedOptimizer;
 	}
@@ -53,29 +75,29 @@ public class LinearMetricTrainer {
 		System.out.println("Beginning Batch training. Objective value "
 				+ embedding.getValue());
 		training_loop: for (int i = 0; i < iterations; i++) {
-			int batchstart = 0;
-			int batchend = batchsize;
-			boolean converged=true;
-			for(int j=0; j<th.numEntries()/batchsize; j++) {
+			boolean converged = true;
+			for (int j = 0; j < th.numEntries() / batchsize; j++) {
 				try {
-				embedding.setThesaurus(SubThesaurus.SampleThesaurus(th,batchsize));
-				if (optim.optimize(1)) { // if convergence
-					break training_loop;
+					embedding.setThesaurus(SubThesaurus.SampleThesaurus(th,
+							batchsize));
+					if (!optim.optimize(1)) { // if convergence
+						converged=false;
+					} else {
+						break training_loop;
+					}
+				} catch (OptimizationException e) {
 				}
-				}catch(OptimizationException e) {
-				}
-				System.out
-				.println("One minibatch complete. Batch value "
-						+ embedding.getValue());	
+				System.out.println("One minibatch complete. Batch value "
+						+ embedding.getValue());
 			}
 			embedding.setThesaurus(th);
 			System.out
 					.println("One pass of dataset complete.  Objective value "
-							+ embedding.getValue());	
-			if(converged) {
+							+ embedding.getValue());
+			if (converged) {
 				System.out.println("Converged!");
-					break training_loop;
-				}
+				break training_loop;
+			}
 		}
 
 		return embedding;
@@ -87,24 +109,37 @@ public class LinearMetricTrainer {
 				"data/Rogets/synonym.txt"), new File("data/Rogets/antonym.txt"));
 		NormalizedVectorEmbedding origEmbed = new NormalizedTextFileEmbedding(
 				new File("data/huangvectors.txt"), vocab);
-		LinearMetricTrainer t = new LinearMetricTrainer(origEmbed, 1000);
-		LinearVectorMetric m = t.train(th);
 		
-		String[] input = {"-s", "data/test-data/syn1.txt","-a","data/test-data/ant1.txt"};
-		RandomizedTestCase n = new RandomizedTestCase(input);
-		double score = n.score(m);
-		System.out.println("score = "+score);
-		
-		score = n.score(origEmbed);
-		System.out.println("origscore = "+score);
-		
-		String[] input2 = {"-s", "data/test-data/syn0.txt","-a","data/test-data/ant0.txt"};
-		n = new RandomizedTestCase(input2);
-		score = n.score(m);
-		System.out.println("trainscore = "+score);
-		
-		score = n.score(origEmbed);
-		System.out.println("origtrainscore = "+score);
+		Thesaurus[] split = SubThesaurus.splitThesaurus(th, new double[] { 0.8,
+				0.2 }); // train/test split
+		LinearMetricTrainer t = new LinearMetricTrainer(origEmbed, 4000, 1,
+				true);
 
+		LinearVectorMetric m = t.train(split[0]);
+
+
+		RandomizedTestCase n = new RandomizedTestCase(split[1]);
+		double score = n.score(m);
+		System.out.println("score = " + score);
+
+		score = n.score(origEmbed);
+		System.out.println("origscore = " + score);
+
+	
+		n = new RandomizedTestCase(split[0]);
+		score = n.score(m);
+		System.out.println("trainscore = " + score);
+
+		score = n.score(origEmbed);
+		System.out.println("origtrainscore = " + score);
+
+		TestCaseGRE g=new TestCaseGRE();
+		score=g.score(m);
+		double origscore=g.score(origEmbed);
+		System.out.println("GRE results originally "+origscore+" after optimization "+score);
+		System.out.println("PARAMETERS");
+		for(int i=0; i<m.getNumParameters(); i++) {
+			System.out.println(m.getParameter(i));
+		}
 	}
 }

@@ -14,8 +14,8 @@ public interface Thesaurus {
 	public int numEntries();
 	public Entry getEntry(int entryn);
 	
-	public List<Integer> getAntonyms(int word);
-	public List<Integer> getSynonyms(int word);
+	public int lookupEntry(int word1, int word2, boolean isAnt);
+
 	
 	public boolean isAntonym(int word1, int word2);
 	public boolean isSynonym(int word1, int word2);

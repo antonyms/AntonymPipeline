@@ -18,99 +18,19 @@ import org.apache.commons.cli.PosixParser;
 
 import edu.antonym.Util;
 import edu.antonym.prototype.MetricEvaluator;
+import edu.antonym.prototype.Thesaurus;
+import edu.antonym.prototype.Thesaurus.Entry;
 import edu.antonym.prototype.Vocabulary;
 import edu.antonym.prototype.WordMetric;
 
-public class RandomizedTestCase implements MetricEvaluator{
-	
-	/*	
-	 * 	Input arguments:
-	 *  Usage: 
- 	 *	-a    test files with antonyms
- 	 *	-s    test files with synonyms
- 	 *	-h    print out usage
- 	 *	
-	 *  example:
-	 *  	String[] input = {"-s", "data/test-data/syn0.txt", "data/test-data/syn1.txt"};
-	 *		TestCase n = new TestCase(input);
-	 *		double score = n.score(metric);
-	 *
-	 *		or 
-	 *		String[] input = {"-a", "data/test-data/ant0.txt"};
-	 *		TestCase n = new TestCase(input);
-	 *		double score = n.score(metric);
-	 *
-	 *		or 
-	 *		String[] input = {"-a", "data/test-data/ant0.txt", "-s", "data/test-data/syn0.txt",};
-	 *		TestCase n = new TestCase(input);
-	 *		double score = n.score(metric);
-	 *		Note: 
-	 *		You can still see standard output results for both ant and syn
-	 *			, but only the last score would be returned
-	 *
-	 */
-	public ArrayList<String> antfiles = new ArrayList<String>();
-	public ArrayList<String> synfiles = new ArrayList<String>();
-	
-	@SuppressWarnings("static-access")
-	private static Options createOptions() {
-	    Options options = new Options();
-	    options.addOption(OptionBuilder.hasArgs().withDescription("followed by test files with antonyms").isRequired(false).create("a"));
-	    options.addOption(OptionBuilder.hasArgs().withDescription("followed by test files with synonyms").isRequired(false).create("s"));
-	    options.addOption("h", false, "print out usage");
-	    return options;
-	  }
+public class RandomizedTestCase implements MetricEvaluator {
 
-	private static void showHelp(Options options) {
-	    HelpFormatter h = new HelpFormatter();
-	    h.printHelp("help", options);
-	    System.exit(-1);
-	  }
-	  
-	public RandomizedTestCase(String[]  args){
-		Options options = createOptions();
-	    try {
-	      CommandLineParser parser = new PosixParser();
-	      CommandLine cmd = parser.parse(options, args);
+	public Thesaurus th;
 
-	      if(cmd.hasOption("s")){
-	    	  String path[] = cmd.getOptionValues("s"); 
-	    	  for(int j=0;j<path.length;j++){
-	    		  try{
-	    			  FileInputStream f = new FileInputStream(path[j]);
-		    		  synfiles.add(path[j]);
-	    		  }catch(FileNotFoundException e){
-	    			  System.out.println("File not found, exit");
-	    			  System.exit(0);
-	    		  }
-	    		  
-	    	  }  
-	      }
-	      if(cmd.hasOption("a")){
-	    	  String path[] = cmd.getOptionValues("a"); 
-	    	  for(int j=0;j<path.length;j++){
-	    		  try{
-	    			  FileInputStream f = new FileInputStream(path[j]);
-		    		  antfiles.add(path[j]);
-	    		  }catch(FileNotFoundException e){
-	    			  System.out.println("File not found, exit");
-	    			  System.exit(0);
-	    		  }
-	    	  }  
-	      }
-	      if(cmd.hasOption("h")){
-	    	  showHelp(options);
-	      }
-	      if((!cmd.hasOption("h"))&&(!cmd.hasOption("a"))&&(!cmd.hasOption("s"))){
-	          showHelp(options);
-	      }
-	    } catch (Exception e) {
-	      e.printStackTrace();
-	      showHelp(options);
-	    }
-		
+	public RandomizedTestCase(Thesaurus th) {
+		this.th = th;
 	}
-	
+
 	@Override
 	public double score(WordMetric metric) throws IOException {
 
@@ -118,148 +38,49 @@ public class RandomizedTestCase implements MetricEvaluator{
 		new File(result_folder).mkdirs();
 
 		double acc = 0.0d;
-		
-		if(!antfiles.isEmpty()){
-			
-			Vocabulary vocab = metric.getVocab();
-			int OOV = vocab.OOVindex();
-			
-			for(int i=0;i<antfiles.size();i++){
-				int ant_num = 0;
-				int syn_num = 0;
-				double mse_ant = 0.0;
-				double mse_syn = 0.0;
-				
-				FileWriter out = new FileWriter(result_folder+ "ant"+i+".txt"); 
-				BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(antfiles.get(i))));
-				String line = br.readLine();
-				while(line!=null){
-					String[] words = line.split("\\s+");
-					ArrayList<Integer> wids = new ArrayList<Integer>();
-					for(int j=0;j<words.length;j++){
-						int wordID = vocab.lookupWord(words[j]);
-						if (wordID != OOV) {
-							wids.add(wordID);
-							out.append(words[j]+" ");
-						}
-						else {
-							out.append("No such word: " + words[j]+ " ");
-						}
-					}	
-					if(wids.size()==2 && words.length==2){
-						double cs = metric.similarity(wids.get(0), wids.get(1));
-						double rs=metric.similarity(wids.get(0), Util.r.nextInt(vocab.size()));
-						ant_num++;
-						double err=cs-rs;
-						if(err>0) {
-							mse_ant+=err;
-						}
-						out.append(Double.toString(cs));
-					}
-					else if(wids.size()==3){
-						double cs = metric.similarity(wids.get(0), wids.get(1));
-						double rs=metric.similarity(wids.get(0), Util.r.nextInt(vocab.size()));
-						ant_num++;
-						double err=cs-rs;
-						if(err>0) {
-							mse_ant+=err;
-						}
-						out.append(Double.toString(cs)+" ");
-						cs =metric.similarity(wids.get(0), wids.get(2));
-						rs=metric.similarity(wids.get(0), Util.r.nextInt(vocab.size()));
-						ant_num++;
-						err=cs-rs;
-						if(err>0) {
-							mse_ant+=err;
-						}
-						out.append(Double.toString(cs)+" ");
-						cs = metric.similarity(wids.get(1), wids.get(2));
-						rs=metric.similarity(wids.get(0), Util.r.nextInt(vocab.size()));
-						syn_num++;
-						err=cs-rs;
-						if(err>0) {
-							mse_ant+=err;
-						}
-						out.append(Double.toString(cs)+" ");
-					}
-								
-					out.append("\n");
-					line = br.readLine();
-				}
-				mse_ant = mse_ant/ant_num;
-				mse_syn = mse_syn/syn_num;
-				acc-=mse_ant;
-				out.append("\n");
-				out.append("Mean squared error for antonym is: " + mse_ant +"\n");
-				System.out.println("[SIMPLE ANT TEST" + i + "] Mean squared error for antonym is: " + Double.toString(mse_ant));
-				if(syn_num!=0){
-					out.append("Mean squared error for synonym is: " + mse_syn +"\n");
-					System.out.println("[SIMPLE ANT TEST" + i + "] Mean squared error for synonym is: " + Double.toString(mse_syn));
-				}
-				out.close();
-				br.close();
+
+		Vocabulary vocab = metric.getVocab();
+
+		int ant_num = 0;
+		int syn_num = 0;
+		double mse_ant = 0.0;
+		double mse_syn = 0.0;
+		FileWriter out = new FileWriter(result_folder + "ant.txt");
+
+		for (int i = 0; i < th.numEntries(); i++) {
+			Entry ent = th.getEntry(i);
+			out.append(vocab.lookupIndex(ent.word1()) + " "
+					+ vocab.lookupIndex(ent.word2()) + " ");
+			double cs = metric.similarity(ent.word1(), ent.word2());
+			if (ent.isAntonym()) {
+				ant_num++;
+				mse_ant+=(-1-cs)*(-1-cs);
+				out.append(Double.toString(cs));
+			} else {
+				syn_num++;
+				mse_syn+=(1-cs)*(1-cs);
+				out.append(Double.toString(cs));
 			}
-			System.out.println("Overall accuracy is: "+ acc);
+			out.append("\n");
 		}
-		if(!synfiles.isEmpty()){
-			Vocabulary vocab = metric.getVocab();
-			int OOV = vocab.OOVindex();
-			
-			acc = 0.0d;
-			for (int i = 0; i < synfiles.size(); i++) {
-				int syn_num = 0;
-				double mse_syn = 0.0;
-
-				FileWriter out = new FileWriter(result_folder + "syn"+i+".txt");
-				BufferedReader br = new BufferedReader(new InputStreamReader(
-						new FileInputStream(synfiles.get(i))));
-				String line = br.readLine();
-
-				while (line != null) {
-					String[] words = line.split("\\s+");
-					ArrayList<Integer> vectors = new ArrayList<Integer>();
-					for (int j = 0; j < words.length; j++) {
-						int wordID = vocab.lookupWord(words[j]);
-						if (wordID != OOV) {
-							vectors.add(wordID);
-							out.append(words[j] + " ");
-						} else {
-							out.append("No such word: " + words[j] + " ");
-						}
-					}
-
-					for (int k = 0; k < vectors.size(); k++) {
-						double cs = metric.similarity(
-								vectors.get(k % vectors.size()),
-								vectors.get((k + 1) % vectors.size()));
-						double rs=metric.similarity(k % vectors.size(), Util.r.nextInt(vocab.size()));
-						syn_num++;
-						double err=rs-cs;
-						if(err>0) {
-							mse_syn+=err;
-						}
-						out.append(Double.toString(cs) + " ");
-					}
-
-					out.append("\n");
-					line = br.readLine();
-				}
-				mse_syn = mse_syn / syn_num;
-				acc -= mse_syn;
-				out.append("\n");
-				out.append("Mean squared error for synonym is: " + mse_syn + "\n");
-				System.out.println("[SIMPLE SNY TEST" + i
-						+ "] Mean squared error for synonym is: "
-						+ Double.toString(mse_syn));
-				out.close();
-				br.close();
-
-			}
-			System.out.println("Overall accuracy is: "+ acc);
+		mse_ant = mse_ant / ant_num;
+		mse_syn = mse_syn / syn_num;
+		acc -= mse_ant;
+		acc -= mse_syn;
+		out.append("\n");
+		out.append("Mean squared error for antonym is: " + mse_ant + "\n");
+		System.out
+				.println("[SIMPLE ANT TEST] Mean squared error for antonym is: "
+						+ Double.toString(mse_ant));
+		if (syn_num != 0) {
+			out.append("Mean squared error for synonym is: " + mse_syn + "\n");
+			System.out
+					.println("[SIMPLE ANT TEST] Mean squared error for synonym is: "
+							+ Double.toString(mse_syn));
 		}
-		
+		out.close();
+
 		return acc;
 	}
-
 
 }
