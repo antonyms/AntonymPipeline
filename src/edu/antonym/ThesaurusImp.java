@@ -152,8 +152,8 @@ public class ThesaurusImp implements Thesaurus{
 		return entries.size();
 	}
 	@Override
-	public int getEntry(int entryn) {
-		return entries.get(entryn);
+	public Entry getEntry(int entryn) {
+		return null;
 	}
 
 }

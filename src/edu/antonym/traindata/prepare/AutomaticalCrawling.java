@@ -33,9 +33,9 @@ public class AutomaticalCrawling extends WordNetHelper{
 	}
 
 	@Override
-	public int getEntry(int entryn) {
+	public Entry getEntry(int entryn) {
 		// TODO Auto-generated method stub
-		return 0;
+		return null;
 	}
 
 	@Override

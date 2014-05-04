@@ -3,12 +3,16 @@ package edu.antonym.prototype;
 import java.util.List;
 
 public interface Thesaurus {
-	
+	public interface Entry {
+		public int word1();
+		public int word2();
+		public boolean isAntonym();
+	}
 	public Vocabulary getVocab();
 	
 	//Returns the words included in the Thesaurus
 	public int numEntries();
-	public int getEntry(int entryn);
+	public Entry getEntry(int entryn);
 	
 	public List<Integer> getAntonyms(int word);
 	public List<Integer> getSynonyms(int word);

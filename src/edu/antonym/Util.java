@@ -2,18 +2,15 @@ package edu.antonym;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Random;
-import java.util.Set;
 
 import edu.antonym.prototype.Thesaurus;
+import edu.antonym.prototype.Thesaurus.Entry;
 import edu.antonym.prototype.VectorEmbedding;
 import edu.antonym.prototype.Vocabulary;
 
@@ -57,7 +54,7 @@ public class Util {
         }
         return cosineSimilarity;
     }
-	static Random r=new Random();
+	public static Random r=new Random();
 	
 	public static int hashInteger(int i, int max) {
 		r.setSeed(i);
@@ -76,22 +73,9 @@ public class Util {
 		StringBuffer sbAnt = new StringBuffer();
 		StringBuffer sbSyn = new StringBuffer();
 		for(int i = 0; i < n; i++) {
-			int idx = th.getEntry(i);
-			assert idx != -1 : "word not found";
-			List<Integer> ants = th.getAntonyms(idx);
-			for(int j : ants) {
-				assert j != -1 : "word not found";
-				count += 2;
-				sbAnt.append(Integer.toString(idx+1) + " " + Integer.toString(j+1) + " -1\n");
-				sbAnt.append(Integer.toString(j+1) + " " + Integer.toString(idx+1) + " -1\n");
-			}
-			List<Integer> syns = th.getSynonyms(idx);
-			for(int j : syns) {
-				assert j != -1 : "word not found";
-				count += 2;
-				sbSyn.append(Integer.toString(idx+1) + " " + Integer.toString(j+1) + " 1\n");
-				sbSyn.append(Integer.toString(j+1) + " " + Integer.toString(idx+1) + " 1\n");
-			}
+			Entry idx = th.getEntry(i);
+			sbAnt.append(Integer.toString(idx.word1()+1) + " " + Integer.toString(idx.word2()+1) + " "+(idx.isAntonym()?"-":"")+"1\n");
+			sbAnt.append(Integer.toString(idx.word2()+1) + " " + Integer.toString(idx.word1()+1) + " "+(idx.isAntonym()?"-":"")+"1\n");
 		}
 		PrintStream ps = new PrintStream(out);
 		ps.println("%%MatrixMarket matrix coordinate real general");		

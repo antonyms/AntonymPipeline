@@ -3,16 +3,20 @@ package edu.antonym.metric;
 import java.util.Arrays;
 import java.util.List;
 
+import org.hamcrest.core.IsAnything;
+
 import cc.mallet.optimize.Optimizable;
 import cc.mallet.types.MatrixOps;
 import edu.antonym.Util;
+import edu.antonym.prototype.Thesaurus.Entry;
 import edu.antonym.prototype.WordMetric;
 import edu.antonym.prototype.NormalizedVectorEmbedding;
 import edu.antonym.prototype.Thesaurus;
 import edu.antonym.prototype.VectorEmbedding;
 import edu.antonym.prototype.Vocabulary;
 
-public class LinearVectorMetric implements Optimizable.ByGradientValue, WordMetric {
+public class LinearVectorMetric implements Optimizable.ByGradientValue,
+		WordMetric {
 	Thesaurus th;
 	VectorEmbedding orig;
 	// lower diagonal half of symmetric matrix
@@ -26,9 +30,6 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue, WordMetr
 
 	double regularizationStrength = 1;
 
-	// Beginning and end index
-	int activeThesaurusStart;
-	int activeThesaurusEnd;
 
 	// cached optimization values;
 	boolean cacheDirty;
@@ -53,14 +54,9 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue, WordMetr
 
 	public void setThesaurus(Thesaurus th) {
 		this.th = th;
-		this.activeThesaurusStart = 0;
-		this.activeThesaurusEnd = th.numEntries();
+		cacheDirty = true;
 	}
 
-	public void setActiveEntries(int start, int end) {
-		this.activeThesaurusStart = start;
-		this.activeThesaurusEnd = end;
-	}
 
 	@Override
 	public int getNumParameters() {
@@ -98,7 +94,7 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue, WordMetr
 			for (int j = 0; j < i; j++) {
 				// Calculate the contribution from this entry and the reflected
 				// entry in the upper half part
-				tot += vec1[i] * parameters[ind]* vec2[j];
+				tot += vec1[i] * parameters[ind] * vec2[j];
 				tot += vec1[j] * parameters[ind] * vec2[i];
 				ind++;
 			}
@@ -108,8 +104,8 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue, WordMetr
 		return tot;
 	}
 
-	double cosineSimGradAndValue(int w1ind, int w2ind, double[] vec1,
-			double[] gradOut) {
+	double cosineSimGradAndValue(int w1ind, int w2ind, double[] gradOut) {
+		double[] vec1 = orig.getVectorRep(w1ind);
 		double[] vec2 = orig.getVectorRep(w2ind);
 
 		double n = innerProd(vec1, vec1);
@@ -117,11 +113,10 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue, WordMetr
 		double l = innerProd(vec1, vec2);
 
 		// Value of cosine similarity
-		double value = l ;// / Math.sqrt(n * m);
+		double value = l;// / Math.sqrt(n * m);
 
+		// System.out.println("l="+l+" n="+n+" m="+m+" cosinesim="+value);
 
-		//System.out.println("l="+l+" n="+n+" m="+m+" cosinesim="+value);
-		
 		// Now we calculate the gradient
 		// See doc/linearembeddingtheory for the math behind this
 
@@ -132,21 +127,19 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue, WordMetr
 			for (int j = 0; j < i; j++) {
 				// Off diagonal elements
 				gradOut[ind] = n * m * (vec1[i] * vec2[j] + vec1[j] * vec2[i])
-						     - l * m *  vec1[i] * vec1[j] 
-						     - l * n *  vec2[i] * vec2[j];
+						- l * m * vec1[i] * vec1[j] - l * n * vec2[i] * vec2[j];
 				gradOut[ind] /= denom;
-				
-				gradOut[ind]=vec1[i]*vec2[j]+vec1[j]*vec2[i];
+
+				gradOut[ind] = vec1[i] * vec2[j] + vec1[j] * vec2[i];
 				ind++;
 			}
 			// on diagonal elements
-			gradOut[ind] = 		n * m * vec1[i] * vec2[i] 
-						- 0.5 * l * m * vec1[i] * vec1[i] 
-						- 0.5 * l * n * vec2[i] * vec2[i];
+			gradOut[ind] = n * m * vec1[i] * vec2[i] - 0.5 * l * m * vec1[i]
+					* vec1[i] - 0.5 * l * n * vec2[i] * vec2[i];
 			gradOut[ind] /= denom;
-			
-			gradOut[ind]=vec1[i]*vec2[i];
-			
+
+			gradOut[ind] = vec1[i] * vec2[i];
+
 			ind++;
 		}
 		return value;
@@ -160,42 +153,32 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue, WordMetr
 		double[] gradTmp1 = new double[parameters.length];
 		double[] gradTmp2 = new double[parameters.length];
 
-		for (int i = activeThesaurusStart; i < activeThesaurusEnd; i++) {
-			int wind = th.getEntry(i);
+		for (int i = 0; i < th.numEntries(); i++) {
+			Entry ent = th.getEntry(i);
 
-			double[] vec1 = orig.getVectorRep(wind);
+			int randSample = Util.r.nextInt(vocabSize);
 
-			List<Integer> syn = th.getSynonyms(wind);
-			List<Integer> ant = th.getAntonyms(wind);
+			double entsim = cosineSimGradAndValue(ent.word1(), ent.word2(),
+					gradTmp1);
+			double rsim = cosineSimGradAndValue(ent.word1(), randSample,
+					gradTmp2);
 
-			for (int s : syn) {
-				int randSample = Util.hashIntegerPair(wind, s, vocabSize);
-
-				double synsim = cosineSimGradAndValue(wind, s, vec1, gradTmp1);
-				double rsim = cosineSimGradAndValue(wind, randSample, vec1,
-						gradTmp2);
-				// System.out.println("synsim " + synsim + " rsim " + rsim);
-				 if (rsim > synsim) {
-				cachedValue += synsim - rsim;
-				for (int p = 0; p < parameters.length; p++) {
-					cachedGradient[p] += gradTmp1[p] - gradTmp2[p];
+			if (ent.isAntonym()) {
+				if (rsim < entsim) {
+					cachedValue -= entsim - rsim;
+					for (int p = 0; p < parameters.length; p++) {
+						cachedGradient[p] -= gradTmp1[p] - gradTmp2[p];
+					}
 				}
-				 }
-			}
-			for (int a : ant) {
-				int randSample = Util.hashIntegerPair(wind, a, vocabSize);
-
-				double antsim = cosineSimGradAndValue(wind, a, vec1, gradTmp1);
-				double rsim = cosineSimGradAndValue(wind, randSample, vec1,
-						gradTmp2);
-
-				 if (rsim < antsim) {
-				cachedValue -= antsim - rsim;
-				for (int p = 0; p < parameters.length; p++) {
-					cachedGradient[p] -= gradTmp1[p] - gradTmp2[p];
+			} else {
+				if (rsim > entsim) {
+					cachedValue += entsim - rsim;
+					for (int p = 0; p < parameters.length; p++) {
+						cachedGradient[p] += gradTmp1[p] - gradTmp2[p];
+					}
 				}
-				 }
 			}
+
 		}
 
 		cacheDirty = false;
