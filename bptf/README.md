@@ -4,6 +4,7 @@
 
 Usage:
 
-        ./pretraining.py
-        ./run.sh
+    ./pretraining.py
+    ./run.sh
+    ./posttraining.py
 

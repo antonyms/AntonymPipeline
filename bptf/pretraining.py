@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from pretraining import *
+from pretraining import mm
 
 """
 Calculate pair-wise cosine product of morpho vectors.
@@ -39,13 +39,3 @@ simPath = rootPath + 'morpho/sim.txt'
 
 mm.sim2mm(antPath, synPath, grePath, commonPath, simPath,
     single, TFIDF, MORE, NO_GRE, zero_proportion, sim_proportion)
-
-"""
-Out-of-vocabulary embedding
-"""
-pmfPath = outPath
-matVocPath = rootPath + "bpth/roget_mm-voc"
-grePath = rootPath + "test-data/gre_wordlist.txt"
-savePath = rootPath + "test-data/gre_oov.txt"
-
-oov.embedding(pmfPath, matVocPath, grePath, savePath)
