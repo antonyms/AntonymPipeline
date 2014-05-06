@@ -8,3 +8,4 @@ Usage:
     ./run.sh
     ./posttraining.py
 
+* this model is from EECS E6892 project.
