@@ -40,11 +40,11 @@ import edu.antonym.test.TestCase1;
  * Microsoft Research Asia, Beijing, P.R. China
  * 
  */
-public class RCAMetric implements WordMetric {
+public class DCAMetric implements WordMetric {
 	VectorEmbedding emb;
 	Matrix M;
 
-	public RCAMetric(VectorEmbedding emb, Thesaurus th) {
+	public DCAMetric(VectorEmbedding emb, Thesaurus th) {
 
 		/*
 		 * Step 1. Compute Cb and Cw
@@ -221,7 +221,7 @@ public class RCAMetric implements WordMetric {
 				"data/Rogets/synonym.txt"), new File("data/Rogets/antonym.txt"));
 		NormalizedVectorEmbedding origEmbed = new NormalizedTextFileEmbedding(
 				new File("data/huangvectors.txt"), vocab);
-		RCAMetric metric = new RCAMetric(origEmbed, th);
+		DCAMetric metric = new DCAMetric(origEmbed, th);
 
 		MetricEvaluator me = new RandomizedTestCase(th);
 		double score = me.score(metric);
