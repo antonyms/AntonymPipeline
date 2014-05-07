@@ -70,7 +70,7 @@ public class MarketMatrixTensor implements VectorEmbedding {
 		//GREOOV();
 	}
 	
-	private void GREOOV() throws IOException {
+	/*private void GREOOV() throws IOException {
 
 		Scanner w = new Scanner(new File("data/test-data/gre_oov.txt.voc"));
 		Scanner e = new Scanner(new File("data/test-data/gre_oov.txt"));
@@ -89,7 +89,7 @@ public class MarketMatrixTensor implements VectorEmbedding {
 			vectors.put(idx, vec);
 		}
 		
-	}
+	}*/
 	@Override
 	public int getDimension() {
 		return dim;
@@ -111,12 +111,6 @@ public class MarketMatrixTensor implements VectorEmbedding {
 		return 0;
 	}
 
-	public static void main(String[] args) throws IOException {
-		MarketMatrixVec roget = new MarketMatrixVec(0);
-		Vocabulary voc = roget.getVocab();
-		System.out.println(voc.getVocabSize());
-		System.exit(0);
-	}
 
 	@Override
 	public double similarity(int word1, int word2) {

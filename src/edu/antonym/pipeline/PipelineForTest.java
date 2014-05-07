@@ -6,7 +6,6 @@ import java.util.List;
 
 import cc.mallet.types.Metric;
 import edu.antonym.MarketMatrixTensor;
-import edu.antonym.MarketMatrixVec;
 import edu.antonym.NormalizedTextFileEmbedding;
 import edu.antonym.RawPILSAVec;
 import edu.antonym.SimpleVocab;
