@@ -17,62 +17,15 @@ import edu.mit.jwi.IDictionary;
 import edu.mit.jwi.item.IIndexWord;
 import edu.mit.jwi.item.POS;
 
-public class AutomaticalCrawling extends WordNetHelper{
+public class AutomaticalCrawling {
 
-	
-	
-	
-	@Override
-	public Vocabulary getVocab() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int numEntries() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getEntry(int entryn) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public List<Integer> getAntonyms(int word) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Integer> getSynonyms(int word) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public boolean isAntonym(int word1, int word2) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean isSynonym(int word1, int word2) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
 	public void traverseWords(IDictionary dict) {
-		// TODO Auto-generated method stub
 		List<String> antonymList = new ArrayList<String>();
 		List<String> synonymList = new ArrayList<String>();
-		String vocabularyFilePath = "data/Rogets/vocabulary3.txt";
-		String synonymFilePath = "data/Rogets/synonym2.txt";
-		String antonymFilePath = "data/Rogets/antonym2.txt";
-		String wordnetVocab = "data/Rogets/WordNetVocab3.txt";
+		String vocabularyFilePath = "data/Rogets/vocabulary.txt";
+		String synonymFilePath = "data/Rogets/synonym1.txt";
+		String antonymFilePath = "data/Rogets/antonym1.txt";
+		String wordnetVocab = "data/Rogets/WordNetVocab.txt";
 
 		try {
 			FileWriter vocabularyFileWriter = new FileWriter(vocabularyFilePath, false);
@@ -89,9 +42,10 @@ public class AutomaticalCrawling extends WordNetHelper{
 
 			Set<String> words = new HashSet<String>();
 			Set<String> wordNetWords = new HashSet<String>();
-			
+			// pending stores the words that are not added into theasurus, 
+			// since this method will miss lots of words in one time traverse.
 			List<String> pending = new ArrayList<String>();
-			Scanner sc=new Scanner(new File("data/Rogets/pending"));
+			Scanner sc=new Scanner(new File("data/Rogets/pending")); 
 			while(sc.hasNextLine()) {
 				pending.add(sc.nextLine().trim());
 			}

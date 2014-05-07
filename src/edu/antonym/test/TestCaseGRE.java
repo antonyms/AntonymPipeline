@@ -138,12 +138,8 @@ public class TestCaseGRE implements MetricEvaluator {
 				accuracy = ((double)accuracy_pos)/(double)(accuracy_pos+accuracy_neg);
 				recall = ((double)accuracy_pos)/(double)(all);
 			}
-<<<<<<< HEAD
-			acc+=accuracy;
-=======
 			double f1 = 2*accuracy*recall/(accuracy+recall);
 			acc+=recall;
->>>>>>> 2c964b6... add bptf vector
 			out.append("Final accuracy = "+ Double.toString(accuracy));
 			System.out.println("[GRE TEST] Final accuracy = " + Double.toString(accuracy) + "\t" + Double.toString(recall) + "\t" + Double.toString(f1));
 			System.out.println(""+accuracy_pos+"\t"+(accuracy_pos+accuracy_neg));

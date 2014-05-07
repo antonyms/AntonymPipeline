@@ -263,5 +263,5 @@ public abstract class WordNetHelper implements Thesaurus{
 		ThesaurusImp thesaurus = new ThesaurusImp(antonymsFile, synonymsFile, file);
 
 	}
-	public abstract void traverseWords(IDictionary dict);
+	
 }
