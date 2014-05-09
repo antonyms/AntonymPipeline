@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="descriptors"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.ibm.sai.dca"/>
+	<classpathentry kind="lib" path="/org.jobimtext.thirdparty/lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="/org.jobimtext.thirdparty/lib/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="/org.jobimtext.thirdparty/lib/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="/org.jobimtext.thirdparty/lib/uimaj-as-activemq.jar"/>
+	<classpathentry kind="lib" path="/org.jobimtext.thirdparty/lib/uima-core.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.ibm.sai.distributional_similarity.api.lite"/>
+	<classpathentry kind="lib" path="/org.jobimtext.thirdparty/lib/pig-0.10.0.jar"/>
+	<classpathentry kind="lib" path="/com.ibm.sai.distributional_similarity.api.lite/lib/hppc-0.4.3.jar"/>
+	<classpathentry kind="lib" path="/org.jobimtext.thirdparty/lib/commons-logging.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.ibm.bluej.util"/>
+	<classpathentry kind="lib" path="/org.jobimtext.thirdparty/lib/hadoop-core-2.0.0-mr1-cdh4.5.0.jar"/>
+	<classpathentry kind="lib" path="/org.jobimtext.thirdparty/lib/hadoop-common-2.0.0-cdh4.5.0.jar"/>
+	<classpathentry kind="lib" path="/org.jobimtext.thirdparty/lib/uimafit-core-2.0.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ChiWhiDisamb"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

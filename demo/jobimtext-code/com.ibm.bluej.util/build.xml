@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="com.ibm.bluej.util" default="default">
+<import file="../org.jobimtext.examples.oss/build_common.xml" />  
+
+</project>

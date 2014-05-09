@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+<primitive>true</primitive>
+<annotatorImplementationName>org.jobimtext.holing.output.HolingOutputHDFS</annotatorImplementationName>
+<analysisEngineMetaData>
+<name>HolingOutputHDFS</name>
+<description/>
+<version>1.0</version>
+<vendor/>
+<configurationParameters><configurationParameter><name>HadoopConfig</name><description>Path to the hadoop configuration.</description><type>String</type><multiValued>false</multiValued><mandatory>false</mandatory></configurationParameter><configurationParameter><name>OutputPath</name><type>String</type><multiValued>false</multiValued><mandatory>false</mandatory></configurationParameter><configurationParameter><name>ExtractorConfigurationFile</name><type>String</type><multiValued>false</multiValued><mandatory>false</mandatory></configurationParameter></configurationParameters>
+<configurationParameterSettings/>
+<typeSystemDescription/>
+<typePriorities/>
+<fsIndexCollection/>
+<capabilities>
+<capability>
+<inputs/>
+<outputs/>
+<languagesSupported/>
+</capability>
+</capabilities>
+<operationalProperties><modifiesCas>true</modifiesCas><multipleDeploymentAllowed>true</multipleDeploymentAllowed><outputsNewCASes>false</outputsNewCASes></operationalProperties></analysisEngineMetaData>
+<resourceManagerConfiguration/>
+</analysisEngineDescription>

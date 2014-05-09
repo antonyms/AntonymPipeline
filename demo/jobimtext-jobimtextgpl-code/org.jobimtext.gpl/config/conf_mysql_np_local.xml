@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<databaseThesaurusConfiguration>
+    <tables>
+        <tableSimilarTerms>LMI_p1000_l200</tableSimilarTerms>
+        <tableSimilarContexts>featsim</tableSimilarContexts>
+        <tableTermContextsScore>LMI_p1000</tableTermContextsScore>
+        <tableContextsCount>feature_count</tableContextsCount>
+        <tableTermCount>word_count</tableTermCount>
+        <tableSenses>LMI_p1000_l200_n200N200_cluster</tableSenses>
+        <tableIsas>LMI_p1000_l200_n200N200_cluster</tableIsas>
+        <tableSenseCUIs>LMI_p1000_l200_n200N200_cluster</tableSenseCUIs>
+    </tables>
+        <dbUser>root</dbUser>
+    <dbUrl>jdbc:mysql://localhost:3306/dt120m_stan_lem</dbUrl>
+    <dbPassword></dbPassword>
+    <jdbcString>com.mysql.jdbc.Driver</jdbcString>
+    <similarTermsQuery>select word2, count from $tableSimilarTerms where word1=? order by count desc </similarTermsQuery>
+    <similarTermsTopQuery>select  word2, count from $tableSimilarTerms where word1=? order by count desc LIMIT 0, $numberOfEntries </similarTermsTopQuery>
+    <similarTermsGtScoreQuery>select word2, count from $tableSimilarTerms where word1=? and count&gt;? ORDER BY count DESC</similarTermsGtScoreQuery>
+    <similarTermScoreQuery>select SIM from $tableSimilarTerms where word1=? and word2=?</similarTermScoreQuery>
+    <similarContextsQuery>SELECT W2,SIM FROM $tableSimilarContexts WHERE W1 = ? ORDER BY SIM desc</similarContextsQuery>
+        <similarContextsTopQuery>SELECT W2,SIM FROM $tableSimilarContexts WHERE W1 = ? ORDER BY SIM desc fetch first $numberOfEntries rows only</similarContextsTopQuery>
+        <similarContextsGtScoreQuery>SELECT W2,SIM FROM $tableSimilarContexts WHERE W1 = ? and SIM > ? ORDER BY SIM desc</similarContextsGtScoreQuery>
+        <termsCountQuery>SELECT COUNT FROM $tableTermCount WHERE word=?</termsCountQuery>
+    <contextsCountQuery>SELECT COUNT FROM $tableContextsCount WHERE feature = ?</contextsCountQuery>
+    <termContextsCountQuery>SELECT FREQ FROM $tableTermContextsScore WHERE word =? and feature = ?</termContextsCountQuery>
+    <termContextsScoreQuery>SELECT SIG FROM $tableTermContextsScore WHERE word =? and feature = ?</termContextsScoreQuery>
+    <termContextsScoresQuery>SELECT feature, SIG FROM $tableTermContextsScore WHERE word =? ORDER BY SIG desc</termContextsScoresQuery>
+    <termContextsScoresTopQuery>SELECT feature, SIG FROM $tableTermContextsScore WHERE word =? ORDER BY SIG limit 0, $numberOfEntries </termContextsScoresTopQuery>
+    <termContextsScoresGtScoreQuery>SELECT feature, SIG FROM $tableTermContextsScore WHERE word =? and SIG &gt; ? ORDER BY SIG desc</termContextsScoresGtScoreQuery>
+    <sensesQuery>select CID,isaS, M from  $tableSenses  where W= ?</sensesQuery>
+    <senseCUIsQuery>SELECT CID, CUIS_1 FROM $tableSenseCUIs where w=?</senseCUIsQuery>
+    <isasQuery>SELECT CID, ISAS FROM $tableIsas where w=?</isasQuery>
+</databaseThesaurusConfiguration>

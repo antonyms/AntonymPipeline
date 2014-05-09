@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dcaLightThesaurusConfiguration>
+    <tables>
+        <tableSimilarTerms>similarity/SimSortlimit</tableSimilarTerms>
+        <tableSimilarContexts></tableSimilarContexts>
+        <tableTermContextsScore></tableTermContextsScore>
+        <tableContextsCount></tableContextsCount>
+        <tableTermCount></tableTermCount>
+        <tableSenses></tableSenses>
+        <tableIsas></tableIsas>
+        <tableSenseCUIs></tableSenseCUIs>
+    </tables>
+    <max>30</max>
+</dcaLightThesaurusConfiguration>

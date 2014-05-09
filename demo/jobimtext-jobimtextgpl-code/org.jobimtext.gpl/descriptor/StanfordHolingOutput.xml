@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="HolingOutputIndexedFS">
+      <import name="org.jobimtext.holing.output.HolingOutputIndexedFS"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="DependencyAnnotator">
+      <import location="DependencyAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="StanfordSegmenter">
+      <import name="StanfordSegmenter"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="StanfordParser">
+      <import name="StanfordParser"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>StanfordHolingOutput</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters searchStrategy="language_fallback">
+      <configurationParameter>
+        <name>OutputPath</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>HolingOutputIndexedFS/OutputPath</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>ExtractorConfigurationFile</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>HolingOutputIndexedFS/ExtractorConfigurationFile</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>DocumentAnnotation</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>HolingOutputIndexedFS/DocumentAnnotation</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>DocumentAnnotationId</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>HolingOutputIndexedFS/DocumentAnnotationId</parameter>
+        </overrides>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>ExtractorConfigurationFile</name>
+        <value>
+          <string>config/extractor_stanf_np.xml</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>OutputPath</name>
+        <value>
+          <string>output_stanford</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <flowConstraints>
+      <fixedFlow>
+        <node>StanfordSegmenter</node>
+        <node>StanfordParser</node>
+        <node>DependencyAnnotator</node>
+        <node>HolingOutputIndexedFS</node>
+      </fixedFlow>
+    </flowConstraints>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

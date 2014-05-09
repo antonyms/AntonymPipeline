@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="HolingOutputIndexedFS">
+      <import name="org.jobimtext.holing.output.HolingOutputIndexedFS"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SimpleDocumentSplitter">
+      <import name="org.jobimtext.ingestion.SimpleDocumentSplitter"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="JoAnnotator">
+      <import name="org.jobimtext.holing.annotator.JoAnnotator"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SentenceTokenAnnotatorLucene">
+      <import name="org.jobimtext.holing.segmenter.SentenceTokenAnnotatorLucene"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="TrigramHolingAnnotator">
+      <import name="org.jobimtext.holing.annotator.TrigramHolingAnnotator"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="CollectionReader">
+      <import name="org.jobimtext.ingestion.CollectionReader"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <flowController key="FixedFlowController">
+    <import name="org.apache.uima.flow.FixedFlowController"/>
+  </flowController>
+  <analysisEngineMetaData>
+    <name>MedicalMultigram</name>
+    <description>Does ingestion and runs holing system to generate Jogram
+			based holing output.</description>
+    <version>1.0</version>
+    <vendor>IBM</vendor>
+    <configurationParameters searchStrategy="language_fallback">
+      <configurationParameter>
+        <name>InputPath</name>
+        <description>Input path for source ingestion.</description>
+        <type>String</type>
+        <multiValued>true</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>CollectionReader/InputPath</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>InputFilePattern</name>
+        <description>Extensions for input files.</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>CollectionReader/FilePattern</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>OutputPath</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>HolingOutputIndexedFS/OutputPath</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>ExtractorConfigurationFile</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>HolingOutputIndexedFS/ExtractorConfigurationFile</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>DocumentAnnotation</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>HolingOutputIndexedFS/DocumentAnnotation</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>DocumentAnnotationId</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>HolingOutputIndexedFS/DocumentAnnotationId</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>length</name>
+        <type>Integer</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>JoAnnotator/joTokenLength</parameter>
+        </overrides>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>InputPath</name>
+        <value>
+          <array>
+            <string>corpus</string>
+          </array>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>InputFilePattern</name>
+        <value>
+          <string>txt</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>ExtractorConfigurationFile</name>
+        <value>
+          <string>../org.jobimtext.examples.oss/config/extractor_covered_text.xml</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>DocumentAnnotation</name>
+        <value>
+          <string>org.jobimtext.ingestion.type.DocumentInfo</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>DocumentAnnotationId</name>
+        <value>
+          <string>inputFile</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>length</name>
+        <value>
+          <integer>3</integer>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>OutputPath</name>
+        <value>
+          <string>./trigram_holing_out</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <flowConstraints>
+      <fixedFlow>
+        <node>CollectionReader</node>
+        <node>SimpleDocumentSplitter</node>
+        <node>SentenceTokenAnnotatorLucene</node>
+        <node>JoAnnotator</node>
+        <node>TrigramHolingAnnotator</node>
+        <node>HolingOutputIndexedFS</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported>
+          <language>en</language>
+        </languagesSupported>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>false</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

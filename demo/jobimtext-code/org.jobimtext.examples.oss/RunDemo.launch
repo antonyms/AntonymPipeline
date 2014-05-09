@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/org.jobimtext.demo/src/org/jobimtext/example/demo/JoBimDemo.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.jobimtext.example.demo.JoBimDemo"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-local -model config/dcaLightConfig.xml -annotator ../org.jobimtext.examples.oss/descriptors/org/jobimtext/examples/demo/JoTrigramsHoling.xml -toString ./config/extractor_covered_text.xml"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.jobimtext.examples.oss"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xmx10G -Xms10G"/>
+</launchConfiguration>

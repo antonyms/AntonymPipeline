@@ -1,0 +1,7 @@
+# TableID		ValType	TCP P#	TableLines	CacheSize	MaxValues		DataAllocation		InputFileNames/Dir                                                              FileFilter
+
+LMI_p1000_l200		TABLE	50000	18228968	100000		200			server[0-18228967]	/users/LMI_p1000_l200	NONE
+LMI_p1000		TABLE	50001	35600539	600000		200			server[0-35600538]	/users/LMI_p1000	NONE
+feature_count		SCORE	50002	9948665		100000		200			server[0-9948664]	/users/feature_count	NONE
+word_count		SCORE	50002	9948665		100000		200			server[0-9948664]	/users/word_count	NONE
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NgramHolingConfiguration>
+	<ngramRelations>
+		
+	<ngramRelation model="3gram" hole="2" length="3"/>
+	
+		<!-- 
+		<ngramRelation model="2gram" hole="0" length="2"/>
+		<ngramRelation model="3gram" hole="2" length="3"/>
+		<ngramRelation model="3gram" hole="0" length="3"/>
+		<ngramRelation model="3gram-skip" hole="0" length="3" skip="1"/>
+		 -->		 
+		
+	</ngramRelations>
+</NgramHolingConfiguration>

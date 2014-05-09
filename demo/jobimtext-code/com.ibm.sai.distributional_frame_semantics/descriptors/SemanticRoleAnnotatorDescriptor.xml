@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+<primitive>true</primitive>
+<annotatorImplementationName>com.ibm.sai.semantic_role_annotator.SemanticRoleAnnotator</annotatorImplementationName>
+<analysisEngineMetaData>
+<name>SemanticRoleAnnotatorDescriptor</name>
+<description/>
+<version>1.0</version>
+<vendor/>
+<configurationParameters>
+      <configurationParameter>
+        <name>ParserModelFile</name>
+        <description>Path to the parser model file</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+      </configurationParameter>
+    </configurationParameters>
+<configurationParameterSettings>
+      <nameValuePair>
+        <name>ParserModelFile</name>
+        <value>
+          <string>/users/must/edit</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+<typeSystemDescription>
+      <imports>
+        <import location="SemanticRoleTypeSystemDescriptor.xml"/>
+        <import name="org.jobimtext.holing.type.JoBimTextTypeSystem"/>
+        </imports>
+    </typeSystemDescription>
+<typePriorities/>
+<fsIndexCollection/>
+<capabilities>
+<capability>
+<inputs/>
+<outputs/>
+<languagesSupported/>
+</capability>
+</capabilities>
+<operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>true</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+<resourceManagerConfiguration/>
+</analysisEngineDescription>

@@ -1,0 +1,40 @@
+/*
+Copyright (c) 2012 IBM Corp. and Michael Glass
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+package com.ibm.bluej.consistency.term.corefunc;
+
+import com.ibm.bluej.consistency.term.ATerm;
+import com.ibm.bluej.consistency.term.BooleanTerm;
+import com.ibm.bluej.consistency.term.CheckTerm;
+import com.ibm.bluej.consistency.term.Function;
+
+//actually just a CheckTerm
+public class ExOutside extends CheckTerm {
+	//arg0 is outsize [arg1, arg2]
+	
+	public void update(Function source, Object... msg) {
+		double in = ATerm.getDouble(parts[0]);
+		double minL = ATerm.getDouble(parts[1]);
+		double maxL = ATerm.getDouble(parts[2]);
+		
+		BooleanTerm prevTruth = truth;
+		truth = (in < minL || in > maxL) ? BooleanTerm.TRUE : BooleanTerm.FALSE;
+		if (!truth.equals(prevTruth)) {
+			passUpdate();
+		}
+	}
+
+}

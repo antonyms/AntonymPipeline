@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+	<primitive>false</primitive>
+	<delegateAnalysisEngineSpecifiers>
+	<delegateAnalysisEngine key="HolingOutputIndexedFS"><import name="org.jobimtext.holing.output.HolingOutputIndexedFS"/></delegateAnalysisEngine><delegateAnalysisEngine key="TextReader"><import name="org.jobimtext.holing.reader.DkproTextReader"/></delegateAnalysisEngine><delegateAnalysisEngine key="SentenceTokenAnnotatorLucene"><import name="org.jobimtext.holing.segmenter.SentenceTokenAnnotatorLucene"/></delegateAnalysisEngine><delegateAnalysisEngine key="JoAnnotator"><import name="org.jobimtext.holing.annotator.JoAnnotator"/></delegateAnalysisEngine><delegateAnalysisEngine key="TrigramHolingAnnotator"><import name="org.jobimtext.holing.annotator.TrigramHolingAnnotator"/></delegateAnalysisEngine></delegateAnalysisEngineSpecifiers>
+	<flowController key="FixedFlowController">
+		<import name="org.apache.uima.flow.FixedFlowController"/></flowController>
+	<analysisEngineMetaData>
+		<name>trigrams</name>
+		<description>Does ingestion and runs holing system to generate Jogram
+			based holing output.</description>
+		<version>1.0</version>
+		<vendor>IBM</vendor>
+		<configurationParameters searchStrategy="language_fallback">
+			<configurationParameter>
+				<name>OutputPath</name>
+				<type>String</type>
+				<multiValued>false</multiValued>
+				<mandatory>true</mandatory>
+				<overrides>
+					<parameter>HolingOutputIndexedFS/OutputPath</parameter></overrides>
+			</configurationParameter>
+			<configurationParameter>
+				<name>ExtractorConfigurationFile</name>
+				<type>String</type>
+				<multiValued>false</multiValued>
+				<mandatory>false</mandatory>
+				<overrides>
+					<parameter>HolingOutputIndexedFS/ExtractorConfigurationFile</parameter></overrides>
+			</configurationParameter>
+			<configurationParameter>
+                <name>sourceEncoding</name>
+                <description/>
+                <type>String</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+                	<overrides>
+					<parameter>TextReader/sourceEncoding</parameter></overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>sourceLocation</name>
+                <description/>
+                <type>String</type>
+                <multiValued>false</multiValued>
+                <mandatory>false</mandatory>
+                <overrides>
+					<parameter>TextReader/sourceLocation</parameter></overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>patterns</name>
+                <description/>
+                <type>String</type>
+                <multiValued>true</multiValued>
+                <mandatory>true</mandatory>
+                <overrides>
+					<parameter>TextReader/patterns</parameter></overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>useDefaultExcludes</name>
+                <description/>
+                <type>Boolean</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+                <overrides>
+					<parameter>TextReader/useDefaultExcludes</parameter></overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>includeHidden</name>
+                <description/>
+                <type>Boolean</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+                <overrides>
+					<parameter>TextReader/includeHidden</parameter></overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>language</name>
+                <description/>
+                <type>String</type>
+                <multiValued>false</multiValued>
+                <mandatory>false</mandatory>
+                <overrides>
+					<parameter>TextReader/language</parameter></overrides>
+            </configurationParameter>
+            <configurationParameter>
+                <name>resourceLoaderClass</name>
+                <description/>
+                <type>String</type>
+                <multiValued>false</multiValued>
+                <mandatory>false</mandatory>
+                <overrides>
+					<parameter>TextReader/resourceLoaderClass</parameter></overrides>
+            </configurationParameter>
+			<configurationParameter>
+			<name>DocumentAnnotation</name><type>String</type><multiValued>false</multiValued><mandatory>false</mandatory><overrides><parameter>HolingOutputIndexedFS/DocumentAnnotation</parameter></overrides></configurationParameter><configurationParameter><name>DocumentAnnotationId</name><type>String</type><multiValued>false</multiValued><mandatory>false</mandatory><overrides><parameter>HolingOutputIndexedFS/DocumentAnnotationId</parameter></overrides></configurationParameter><configurationParameter><name>length</name><type>Integer</type><multiValued>false</multiValued><mandatory>false</mandatory><overrides><parameter>JoAnnotator/length</parameter></overrides></configurationParameter><configurationParameter><name>length1</name><description>length of the JoGram</description><type>Integer</type><multiValued>false</multiValued><mandatory>true</mandatory><overrides><parameter>TrigramHolingAnnotator/length</parameter></overrides></configurationParameter><configurationParameter><name>ActionAfterCasMultiplier</name><description>The action to be taken after a CAS has been input to a CAS Multiplier and the CAS Multiplier has finished processing it.
+		 Valid values are:
+			continue - the CAS continues on to the next element in the flow
+			stop - the CAS will no longer continue in the flow, and will be returned from the aggregate if possible.
+			drop - the CAS will no longer continue in the flow, and will be dropped (not returned from the aggregate) if possible.	 
+			dropIfNewCasProduced (the default) - if the CAS multiplier produced a new CAS as a result of processing this CAS, then this
+				CAS will be dropped.  If not, then this CAS will continue.</description><type>String</type><multiValued>false</multiValued><mandatory>false</mandatory><overrides><parameter>FixedFlowController/ActionAfterCasMultiplier</parameter></overrides></configurationParameter></configurationParameters>
+		<configurationParameterSettings>
+			<nameValuePair>
+				<name>ExtractorConfigurationFile</name>
+				<value>
+					<string>../org.jobimtext/config/extractor_token_lowercase.xml</string></value>
+			</nameValuePair>
+			<nameValuePair><name>DocumentAnnotation</name><value><string>org.jobimtext.ingestion.type.DocumentInfo</string></value></nameValuePair><nameValuePair><name>DocumentAnnotationId</name><value><string>inputFile</string></value></nameValuePair><nameValuePair><name>length</name><value><integer>3</integer></value></nameValuePair><nameValuePair><name>length1</name><value><integer>3</integer></value></nameValuePair><nameValuePair><name>OutputPath</name><value><string>/users/mriedl/test_out/</string></value></nameValuePair><nameValuePair><name>sourceLocation</name><value><string>/users/mriedl/test/</string></value></nameValuePair><nameValuePair><name>patterns</name><value><array><string>[+]*.txt</string></array></value></nameValuePair><nameValuePair><name>language</name><value><string>en</string></value></nameValuePair><nameValuePair><name>sourceEncoding</name><value><string>UTF-8</string></value></nameValuePair><nameValuePair><name>useDefaultExcludes</name><value><boolean>false</boolean></value></nameValuePair><nameValuePair><name>includeHidden</name><value><boolean>true</boolean></value></nameValuePair></configurationParameterSettings>
+		<flowConstraints>
+			<fixedFlow>
+				<node>TextReader</node>
+				
+				<node>SentenceTokenAnnotatorLucene</node>
+				<node>JoAnnotator</node>
+				<node>TrigramHolingAnnotator</node>
+			<node>HolingOutputIndexedFS</node></fixedFlow>
+		</flowConstraints>
+		<typePriorities/>
+		<fsIndexCollection/>
+		<capabilities>
+			<capability>
+				<inputs/>
+				<outputs/>
+				<languagesSupported>
+					<language>en</language></languagesSupported>
+			</capability>
+		</capabilities>
+		<operationalProperties>
+			<modifiesCas>true</modifiesCas>
+			<multipleDeploymentAllowed>false</multipleDeploymentAllowed>
+			<outputsNewCASes>false</outputsNewCASes>
+		</operationalProperties>
+	</analysisEngineMetaData>
+	<resourceManagerConfiguration/>
+</analysisEngineDescription>

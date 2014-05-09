@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+	<primitive>false</primitive>
+	<delegateAnalysisEngineSpecifiers>
+
+		<delegateAnalysisEngine key="HolingSegmenter"><import name="org.jobimtext.holing.segmenter.SentenceTokenAnnotator"/></delegateAnalysisEngine>
+		<delegateAnalysisEngine key="HolingNgramAnnotator"><import name="org.jobimtext.holing.annotator.NgramHolingAnnotator"/></delegateAnalysisEngine>
+		</delegateAnalysisEngineSpecifiers>
+	<flowController key="FixedFlowController">
+
+		<import name="org.apache.uima.flow.FixedFlowController"/></flowController>
+	<analysisEngineMetaData>
+		<name>NgramSub</name>
+		<description>Contains the processing components of the ingestion and
+			holing phase for Ngram models.</description>
+		<version>1.0</version>
+		<vendor>IBM</vendor>
+		<configurationParameters searchStrategy="language_fallback">
+			<configurationParameter>
+				<name>ActionAfterCasMultiplier</name>
+				<description>The action to be taken after a CAS has been input to a
+					CAS Multiplier and the CAS Multiplier has finished processing it.
+					Valid values are:
+					continue - the CAS continues on to the next
+					element in the flow
+					stop - the CAS will no longer continue in the
+					flow, and will be
+					returned from the aggregate if possible.
+					drop - the
+					CAS will no longer continue in the flow, and will be dropped
+					(not
+					returned from the aggregate) if possible.
+					dropIfNewCasProduced (the
+					default) - if the CAS multiplier produced a new CAS as a
+					result of
+					processing this CAS, then this
+					CAS will be dropped. If not, then
+					this CAS will continue.</description>
+				<type>String</type>
+				<multiValued>false</multiValued>
+				<mandatory>false</mandatory>
+				<overrides>
+					<parameter>FixedFlowController/ActionAfterCasMultiplier</parameter></overrides>
+			</configurationParameter>
+			<configurationParameter>
+				<name>configFilePath</name>
+				<description>Configuration file path. The configuration file
+					specifies the types of ngram relations to process.</description>
+				<type>String</type>
+				<multiValued>false</multiValued>
+				<mandatory>false</mandatory>
+				<overrides>
+					<parameter>HolingNgramAnnotator/configFilePath</parameter></overrides>
+			</configurationParameter>
+		</configurationParameters>
+		<configurationParameterSettings>
+			<nameValuePair>
+				<name>ActionAfterCasMultiplier</name>
+				<value>
+					<string>drop</string></value>
+			</nameValuePair>
+		<nameValuePair><name>configFilePath</name><value><string>descriptors/NgramHolingConfiguration.xml</string></value></nameValuePair></configurationParameterSettings>
+		<flowConstraints>
+			<fixedFlow>
+				<node>HolingSegmenter</node>
+				<node>HolingNgramAnnotator</node>
+			</fixedFlow>
+		</flowConstraints>
+		<fsIndexCollection/>
+		<capabilities>
+			<capability>
+				<inputs/>
+				<outputs/>
+				<languagesSupported>
+					<language>en</language></languagesSupported>
+			</capability>
+		</capabilities>
+		<operationalProperties>
+			<modifiesCas>true</modifiesCas>
+			<multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+			<outputsNewCASes>false</outputsNewCASes>
+		</operationalProperties>
+	</analysisEngineMetaData>
+	<resourceManagerConfiguration/>
+</analysisEngineDescription>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="SentenceTokenAnnotatorLucene">
+      <import name="org.jobimtext.holing.segmenter.SentenceTokenAnnotatorLucene"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="JoAnnotator">
+      <import name="org.jobimtext.holing.annotator.JoAnnotator"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="TrigramHolingAnnotator">
+      <import name="org.jobimtext.holing.annotator.TrigramHolingAnnotator"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <flowController key="FixedFlowController">
+    <import name="org.apache.uima.flow.FixedFlowController"/>
+  </flowController>
+  <analysisEngineMetaData>
+    <name>Jo Trigram</name>
+    <description>Does ingestion and runs holing system to generate Jogram
+			based holing output.</description>
+    <version>1.0</version>
+    <vendor>IBM</vendor>
+    <configurationParameters searchStrategy="language_fallback">
+      <configurationParameter>
+        <name>joTokenLength</name>
+        <type>Integer</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>JoAnnotator/joTokenLength</parameter>
+        </overrides>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>joTokenLength</name>
+        <value>
+          <integer>3</integer>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <flowConstraints>
+      <fixedFlow>
+        <node>SentenceTokenAnnotatorLucene</node>
+        <node>JoAnnotator</node>
+        <node>TrigramHolingAnnotator</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported>
+          <language>en</language>
+        </languagesSupported>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>false</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

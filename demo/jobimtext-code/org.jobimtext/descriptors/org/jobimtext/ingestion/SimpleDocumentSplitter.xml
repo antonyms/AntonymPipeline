@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+	<primitive>true</primitive>
+	<annotatorImplementationName>org.jobimtext.ingestion.SimpleDocumentSplitter
+	</annotatorImplementationName>
+	<analysisEngineMetaData>
+		<name>SimpleDocumentSplitter</name>
+		<description>Simple document splitter that splits plain text on new
+			lines.</description>
+		<version>1.0</version>
+		<vendor>IBM</vendor>
+		<configurationParameters />
+		<configurationParameterSettings />
+		<typeSystemDescription>
+			<imports>
+				<import
+					name="org.jobimtext.ingestion.type.JoBimIngestionTypeSystem" />
+			</imports>
+		</typeSystemDescription>
+		<typePriorities />
+		<fsIndexCollection />
+		<capabilities>
+			<capability>
+				<inputs>
+					<type allAnnotatorFeatures="true">org.jobimtext.ingestion.type.DocumentInfo
+					</type>
+					<type allAnnotatorFeatures="true">org.jobimtext.ingestion.type.CorpusInfo
+					</type>
+				</inputs>
+				<outputs>
+					<type allAnnotatorFeatures="true">org.jobimtext.ingestion.type.DocumentInfo
+					</type>
+					<type allAnnotatorFeatures="true">org.jobimtext.ingestion.type.CorpusInfo
+					</type>
+				</outputs>
+				<languagesSupported>
+					<language>en</language>
+				</languagesSupported>
+			</capability>
+		</capabilities>
+		<operationalProperties>
+			<modifiesCas>true</modifiesCas>
+			<multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+			<outputsNewCASes>true</outputsNewCASes>
+		</operationalProperties>
+	</analysisEngineMetaData>
+	<resourceManagerConfiguration />
+</analysisEngineDescription>

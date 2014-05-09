@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collectionReaderDescription xmlns="http://uima.apache.org/resourceSpecifier">
+<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+<implementationName>de.tudarmstadt.ukp.dkpro.core.io.text.TextReader</implementationName>
+<processingResourceMetaData><name>DkproTextReader</name><description/><version>1.0</version><vendor/><configurationParameters>
+            <configurationParameter>
+                <name>sourceEncoding</name>
+                <description/>
+                <type>String</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+            </configurationParameter>
+            <configurationParameter>
+                <name>sourceLocation</name>
+                <description/>
+                <type>String</type>
+                <multiValued>false</multiValued>
+                <mandatory>false</mandatory>
+            </configurationParameter>
+            <configurationParameter>
+                <name>patterns</name>
+                <description/>
+                <type>String</type>
+                <multiValued>true</multiValued>
+                <mandatory>true</mandatory>
+            </configurationParameter>
+            <configurationParameter>
+                <name>useDefaultExcludes</name>
+                <description/>
+                <type>Boolean</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+            </configurationParameter>
+            <configurationParameter>
+                <name>includeHidden</name>
+                <description/>
+                <type>Boolean</type>
+                <multiValued>false</multiValued>
+                <mandatory>true</mandatory>
+            </configurationParameter>
+            <configurationParameter>
+                <name>language</name>
+                <description/>
+                <type>String</type>
+                <multiValued>false</multiValued>
+                <mandatory>false</mandatory>
+            </configurationParameter>
+            <configurationParameter>
+                <name>resourceLoaderClass</name>
+                <description/>
+                <type>String</type>
+                <multiValued>false</multiValued>
+                <mandatory>false</mandatory>
+            </configurationParameter>
+        </configurationParameters>
+        <configurationParameterSettings/>
+<typeSystemDescription/>
+<typePriorities/>
+<fsIndexCollection/>
+<capabilities><capability>
+<inputs/>
+<outputs/>
+<languagesSupported/>
+</capability>
+</capabilities><operationalProperties><modifiesCas>true</modifiesCas><multipleDeploymentAllowed>false</multipleDeploymentAllowed><outputsNewCASes>true</outputsNewCASes></operationalProperties></processingResourceMetaData><resourceManagerConfiguration/>
+</collectionReaderDescription>

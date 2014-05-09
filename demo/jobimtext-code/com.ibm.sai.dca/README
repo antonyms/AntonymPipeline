@@ -1,0 +1,158 @@
+1. Description
+
+Distributed Content Access (DCA) is a simple, scalable client/server Java framework that 
+supports massively parallel jobs at runtime with simple and fast access to large amounts 
+of data. DCA provides transparent mechanisms as multi-server redundancy, splitting, and 
+caching of (usually) precomputed tables. DCA is mostly intended to replace a Data Base 
+Management System in a research/experimental environment, when just simple yet very fast 
+lookup operations are needed, hence avoiding the costs of DB replication and optimization.
+
+A set of DCA Servers read from file a set of data in tabular format, keep them in memory, 
+and make them available to a set of DCA Clients through TCP connections. A single input table 
+can be partitioned across different servers if RAM constraints require it. Also, each 
+individual table partition can be replicated across multiple servers in order to allow load
+balancing and achieve faster access time.
+
+
+
+2. Data format and access
+
+Multiple input formats can be used at the same time, and new ones can be easily defined.
+Currently, only one very general ("TABLE") format is implemented, which is general enough
+to support most of the Natural Language Processing tasks for which DCA was initially written.
+
+Input data: a set of unique triples {<String:item1, String:item2, Double:score>}
+File format: Plain text, one tab-separated triple per line.
+
+The querying scheme is inspired by a Java Map<K, V> where:
+
+Query = K = item1
+Result = V = Map<item2, score>
+
+So, the abstract operation run at client side will be
+
+	result = makeQuery(item1)
+
+and Result will be locally managed as a Map, and accessed by:
+
+	score = result.get(item2)
+
+
+3. Configuration
+
+All the configuration parameters are included in a single text file, like the one included
+in the examples directory. A sample with just one Server Table is the following:
+
+#TableID		ValType		TCPP#		TotLines	CacheSize	MaxValues	DataDistribution						InputFileName	Filter
+Word2WordSim	TABLE		50000		362321		100000		200			server1[0-362320], server2[0-362320]    /data/W2W.txt	NONE
+
+where every non comment line (#) defines the complete management of a single source data table
+
+where:
+
+#TableID		: Unique user-defined table name		
+
+ValType			: TABLE (or SCORE)		
+
+TCPP#			: TCP Port number		
+
+TotLines		: [Currently ignored] Number of rows composing the source table
+
+CacheSize		: Number of queries locally cached on each DCA Client
+
+MaxValues		: Maximum number of <item2, score> pairs considered for each item2. 
+				  The rest will be discarded
+
+DataDistribution: Comma-separated list of servers which will host this data table. 
+				  The server name must match the one returned by System.getenv("HOSTNAME").
+
+InputFileName	: Comma-separated list of Files or Directories including the 
+				  (possibly multiple) files composing the source table.
+				  [Currently ignored] For each Server, a specific portion of the table 
+				  can be selected, in [StartLine, EndLine] format
+
+Filter			: In case InputFileName is a Directory, this filename extension filter 
+				  (e.g: txt) is applied on its files (or, "NONE").
+
+
+
+4. Server start up
+
+The DCA Server start is currently manual. So, a new DCA Server instance must be manually 
+executed **ONCE** on every machine listed in the configuration file by:
+
+java -Xmx... -Xms... -cp DCA_Framework.jar com.ibm.sai.dca.server.Server DCA_ClusterConfigFile
+
+Where the Xmx/Xms paramaters will be usually required with appropriate values replacing
+the "..." dots. 
+
+This will initially load all the tables defined in the config file to be hosted on the
+particular machine. Then, the listener(s) will be enabled and the Server will be ready.
+
+
+
+5. Client operation
+
+A DCA Client will make it by invoking the method in com.ibm.sai.dca.client.DCA_Client :
+
+	public ContentValue getContentValue(String tableID, String key, ContentValue.VALTYPE type)
+
+where:
+
+tableID		: Must match a tableID defined in the config file
+key			: is the "item1" as discussed in Section 2.
+type		: will be ContentValue.VALTYPE.TABLE for the "TABLE" format as discussed in 
+			  Section 2
+
+This interface is currently not stabilized and will be refined depending on some ongoing 
+work being made on the abstract data model(s) managed by DCA. As of now, the type 
+ContentValue will provide Map-like get(), size(), and keySet() methods to manage the query 
+result as discussed in Section 2.
+
+
+
+3. Caveat
+
+The com.ibm.sai.dca.client.DCA_Client is currently and *INTENTIONALLY NOT* thread safe.
+Every user-defined thread using a DCA Client *MUST* declare its own private DCA_Client
+instance. The rationale is to avoid any synchronization point on the client side which may
+harm present and future load management policies. In fact, every DCA_Client instance will
+open its private set of persistent TCP connections, one to each server defined in the 
+config file. Sharing a DCA_Client will jam data on the associated IO streams. I warned you.
+Instead, the local cache memory on each DCA_Client will be shared (and it is in fact 
+synchronized) among all the DCA_Client instances possibly running on the same machine.
+
+
+
+4. License
+
+The DCA software is Copyrighted (c) by IBM Corporation, and released under the terms of
+the Apache 2.0 Software License.
+
+   Copyright (c) 2012 IBM Corp.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+   
+
+   
+5. Support and Contacts
+
+Limited support might be offered by the author depending on current workload. 
+Contact:
+
+Bonaventura Coppola
+IBM Thomas J. Watson Research Center
+Watson Technologies - Question Answering Team.
+Yorktown Heights, NY
+
+email: 	bcoppola@us.ibm.com, coppolab@gmail.com

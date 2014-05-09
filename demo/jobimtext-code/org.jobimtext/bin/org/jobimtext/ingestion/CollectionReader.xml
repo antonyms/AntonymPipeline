@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collectionReaderDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+	<implementationName>org.jobimtext.ingestion.JoBimIngestionCollectionReader</implementationName>
+	<processingResourceMetaData><name>CollectionReader</name><description>Reads files from the filesystem.</description><version>1.0</version><vendor>IBM</vendor><configurationParameters>
+			<configurationParameter>
+				<name>InputPath</name>
+				<description>Input path for source ingestion.</description>
+				<type>String</type>
+				<multiValued>true</multiValued>
+				<mandatory>true</mandatory>
+			</configurationParameter>
+			<configurationParameter>
+				<name>FilePattern</name>
+				<description>File pattern or extensions of files to read.
+					If a pattern, it must start with the '/' (forward slash).
+					If a set of extensions, separate them with the ':' (colon). File
+					extensions should be any text following the last '.' (period) in a
+					file name.</description>
+				<type>String</type>
+				<multiValued>false</multiValued>
+				<mandatory>true</mandatory>
+			</configurationParameter>
+		</configurationParameters>
+		<configurationParameterSettings>
+			<nameValuePair>
+				<name>InputPath</name>
+				<value>
+					<array><string>/path/to/source</string></array></value>
+			</nameValuePair>
+			<nameValuePair>
+				<name>FilePattern</name>
+				<value>
+					<string>data</string></value>
+			</nameValuePair>
+		</configurationParameterSettings>
+		<typeSystemDescription>
+			<imports>
+				<import name="org.jobimtext.ingestion.type.JoBimIngestionTypeSystem"/></imports>
+		</typeSystemDescription>
+		<typePriorities/>
+		<fsIndexCollection/>
+		<capabilities><capability>
+				<inputs/>
+				<outputs>
+					<type allAnnotatorFeatures="true">org.jobimtext.ingestion.type.DocumentInfo</type><type allAnnotatorFeatures="true">org.jobimtext.ingestion.type.CorpusInfo</type></outputs>
+				<languagesSupported>
+					<language>en</language></languagesSupported>
+			</capability>
+		</capabilities><operationalProperties>
+			<modifiesCas>false</modifiesCas>
+			<multipleDeploymentAllowed>false</multipleDeploymentAllowed>
+			<outputsNewCASes>true</outputsNewCASes>
+		</operationalProperties>
+	</processingResourceMetaData><resourceManagerConfiguration/>
+</collectionReaderDescription>

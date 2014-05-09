@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+	<primitive>false</primitive>
+	<delegateAnalysisEngineSpecifiers>
+		<delegateAnalysisEngine key="JogramHolingAnnotator"><import name="org.jobimtext.holing.annotator.JogramHolingAnnotator"/></delegateAnalysisEngine><delegateAnalysisEngine key="JoAnnotator"><import name="org.jobimtext.holing.annotator.JoAnnotator"/></delegateAnalysisEngine><delegateAnalysisEngine key="SentenceTokenAnnotator"><import name="org.jobimtext.holing.segmenter.SentenceTokenAnnotator"/></delegateAnalysisEngine></delegateAnalysisEngineSpecifiers>
+	<analysisEngineMetaData>
+		<name>JoGramNew</name>
+		<description/>
+		<version>1.0</version>
+		<vendor/>
+		<configurationParameters searchStrategy="language_fallback"><configurationParameter><name>configFilePath</name><description>Configuration file path.  The configuration file specifies the types of jogram relations to process.</description><type>String</type><multiValued>false</multiValued><mandatory>true</mandatory><overrides><parameter>JogramHolingAnnotator/configFilePath</parameter></overrides></configurationParameter><configurationParameter><name>length</name><type>Integer</type><multiValued>false</multiValued><mandatory>false</mandatory><overrides><parameter>JoAnnotator/length</parameter></overrides></configurationParameter></configurationParameters>
+		<configurationParameterSettings><nameValuePair><name>length</name><value><integer>3</integer></value></nameValuePair><nameValuePair><name>configFilePath</name><value><string>/home/mriedl/workspace/org.jobimtext.examples/descriptors/org/jobimtext/examples/medical/config.xml</string></value></nameValuePair></configurationParameterSettings>
+		<flowConstraints>
+			<fixedFlow>
+				<node>SentenceTokenAnnotator</node>
+				<node>JoAnnotator</node>
+				<node>JogramHolingAnnotator</node>
+			</fixedFlow>
+		</flowConstraints>
+		<fsIndexCollection/>
+		<capabilities>
+			<capability>
+				<inputs/>
+				<outputs/>
+				<languagesSupported/>
+			</capability>
+		</capabilities>
+		<operationalProperties>
+			<modifiesCas>true</modifiesCas>
+			<multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+			<outputsNewCASes>false</outputsNewCASes>
+		</operationalProperties>
+	</analysisEngineMetaData>
+	<resourceManagerConfiguration/>
+</analysisEngineDescription>

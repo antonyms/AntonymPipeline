@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NgramHolingConfiguration>
+	<ngramRelations>	
+		<ngramRelation relationPrefix="ngram" hole="2" ngramLength="3"/>
+		<!-- 
+		<ngramRelation relationPrefix="ngram" hole="*" ngramLength="2"/>
+		<ngramRelation relationPrefix="ngram" hole="*" ngramLength="3"/>
+		<ngramRelation relationPrefix="ngram" hole="*" ngramLength="3" skip="1"/>
+		 -->		 		
+	</ngramRelations>
+</NgramHolingConfiguration>
