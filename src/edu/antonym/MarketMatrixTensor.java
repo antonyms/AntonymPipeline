@@ -14,17 +14,20 @@ import edu.antonym.prototype.Vocabulary;
 
 public class MarketMatrixTensor implements VectorEmbedding {
 	Vocabulary vocab; // May change to share one vocabulary for all method
+	Vocabulary secondvocab;
 	Map<Integer, double[]> vectors;
 	double[] T;
 	double[] TSim;
 
 	int dim;
-	static final String rootPath = "data/bptf/results/";
+	static final String rootPath = "data/bptf/";
 	
 	public MarketMatrixTensor(int idx) throws IOException {
 		String uPath = "roget_mm-"+idx+"_U.mm";
 		String vPath = "roget_mm-"+idx+"_V.mm";
-		vocab = new SimpleVocab(new File(rootPath+"roget_mm-voc"), new File(rootPath+"oov-sense.voc"), -1);
+		vocab = new SimpleVocab(new File(rootPath+"roget_mm-"+idx+"_voc"), new File(rootPath+"oov-sense.voc"), -1);
+		secondvocab = new SimpleVocab(new File(rootPath+"oov-sense.voc"), -1);
+//		vocab = new SimpleVocab(new File(rootPath+"roget_mm-0_voc"));
 		vectors = new HashMap<Integer, double[]>();
 
 		Scanner s = new Scanner(new File(rootPath+vPath));
@@ -75,7 +78,7 @@ public class MarketMatrixTensor implements VectorEmbedding {
 			assert svec.length == dim;
 			double[] vec = new double[dim];
 			for (int i = 0; i < dim; i++) {
-				vec[i] = Float.parseFloat(svec[i]);
+			vec[i] = Float.parseFloat(svec[i]);
 			}
 			vectors.put(index, vec);
 			index++;
@@ -112,6 +115,10 @@ public class MarketMatrixTensor implements VectorEmbedding {
 	@Override
 	public Vocabulary getVocab() {
 		return vocab;
+	}
+	
+	public Vocabulary getSecondVocab() {
+		return secondvocab;
 	}
 
 	@Override
