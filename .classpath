@@ -11,11 +11,9 @@
 	<classpathentry kind="lib" path="lib/jpaul-2.5.1.jar"/>
 	<classpathentry kind="src" path="descriptor"/>
 	<classpathentry kind="src" path="config"/>
-	<classpathentry kind="lib" path="lib/jobimlib/commons-cli-1.2.jar"/>
 	<classpathentry kind="lib" path="lib/jobimlib/commons-io-1.4.jar"/>
 	<classpathentry kind="lib" path="lib/jobimlib/commons-lang-2.3.jar"/>
 	<classpathentry kind="lib" path="lib/jobimlib/commons-logging-1.1.1.jar"/>
-	<classpathentry kind="lib" path="lib/jobimlib/commons-logging.jar"/>
 	<classpathentry kind="lib" path="lib/jobimlib/de.tudarmstadt.ukp.dkpro.core.api.io-asl-1.5.0.jar"/>
 	<classpathentry kind="lib" path="lib/jobimlib/de.tudarmstadt.ukp.dkpro.core.api.lexmorph-asl-1.5.0.jar"/>
 	<classpathentry kind="lib" path="lib/jobimlib/de.tudarmstadt.ukp.dkpro.core.api.metadata-asl-1.5.0.jar"/>
@@ -24,7 +22,6 @@
 	<classpathentry kind="lib" path="lib/jobimlib/de.tudarmstadt.ukp.dkpro.core.api.segmentation-asl-1.5.0.jar"/>
 	<classpathentry kind="lib" path="lib/jobimlib/de.tudarmstadt.ukp.dkpro.core.api.structure-asl-1.5.0.jar"/>
 	<classpathentry kind="lib" path="lib/jobimlib/de.tudarmstadt.ukp.dkpro.core.api.syntax-asl-1.5.0.jar"/>
-	<classpathentry kind="lib" path="lib/jobimlib/de.tudarmstadt.ukp.dkpro.core.io.text-asl-1.4.0.jar"/>
 	<classpathentry kind="lib" path="lib/jobimlib/de.tudarmstadt.ukp.dkpro.core.io.text-asl-1.5.0.jar"/>
 	<classpathentry kind="lib" path="lib/jobimlib/de.tudarmstadt.ukp.dkpro.core.stanfordnlp-gpl-1.5.0.jar"/>
 	<classpathentry kind="lib" path="lib/jobimlib/ivy-2.3.0.jar"/>

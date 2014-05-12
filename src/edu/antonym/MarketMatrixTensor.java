@@ -19,12 +19,12 @@ public class MarketMatrixTensor implements VectorEmbedding {
 	double[] TSim;
 
 	int dim;
-	static final String rootPath = "data/bptf/";
+	static final String rootPath = "data/bptf/results/";
 	
 	public MarketMatrixTensor(int idx) throws IOException {
 		String uPath = "roget_mm-"+idx+"_U.mm";
 		String vPath = "roget_mm-"+idx+"_V.mm";
-		vocab = new SimpleVocab(new File(rootPath+"roget_mm-voc"), -1);
+		vocab = new SimpleVocab(new File(rootPath+"roget_mm-voc"), new File(rootPath+"oov-sense.voc"), -1);
 		vectors = new HashMap<Integer, double[]>();
 
 		Scanner s = new Scanner(new File(rootPath+vPath));
@@ -32,7 +32,7 @@ public class MarketMatrixTensor implements VectorEmbedding {
 		String line = s.nextLine();
 		String[] param = line.split("\\s");
 		int N = Integer.parseInt(param[0]);
-		assert N == vocab.getVocabSize();
+		//assert N == vocab.getVocabSize();
 		dim = Integer.parseInt(param[1]);
 		
 		int index = 0; // assume vocabulary index equals to line number
@@ -54,6 +54,20 @@ public class MarketMatrixTensor implements VectorEmbedding {
 		s = new Scanner(new File(rootPath+uPath));
 		s.nextLine();s.nextLine();
 		line = s.nextLine();		
+		
+		while (s.hasNextLine()) {
+			line = s.nextLine();
+			svec = line.trim().split("\\s");
+			assert svec.length == dim;
+			double[] vec = new double[dim];
+			for (int i = 0; i < dim; i++) {
+				vec[i] = Float.parseFloat(svec[i]);
+			}
+			vectors.put(index, vec);
+			index++;
+		}
+		
+		s = new Scanner(new File(rootPath+"oov-sense"));
 		
 		while (s.hasNextLine()) {
 			line = s.nextLine();

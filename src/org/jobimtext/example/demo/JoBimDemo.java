@@ -7,6 +7,7 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
 
@@ -217,7 +218,7 @@ public class JoBimDemo extends JPanel {
 		}
 	}
 
-	private void createComponents() {
+	private void createComponents() throws IOException {
 
 		Toolkit.getDefaultToolkit().getSystemEventQueue()
 				.push(new TCPopupEventQueue());

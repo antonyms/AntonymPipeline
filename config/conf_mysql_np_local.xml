@@ -12,7 +12,7 @@
     </tables>
         <dbUser>root</dbUser>
     <dbUrl>jdbc:mysql://localhost:3306/dt120m_stan_lem</dbUrl>
-    <dbPassword>iceboal</dbPassword>
+    <dbPassword></dbPassword>
     <jdbcString>com.mysql.jdbc.Driver</jdbcString>
     <similarTermsQuery>select word2, count from $tableSimilarTerms where word1=? order by count desc </similarTermsQuery>
     <similarTermsTopQuery>select  word2, count from $tableSimilarTerms where word1=? order by count desc LIMIT 0, $numberOfEntries </similarTermsTopQuery>

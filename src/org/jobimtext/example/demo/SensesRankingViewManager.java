@@ -38,11 +38,13 @@ public class SensesRankingViewManager implements TreeSelectionListener {
       BasicJTree jobimView, 
       BasicJTree view, 
       IThesaurusMap<String, String> dt, 
-      JobimAnnotationExtractor extractor) {
+      JobimAnnotationExtractor extractor) throws IOException {
     this.jobimView = jobimView;
     this.view = view;
     this.dt = dt;
     this.extractor = extractor;
+    embeddingTensor = new MarketMatrixTensor(0);
+    embeddingPILSA = new RawPILSAVec(false);
   }
   
   public void valueChanged(TreeSelectionEvent event) {
@@ -84,8 +86,7 @@ public class SensesRankingViewManager implements TreeSelectionListener {
 	      ArrayList<Pair<Integer,Double>> senseScoresSorted = HashMapUtil.toPairs(senseScores);
 	      SecondPairComparator.sortR(senseScoresSorted);			
 		  	
-	      embeddingTensor = new MarketMatrixTensor(0);
-	      embeddingPILSA = new RawPILSAVec(false);
+	      
 	      
 	      for (Pair<Integer,Double> sense : senseScoresSorted) {
 	    	int key = sense.first;
@@ -94,7 +95,7 @@ public class SensesRankingViewManager implements TreeSelectionListener {
 	            .makeGrouping("Sense "+count++);
 	        view.top.add(senseNode);
 	        for (String s : l) {
-	        	DefaultMutableTreeNode vectorNode1 = BasicJTree.makeGrouping("MarketMatrixTensor");
+	        	DefaultMutableTreeNode vectorNode1 = BasicJTree.makeGrouping("BPTF");
 	        	ArrayList<String> ss = processWordsense(joString,s,1);
 	        	//DefaultMutableTreeNode expNode1 = new DefaultMutableTreeNode(ss);
 	        	int size = ss.size();
@@ -115,7 +116,7 @@ public class SensesRankingViewManager implements TreeSelectionListener {
 	        	//vectorNode1.add(expNode1);
 	        	senseNode.add(vectorNode1);
 	        	
-	        	DefaultMutableTreeNode vectorNode2 = BasicJTree.makeGrouping("RawPILSAVector");
+	        	DefaultMutableTreeNode vectorNode2 = BasicJTree.makeGrouping("PILSA");
 	        	ArrayList<String> sss = processWordsense(joString,s,2);
 	        	size = sss.size();
 	        	if(size<=20){
