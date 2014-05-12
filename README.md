@@ -1,15 +1,14 @@
-# Synonym & Antonym word representation.
-### Introduction
+### Synonym & Antonym Word Representation
 
-Available [here](https://edblogs.columbia.edu/comse6998-006-2014-1/2014/04/20/project8-antonym/)
+Details available [here](https://edblogs.columbia.edu/comse6998-006-2014-1/2014/04/20/project8-antonym/)
 
-### BPTF model
+##### [BPTF model](https://github.com/antonyms/AntonymPipeline/tree/master/bptf#bayesian-probabilistic-tensor-factorization)
 
 C++ code forked from [GraphChi](https://github.com/GraphChi/graphchi-cpp)
 
-### Linear embedding
+##### Linear embedding
 
-Two approaches:
+Implemented two approaches:
 
 * Linear Metric ([pdf](https://github.com/antonyms/AntonymPipeline/blob/master/doc/LinearEmbeddingTheory.pdf?raw=true))
 * DCA ([pdf](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.333.1676&rep=rep1&type=pdf))
