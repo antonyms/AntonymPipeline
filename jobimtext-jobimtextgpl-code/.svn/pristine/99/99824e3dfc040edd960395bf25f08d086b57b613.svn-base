@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<jobimExtractorConfiguration>
-    <keyValuesDelimiter>	</keyValuesDelimiter>
-    <attributeDelimiter>/</attributeDelimiter>
-    <valueDelimiter>_</valueDelimiter>
-    <extractorClassName>TokenExtractors$LemmaLowercasePosNPNN</extractorClassName>
-    <valueRelationPattern>$relation/$values</valueRelationPattern>
-    <holeSymbol></holeSymbol>
-</jobimExtractorConfiguration>

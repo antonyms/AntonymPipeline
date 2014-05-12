@@ -1,5 +1,0 @@
-# TableID		ValType	TCP P#	TableLines	CacheSize	MaxValues		DataAllocation		InputFileNames/Dir                                                              FileFilter
-
-Word2WordSim		TABLE	50000	18228968	100000		200			bluej476[0-18228967]	/users/bcoppola/uFrames/DTSimilarity/wordContext.sim_p200_t3_N200.cut123	NONE
-Ctx2CtxSim		TABLE	50001	35600539	600000		200			bluej476[0-35600538]	/users/bcoppola/uFrames/DTSimilarity/wordContext.inv.sim.cut123.stripTWREX	NONE
-Word2CtxSim		TABLE	50002	9948665		100000		200			bluej476[0-9948664]	/users/bcoppola/uFrames/DTSimilarity/wordContext.pruned200.cut126.stripTWREX	NONE

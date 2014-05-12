@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<jobimExtractorConfiguration>
-  <keyValuesDelimiter>	</keyValuesDelimiter>
-  <attributeDelimiter>#</attributeDelimiter>
-  <valueDelimiter>_</valueDelimiter>
-  <extractorClassName>org.jobimtext.holing.extractor.TokenExtractors$CoveredText</extractorClassName>
-  <valueRelationPattern>$relation($values)</valueRelationPattern>
-</jobimExtractorConfiguration>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<NgramHolingConfiguration>
-	<ngramRelations>
-		<ngramRelation model="2jogram" hole="0" length="2"/>
-		<!-- ngramRelation model="3jogram" hole="0" length="3"/>
-		<ngramRelation model="3jogram-skip" hole="0" length="3" skip="1"/ -->
-	</ngramRelations>
-</NgramHolingConfiguration>
