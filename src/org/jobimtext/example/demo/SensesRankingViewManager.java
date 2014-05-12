@@ -29,7 +29,7 @@ public class SensesRankingViewManager implements TreeSelectionListener {
   private IThesaurusMap<String, String> dt;
   private JobimAnnotationExtractor extractor;
 
-  public VectorEmbedding embeddingTensor;
+  public MarketMatrixTensor embeddingTensor;
   public VectorEmbedding embeddingPILSA;
   public Vocabulary voc;
   public HashMap<String,Double> map = new HashMap<String,Double>();
@@ -43,7 +43,7 @@ public class SensesRankingViewManager implements TreeSelectionListener {
     this.view = view;
     this.dt = dt;
     this.extractor = extractor;
-    embeddingTensor = new MarketMatrixTensor(0);
+    embeddingTensor = new MarketMatrixTensor(17);
     embeddingPILSA = new RawPILSAVec(false);
   }
   
@@ -188,6 +188,8 @@ public class SensesRankingViewManager implements TreeSelectionListener {
 				if(index!=OOV){
 					if(choice==1){
 						double sim = embeddingTensor.similarity(t, index);
+						if (embeddingTensor.getSecondVocab().lookupWord(plainword(words[i])) != OOV)
+							sim /= 2;
 						map.put(words[i], sim);
 					}
 					else if(choice==2){
