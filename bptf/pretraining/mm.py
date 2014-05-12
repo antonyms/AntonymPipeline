@@ -10,170 +10,132 @@ def vec2sim(vocPath, savePath, sample_rate=.02):
     matVoc = load_dic(vocPath)
     word2id, N = get_voc_dic(matVoc)
 
-    embed, vec = load_embedding("../data/morpho/hsmnCsmRNN.words", "../data/morpho/hsmnCsmRNN.We")
+    #embed, vec = load_embedding("../data/morpho/hsmnCsmRNN.words", "../data/morpho/hsmnCsmRNN.We")
+    embed, vec = load_embedding("../data/morpho/cwCsmRNN.words", "../data/morpho/cwCsmRNN.We")
 
     voc = list(matVoc)
+    count = 1
     with open(savePath, 'w') as f:
         for i in xrange(N-1):
-            print i
+            print_status(i)
             if voc[i] in embed:
                 for j in xrange(i+1,N):
                     if voc[j] in embed and 1==np.random.binomial(1,sample_rate):
                         a = voc[i]
                         b = voc[j]
-                        if a <= b:
-                            line = str(a) + ' ' + str(b)
-                        else:
-                            line = str(b) + ' ' + str(a)
+                        count += 1
+                        line = str(a) + ' ' + str(b)
                         line += ' ' + str(cosine_sim(embed[voc[i]], embed[voc[j]])) + '\n'
                         f.write(line)
+                        line = str(b) + ' ' + str(a)
+                        line += ' ' + str(cosine_sim(embed[voc[i]], embed[voc[j]])) + '\n'
+                        f.write(line)
+    print "\nGenerated %d pairs of second slice" % count
 
-def sim2mm(antPath, synPath, grePath, commonPath, simPath,
-        single, TFIDF, MORE, NO_GRE, zero_proportion, sim_proportion):
-
-    # inner dictionary: gre words list and popular words
-    gre = load_dic(grePath)
-    common = load_dic(commonPath)
-    gre = set(gre)
-    gre = gre.union(common)
-    #save_dic("Rogets/inner.txt", gre)
-    print len(gre)
+def sim2mm(antPath, synPath, vocPath, simPath, outPath,
+        zero_proportion, sim_proportion):
 
 
-    if TFIDF:
-        voc, doc, entries, items = get_voc_tfidfdoc_from_synant(antPath, synPath, gre)
-        entry2id, N = get_voc_dic(entries)
-        item2id, N = get_voc_dic(items)
-        word2id, N = get_voc_dic(voc)
-    else:
-        if MORE:
-            voc = get_more_voc_from_synant(antPath, synPath, gre)
-        else:
-            voc = get_voc_from_synant(antPath, synPath, gre)
-        print len(voc)
-        if NO_GRE:
-            gre = load_dic(grePath)
-            voc = voc.difference(gre)
-        #save_dic("Rogets/outer.txt", voc)
-        print len(voc)
-        word2id, N = get_voc_dic(voc)
-        entries = voc
-        items = voc
-        entry2id = word2id
-        item2id = word2id
-
-    not_th = a_not_in_b(gre, voc)
-    #save_dic('Rogets/not_th.txt', not_th)
-    print N
+    voc = load_dic(vocPath)
+    word2id, N = get_voc_dic(voc)
+    print "Vocabulary size: %d" % N
 
     G = np.zeros((N, N), dtype=bool)
 
     output = []
-    d = PairDict()
 
     ant, word = load_th(antPath)
     for target in ant:
-        if target in entries:
+        if target in word2id:
+            a = word2id[target]
             for w in ant[target]:
-                if w in items:
-                    a = word2id[target]
-                    ai = entry2id[target]
+                if w in word2id:
                     b = word2id[w]
-                    bi = item2id[w]
-                    p = (a, b)
-                    if p in d:
+                    if G[a-1,b-1] == True:
                         continue
-                    d[p] = 1
                     G[a-1,b-1] = True
                     G[b-1,a-1] = True
                     line = str(a) + ' ' + str(b)
-                    affix = ''
-                    if not single:
-                        affix += ' 1'
-                    affix += ' '
-                    if TFIDF:
-                        affix += str(-doc[ai-1,bi-1])
-                    else:
-                        affix += '-4.0'
+                    affix = ' 1 -1.0'
                     output.append(line+affix)
                     line = str(b) + ' ' + str(a)
                     output.append(line+affix)
     X = len(output)/2
-    print 'x' + str(X)
+    print 'Antonym pairs: %d' % X
 
     syn, word = load_th(synPath)
     for target in syn:
-        if target in entries:
+        if target in word2id:
+            a = word2id[target]
             for w in syn[target]:
-                if w in items:
-                    a = word2id[target]
-                    ai = entry2id[target]
+                if w in word2id:
                     b = word2id[w]
-                    bi = item2id[w]
-                    p = (a, b)
-                    if p in d:
+                    if G[a-1,b-1] == True:
                         continue
-                    d[p] = 1
                     G[a-1,b-1] = True
                     G[b-1,a-1] = True
                     line = str(a) + ' ' + str(b)
-                    affix = ''
-                    if not single:
-                        affix += ' 1'
-                    affix += ' '
-                    if TFIDF:
-                        affix += str(doc[ai-1,bi-1])
-                    else:
-                        affix += '6.0'
+                    affix = ' 1 1.0'
                     output.append(line+affix)
                     line = str(b) + ' ' + str(a)
                     output.append(line+affix)
     X = len(output)/2 - X
-    print 'x' + str(X)
+    print 'Synonym pairs: %d' % X
 
     neiG = np.zeros(G.shape, dtype=bool)
     for i, row in enumerate(G):
-        print i
-        neigh = set()
+        print_status(i)
+        neigh = []
         for j in np.where(row==True)[0]:
-            neigh = neigh.union(np.where(G[j]==True)[0])
-            neiG[i] = row
-            neiG[i, list(neigh)] = True
-    NN = G.sum() * zero_proportion
+            neigh += np.where(G[j]==True)[0].tolist()
+        neiG[i] = row
+        neigh.append(i)
+        neiG[i, neigh] = True
+    NN = G.sum()/2
+    print '\nGot first slice: %d' % NN
+    NN = NN * zero_proportion
     G = neiG
 
-    G[range(N), range(N)] = True
     count = 0
     while count < NN:
         i = np.random.randint(N)
         j = np.random.randint(N)
         if G[i,j] == False:
             G[i,j] = True
+            G[j,i] = True
             count += 1
             line = str(i+1) + ' ' + str(j+1)
-            if not single:
-                line += ' 1'
-            line += ' 5.0'
+            line += ' 1 0.0'
             output.append(line)
             line = str(j+1) + ' ' + str(i+1)
-            if not single:
-                line += ' 1'
-            line += ' 5.0'
+            line += ' 1 0.0'
             output.append(line)
-    N = len(output)/2 * sim_proportion
-    print N
+    N = len(output)/2
+    print 'Finished first slice: %d' % N
+    N_ = N * sim_proportion
+    print 'Desired second slice: %d' % N_
 
-    if not single:
-        sim = load_sim(simPath, voc, True, N)
-        print len(sim)
-        for row in sim:
-            line = str(word2id[row[0]]) + ' ' + str(word2id[row[1]])
-            psim = sim[row]/10 + 5
-            line += ' 2 ' + str(psim)
-            output.append(line)
-            line = str(word2id[row[1]]) + ' ' + str(word2id[row[0]])
-            line += ' 2 ' + str(psim)
-            output.append(line)
+    prop = N_*2
+    with open(simPath, 'r') as f:
+        count = 0
+        for row in f:
+            count += 1
+    prop = float(prop) / count
+    print 'Sample probability: %f' % prop
+    voc = set(voc)
+    with open(simPath, 'r') as f:
+        for row in f:
+            if np.random.binomial(1, prop)==1:
+                row = row.strip().split()
+                a = row[0]
+                b = row[1]
+                if a in voc and b in voc:
+                    line = str(word2id[a]) + ' ' + str(word2id[b])
+                    psim = preprocess_sim(float(row[2]))
+                    line += ' 2 ' + str(psim)
+                    output.append(line)
+
+    print 'Finished second slice: %d' % (len(output)/2 - N)
 
     with open(outPath, 'w') as f:
         f.write('%%MatrixMarket matrix coordinate real general\n% Generated 27-Apr-2014\n'+str(len(voc))+' '+str(len(voc))+' '+str(len(output))+'\n')

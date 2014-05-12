@@ -1,28 +1,22 @@
 import numpy as np
 import re
+import copy
+import sys
 from collections import defaultdict
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 def cosine_sim(x, y):
     return np.dot(x, y) / np.sqrt(np.dot(x, x) * np.dot(y, y))
 
-class PairDict(dict):
-    def __setitem__(self, key, value):
-        if key[0] == key[1]:
-            return
-        if key[0] < key[1]:
-            return dict.__setitem__(self, key, value)
-        else:
-            return dict.__setitem__(self, (key[1], key[0]), value)
+def preprocess_sim(sim):
+    return sim/10 - 1
 
 def load_dic(path):
     with open(path, 'r') as f:
         vec = f.readlines()
     vec = [x.strip() for x in vec]
     N = len(vec)
-    if N != len(set(vec)):
-        print "Vocabulary contains duplicates!"
-    assert N == len(vec)
+    assert N == len(set(vec)), "Vocabulary contains duplicates!"
     return vec
 
 def save_dic(path, vec):
@@ -42,14 +36,45 @@ def load_embedding(dicpath, embedpath):
             embed[word[i]] = row
     return embed, word
 
+def clean_th(ants,clean=True):
+    new_ants = copy.deepcopy(ants)
+    for w in ants:
+        if clean:
+            if not re.match(r"^[a-zA-Z\-]+$", w):
+                del new_ants[w]
+                continue
+            temp = []
+            for x in ants[w]:
+                if re.match(r"^[a-zA-Z\-]+$", x):
+                    temp.append(x)
+        else:
+            temp = ants[w]
+        temp = set(temp)
+        if w in temp:
+            temp.remove(w)
+        if not temp:
+            del new_ants[w]
+            continue
+        new_ants[w] = temp
+    return new_ants
+
+def print_status(i):
+    i += 1
+    if i % 10 == 0:
+        sys.stdout.write('.')
+        if i % 1000 == 0:
+            sys.stdout.write('\n')
+            print i
+    sys.stdout.flush()
+
 def load_sim(simpath, voc=None, sample=True, prop=1e3):
-    sim = PairDict()
+    sim = {}
     with open(simpath, 'r') as f:
         count = 0
         for row in f:
             count += 1
-        prop = float(prop) / count
-        print prop
+    prop = float(prop) / count
+    print 'sample probability: %f' % prop
     with open(simpath, 'r') as f:
         for row in f:
             if not sample or np.random.binomial(1, prop)==1:
@@ -80,6 +105,18 @@ def get_voc_from_synant(antPath, synPath, gre):
         if target in gre:
             for w in row[1:]:
                 if w in gre:
+                    voc.add(w)
+                    voc.add(target)
+    return voc
+
+def get_more_voc_from_ant(antPath, gre):
+    voc = set()
+    with open(antPath, 'r') as f:
+        for row in f:
+            row = row.strip().split()
+            target = row[0]
+            for w in row[1:]:
+                if target in gre or w in gre:
                     voc.add(w)
                     voc.add(target)
     return voc
@@ -169,7 +206,6 @@ def load_th(path, clean=False):
                 to = set(to)
             ant[words[0]] = to
             word += list(to)
-    word = set(word)
     return ant, word
 
 def save_th(path, ant):

@@ -5,9 +5,7 @@ from pretraining import *
 Out-of-vocabulary embedding
 """
 rootPath = '../data/'
-outPath = 'bptf/roget_mm'
-outPath = rootPath + outPath
-pmfPath = outPath
+pmfPath = rootPath + 'bptf/roget_mm'
 matVocPath = rootPath + "bpth/roget_mm-voc"
 grePath = rootPath + "test-data/gre_wordlist.txt"
 savePath = rootPath + "test-data/gre_oov.txt"
