@@ -48,6 +48,26 @@ public class SimpleVocab implements Vocabulary {
 		this.OOVindex=OOVindex;
 	}
 	
+	public SimpleVocab(File file, File file2, int i) throws FileNotFoundException {
+		words = new ArrayList<String>();
+		ids = new HashMap<String, Integer>();
+		Scanner scan=new Scanner(file);
+		int index=0;
+		while(scan.hasNextLine()) {
+			String word=scan.nextLine();
+			words.add(word);
+			ids.put(word,index++);
+		}
+		scan=new Scanner(file2);
+		while(scan.hasNextLine()) {
+			String word=scan.nextLine();
+			words.add(word);
+			ids.put(word,index++);
+		}
+		scan.close();
+		this.OOVindex=i;
+	}
+	
 	@Override
 	public int size() {
 		return words.size();
