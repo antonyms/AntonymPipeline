@@ -22,12 +22,16 @@ public class MarketMatrixTensor implements VectorEmbedding {
 	int dim;
 	static final String rootPath = "data/bptf/";
 	
+	public MarketMatrixTensor() throws IOException {
+		this(58);
+	}
+	
 	public MarketMatrixTensor(int idx) throws IOException {
 		String uPath = "roget_mm-"+idx+"_U.mm";
 		String vPath = "roget_mm-"+idx+"_V.mm";
-		vocab = new SimpleVocab(new File(rootPath+"roget_mm-"+idx+"_voc"), new File(rootPath+"oov-sense.voc"), -1);
-		secondvocab = new SimpleVocab(new File(rootPath+"oov-sense.voc"), -1);
-//		vocab = new SimpleVocab(new File(rootPath+"roget_mm-0_voc"));
+		vocab = new SimpleVocab(new File(rootPath+"roget_mm-"+idx+"_voc"), new File(rootPath+"gre_oov.txt.voc"), -1);
+//		secondvocab = new SimpleVocab(new File(rootPath+"oov-sense.voc"), -1);
+//		vocab = new SimpleVocab(new File(rootPath+"roget_mm-"+idx+"_voc"));
 		vectors = new HashMap<Integer, double[]>();
 
 		Scanner s = new Scanner(new File(rootPath+vPath));
@@ -70,7 +74,7 @@ public class MarketMatrixTensor implements VectorEmbedding {
 			index++;
 		}
 		
-		s = new Scanner(new File(rootPath+"oov-sense"));
+		s = new Scanner(new File(rootPath+"gre_oov.txt"));
 		
 		while (s.hasNextLine()) {
 			line = s.nextLine();
@@ -84,7 +88,6 @@ public class MarketMatrixTensor implements VectorEmbedding {
 			index++;
 		}
 		
-		//GREOOV();
 	}
 	
 	/*private void GREOOV() throws IOException {
