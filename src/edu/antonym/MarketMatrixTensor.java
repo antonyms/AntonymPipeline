@@ -29,7 +29,7 @@ public class MarketMatrixTensor implements VectorEmbedding {
 	public MarketMatrixTensor(int idx) throws IOException {
 		String uPath = "roget_mm-"+idx+"_U.mm";
 		String vPath = "roget_mm-"+idx+"_V.mm";
-		vocab = new SimpleVocab(new File(rootPath+"roget_mm-"+idx+"_voc"), new File(rootPath+"gre_oov.txt.voc"), -1);
+		vocab = new SimpleVocab(new File(rootPath+"roget_mm-voc"), new File(rootPath+"gre_oov.txt.voc"), -1);
 //		secondvocab = new SimpleVocab(new File(rootPath+"oov-sense.voc"), -1);
 //		vocab = new SimpleVocab(new File(rootPath+"roget_mm-"+idx+"_voc"));
 		vectors = new HashMap<Integer, double[]>();
