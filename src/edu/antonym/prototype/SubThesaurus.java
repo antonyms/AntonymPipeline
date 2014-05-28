@@ -10,20 +10,26 @@ import java.util.Map;
 import edu.antonym.Util;
 
 public class SubThesaurus implements Thesaurus {
-	class SubEntry {
-		int index;
-		List<Integer> synentries;
-		List<Integer> antentries;
-	}
 
 	Thesaurus parent;
 	List<Integer> indices;
+	int numSynonyms;
+	int numAntonyms;
 
 	public SubThesaurus(Thesaurus parent, List<Integer> indices) {
 		super();
 		this.parent = parent;
 		this.indices = indices;
 		Collections.sort(this.indices);
+		this.numSynonyms=0;
+		this.numAntonyms=0;
+		for(Integer i:this.indices) {
+			if(parent.getEntry(i).isAntonym()) {
+				numAntonyms++;
+			} else {
+				numSynonyms++;
+			}
+		}
 	}
 
 	public void addEntry(int entry) {
@@ -139,6 +145,16 @@ public class SubThesaurus implements Thesaurus {
 			entrymap.put(new Key(ent.word1(), ent.word2()), assignment);
 		}
 		return result;
+	}
+
+	@Override
+	public int numSynonyms() {
+		return numSynonyms;
+	}
+
+	@Override
+	public int numAntonyms() {
+		return numAntonyms;
 	}
 
 }

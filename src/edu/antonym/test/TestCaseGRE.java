@@ -31,7 +31,7 @@ public class TestCaseGRE implements MetricEvaluator {
 	
 	@Override
 	public double score(WordMetric metric) throws IOException {
-		return score(metric, "gre_testset.txt");
+		return score(metric, "testset.txt");
 	}
 	
 	public double score(WordMetric metric, String test0) throws IOException {
@@ -45,7 +45,7 @@ public class TestCaseGRE implements MetricEvaluator {
 		double acc = 0.0d;
 		gres.add(test0);	//add more file if needed
 		
-		Vocabulary smallvocab = new SimpleVocab(new File("/home/jingwei/workspace/pmf/roget_mm-voc"), -1);
+		//Vocabulary smallvocab = new SimpleVocab(new File("/home/jingwei/workspace/pmf/roget_mm-voc"), -1);
 		Vocabulary vocab = metric.getVocab();
 		int OOV = vocab.OOVindex();
 		
@@ -78,7 +78,8 @@ public class TestCaseGRE implements MetricEvaluator {
 				else {
 					out.append("Cannot find target: " + target);
 					out.append(" WRONG ");
-					//accuracy_neg++;
+					accuracy_neg++;
+					//all--;
 					out.append("\n");
 
 					line = br.readLine();
@@ -94,7 +95,7 @@ public class TestCaseGRE implements MetricEvaluator {
 				String test_answer = null;
 				
 				for(int j=0;j<choices.length;j++){
-					if(smallvocab.lookupWord(choices[j])==OOV) {
+					if(vocab.lookupWord(choices[j])==OOV) {
 					continue;
 					}
 					int choiceID = vocab.lookupWord(choices[j]);

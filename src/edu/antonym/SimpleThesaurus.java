@@ -79,10 +79,11 @@ public class SimpleThesaurus implements Thesaurus {
 
 	ThesaurusEntry[] entries;
 
+	int numSynonyms;
 	public SimpleThesaurus(Vocabulary vocab, File synonyms, File antonyms)
 			throws FileNotFoundException {
 		this.vocab = vocab;
-
+		this.numSynonyms=0;
 		List<ThesaurusEntry> ent =new ArrayList<ThesaurusEntry>();
 		Scanner s = new Scanner(synonyms);
 		while (s.hasNextLine()) {
@@ -98,6 +99,7 @@ public class SimpleThesaurus implements Thesaurus {
 					continue;
 				}
 				ent.add(new ThesaurusEntry(w1,w2,false));
+				numSynonyms++;
 			}
 
 		}
@@ -130,6 +132,12 @@ public class SimpleThesaurus implements Thesaurus {
 	@Override
 	public int numEntries() {
 		return entries.length;
+	}
+	public int numSynonyms() {
+		return numSynonyms;
+	}
+	public int numAntonyms() {
+		return numEntries()-numSynonyms();
 	}
 
 	@Override

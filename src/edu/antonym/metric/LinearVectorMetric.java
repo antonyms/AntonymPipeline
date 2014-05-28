@@ -160,14 +160,14 @@ public class LinearVectorMetric implements Optimizable.ByGradientValue,
 					gradTmp1);
 
 			if (ent.isAntonym()) {
-				cachedValue -= (entsim + 1) * (entsim + 1);
+				cachedValue -= (entsim + 1) * (entsim + 1)/th.numAntonyms();
 				for (int p = 0; p < parameters.length; p++) {
-					cachedGradient[p] -= 2 * (entsim + 1) * gradTmp1[p];
+					cachedGradient[p] -= 2 * (entsim + 1) * gradTmp1[p]/th.numAntonyms();
 				}
 			} else {
-				cachedValue -= (entsim - 1) * (entsim - 1);
+				cachedValue -= (entsim - 1) * (entsim - 1)/th.numSynonyms();
 				for (int p = 0; p < parameters.length; p++) {
-					cachedGradient[p] -= 2 * (entsim - 1) * gradTmp1[p];
+					cachedGradient[p] -= 2 * (entsim - 1) * gradTmp1[p]/th.numSynonyms();
 				}
 			}
 

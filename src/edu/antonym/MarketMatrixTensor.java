@@ -9,10 +9,11 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+import edu.antonym.prototype.NormalizedVectorEmbedding;
 import edu.antonym.prototype.VectorEmbedding;
 import edu.antonym.prototype.Vocabulary;
 
-public class MarketMatrixTensor implements VectorEmbedding {
+public class MarketMatrixTensor implements NormalizedVectorEmbedding {
 	Vocabulary vocab; // May change to share one vocabulary for all method
 	Vocabulary secondvocab;
 	Map<Integer, double[]> vectors;
@@ -134,7 +135,7 @@ public class MarketMatrixTensor implements VectorEmbedding {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
+	
 
 	@Override
 	public double similarity(int word1, int word2) {
@@ -143,5 +144,8 @@ public class MarketMatrixTensor implements VectorEmbedding {
 		//sim = sim < -1.0 ? -1.0 : sim;
 		return sim;
 		//return Util.cosineSimilarity(vectors.get(word1), vectors.get(word2));
+	}
+	public double getT(int i) {
+		return T[i];
 	}
 }

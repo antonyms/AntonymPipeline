@@ -11,6 +11,7 @@ import cc.mallet.optimize.Optimizable;
 import cc.mallet.optimize.OptimizationException;
 import cc.mallet.optimize.Optimizer;
 import cc.mallet.optimize.tests.TestOptimizable;
+import edu.antonym.MarketMatrixTensor;
 import edu.antonym.NormalizedTextFileEmbedding;
 import edu.antonym.SimpleThesaurus;
 import edu.antonym.SimpleVocab;
@@ -19,6 +20,7 @@ import edu.antonym.metric.LinearVectorMetric;
 import edu.antonym.prototype.NormalizedVectorEmbedding;
 import edu.antonym.prototype.SubThesaurus;
 import edu.antonym.prototype.Thesaurus;
+import edu.antonym.prototype.VectorEmbedding;
 import edu.antonym.prototype.Vocabulary;
 import edu.antonym.test.RandomizedTestCase;
 import edu.antonym.test.TestCase;
@@ -104,18 +106,26 @@ public class LinearMetricTrainer {
 	}
 
 	public static void main(String[] args) throws IOException {
-		Vocabulary vocab = new SimpleVocab(new File("data/huangvocab.txt"));
+	MarketMatrixTensor origEmbed=new MarketMatrixTensor(58);
+		Vocabulary vocab = origEmbed.getVocab();
+		//Vocabulary vocab = new SimpleVocab(new File("data/huangvocab.txt"));
 		Thesaurus th = new SimpleThesaurus(vocab, new File(
-				"data/Rogets/synonym.txt"), new File("data/Rogets/antonym.txt"));
-		NormalizedVectorEmbedding origEmbed = new NormalizedTextFileEmbedding(
-				new File("data/huangvectors.txt"), vocab);
+				"data/combine/synonym.txt"), new File("data/combine/antonym.txt"));
+		//NormalizedVectorEmbedding origEmbed = new NormalizedTextFileEmbedding(
+		//		new File("data/huangvectors.txt"), vocab);
+		
 		
 		Thesaurus[] split = SubThesaurus.splitThesaurus(th, new double[] { 0.8,
 				0.2 }); // train/test split
-		LinearMetricTrainer t = new LinearMetricTrainer(origEmbed, 4000, 1,
+		LinearMetricTrainer t = new LinearMetricTrainer(origEmbed, 1000, 1,
 				true);
 
-		LinearVectorMetric m = t.train(split[0]);
+		int ind = 0;
+		for (int i = 0; i < origEmbed.getDimension(); i++) {
+			t.embedding.setParameter(ind, origEmbed.getT(i));
+			ind += (i + 2);
+		}
+		LinearVectorMetric m = t.train(split[0],100);
 
 
 		RandomizedTestCase n = new RandomizedTestCase(split[1]);

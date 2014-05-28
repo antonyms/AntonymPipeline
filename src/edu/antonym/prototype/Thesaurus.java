@@ -12,6 +12,8 @@ public interface Thesaurus {
 	
 	//Returns the words included in the Thesaurus
 	public int numEntries();
+	public int numSynonyms();
+	public int numAntonyms();
 	public Entry getEntry(int entryn);
 	
 	public int lookupEntry(int word1, int word2, boolean isAnt);

@@ -158,5 +158,15 @@ public class ThesaurusImp implements Thesaurus{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	@Override
+	public int numSynonyms() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public int numAntonyms() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }
