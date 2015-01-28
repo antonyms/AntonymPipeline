@@ -1,5 +1,5 @@
 # Bayesian Probabilistic Tensor Factorization
-
+_**This code is slightly outdated. Will update soon.**_
 * Forked from GraphChi
 
 Usage:
