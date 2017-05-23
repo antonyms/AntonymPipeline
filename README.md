@@ -1,3 +1,5 @@
+Disclaimer: this research code is nasty, lack of proper design or comments.
+
 ### Synonym & Antonym Word Representation
 
 Details available [here](https://edblogs.columbia.edu/comse6998-006-2014-1/2014/04/20/project8-antonym/)

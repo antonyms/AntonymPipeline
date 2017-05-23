@@ -1,5 +1,2 @@
 bin/
-bptf/*.py
-bptf/pretraining/*.pyc
-data/bptf/
 data/WordNet-3.0/

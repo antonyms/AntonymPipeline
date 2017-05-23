@@ -4,13 +4,19 @@ from utils import *
 from nltk.corpus import wordnet as wn
 
 def readArray(path):
-    with open(path, 'r') as f:
-        data = f.readlines()
     out = []
-    for row in data[3:]:
-        row = row.strip().split()
-        row = [float(x) for x in row]
-        out.append(row)
+    i = 0
+    with open(path, 'r') as f:
+        for row in f:
+            i += 1
+            if i > 3:
+                row = row.strip().split()
+                try:
+                    row = [float(x) for x in row]
+                except:
+                    print row
+                    raise
+                out.append(row)
     out = np.array(out)
     return out
 
@@ -26,13 +32,10 @@ def readParam(pmfPath, itr, k=1, all_slice=False):
     alpha = readArray(path+"alpha.mm")[0][0]
     return U, T, A, mu, alpha
 
-def embedding(pmfPath, matVocPath, grePath, savePath):
+def embedding(pmfPath, matVocPath, grePath, savePath, synPath, itr=0):
     # load Gibbs sampling parameters
-    synPath = "../data/Rogets/synonym.txt"
-    synPath = "../data/WordNet-3.0/synonym.txt"
-    synPath = "../data/combine/synonym.txt"
+
     syns, word = load_th(synPath)
-    itr = 0
     U, T, A, mu, alpha = readParam(pmfPath, itr, all_slice=True)
     T0 = T[0]
     T = T[1]
@@ -102,19 +105,23 @@ def embedding(pmfPath, matVocPath, grePath, savePath):
 
     output = []
     word = []
+    count = 0
     for i, w in enumerate(not_th_in_vec):
+
         v = wn.morphy(w)
         if True and v in voc: # morphy
             vector = U[word2id[v]-1]
             vector = '\t'.join([str(x) for x in vector])
             word.append(w)
             output.append(vector)
+            count += 1
             print "%d, morphy" % i
             continue
+
         if True: # oov embedding
             vector = OOVembed(w)
-        if vector == None:
-            vector = list(set([x.name.split('.')[0] for x in wn.synsets(w)]))
+        if False and vector == None:
+            vector = list(set([x.name().split('.')[0] for x in wn.synsets(w)]))
             if vector:
                 vector = OOVembed(vector[0])
             else:
@@ -123,9 +130,12 @@ def embedding(pmfPath, matVocPath, grePath, savePath):
             vector = '\t'.join([str(x) for x in vector])
             word.append(w)
             output.append(vector)
+            count += 1
             print "%d, oov" % i
             continue
-        print "%d" % i
+
+        print ("%d" % i), w
+    print 1.0-1.0*(len(not_th_in_vec)-count)/len(voc)
 
     save_dic(savePath+'.voc', word)
     with open(savePath, 'w') as f:
@@ -136,9 +146,10 @@ def get_name(string):
 
 if __name__ == "__main__":
 
-    pmfPath = "../../pmf/roget_no_mm-"
-    matVocPath = "../../pmf/roget_no_mm-voc"
-    grePath = "test-data/gre_wordlist.txt"
-    savePath = "test-data/gre_oov.txt"
+    pmfPath = "../../pmf/combine_single_mm"
+    matVocPath = "../../pmf/combine_single_mm-voc"
+    grePath = "../../data/test-data/gre_wordlist.txt"
+    savePath = "../../pmf/gre_oov.txt"
+    synPath = "../../data/combine/synonym.txt"
 
     embedding(pmfPath, matVocPath, grePath, savePath)

@@ -5,7 +5,7 @@ import cPickle
 import sys
 from utils import *
 
-def vec2sim(vocPath, savePath, sample_rate=.02):
+def vec2sim(vocPath, savePath, sample_rate=.02, tag=False):
 
     matVoc = load_dic(vocPath)
     word2id, N = get_voc_dic(matVoc)
@@ -18,23 +18,30 @@ def vec2sim(vocPath, savePath, sample_rate=.02):
     with open(savePath, 'w') as f:
         for i in xrange(N-1):
             print_status(i)
-            if voc[i] in embed:
+            if not tag:
+                voci = voc[i]
+            else:
+                voci = voc[i].split('#')[0]
+            if voci in embed:
                 for j in xrange(i+1,N):
-                    if voc[j] in embed and 1==np.random.binomial(1,sample_rate):
+                    if not tag:
+                        vocj = voc[j]
+                    else:
+                        vocj = voc[j].split('#')[0]
+                    if vocj in embed and 1==np.random.binomial(1,sample_rate):
                         a = voc[i]
                         b = voc[j]
                         count += 1
                         line = str(a) + ' ' + str(b)
-                        line += ' ' + str(cosine_sim(embed[voc[i]], embed[voc[j]])) + '\n'
+                        line += ' ' + str(cosine_sim(embed[voci], embed[vocj])) + '\n'
                         f.write(line)
                         line = str(b) + ' ' + str(a)
-                        line += ' ' + str(cosine_sim(embed[voc[i]], embed[voc[j]])) + '\n'
+                        line += ' ' + str(cosine_sim(embed[voci], embed[vocj])) + '\n'
                         f.write(line)
     print "\nGenerated %d pairs of second slice" % count
 
 def sim2mm(antPath, synPath, vocPath, simPath, outPath,
         zero_proportion, sim_proportion):
-
 
     voc = load_dic(vocPath)
     word2id, N = get_voc_dic(voc)
@@ -140,7 +147,6 @@ def sim2mm(antPath, synPath, vocPath, simPath, outPath,
     with open(outPath, 'w') as f:
         f.write('%%MatrixMarket matrix coordinate real general\n% Generated 27-Apr-2014\n'+str(len(voc))+' '+str(len(voc))+' '+str(len(output))+'\n')
         f.write('\n'.join(output))
-    save_dic(outPath+'-voc', voc)
 
 if __name__ == "__main__":
 

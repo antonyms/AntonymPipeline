@@ -66,7 +66,7 @@ def lookup_wordnet(gre):
             #print q
     return float(correct)/float(answered), float(correct)/len(gre)
 
-def lookup(gre, ants):
+def lookup(gre, ants, rand=True):
     correct = 0
     answered = 0
     for q in gre:
@@ -87,9 +87,10 @@ def lookup(gre, ants):
                 if candidate[0] == answer:
                     correct += 1
                 continue
-            answered += 1
-            if candidate[np.random.randint(len(candidate))] == answer:
-                correct += 1
+            if rand:
+                answered += 1
+                if candidate[np.random.randint(len(candidate))] == answer:
+                    correct += 1
             continue
         if len(candidate) == 1:
             answered += 1
@@ -102,20 +103,23 @@ def lookup(gre, ants):
             if c in ants and target in ants[c]:
                 candidate.append(c)
         if len(candidate) > 1:
-            answered += 1
-            if candidate[np.random.randint(len(candidate))] == answer:
-                correct += 1
+            if rand:
+                answered += 1
+                if candidate[np.random.randint(len(candidate))] == answer:
+                    correct += 1
             continue
         if len(candidate) == 1:
             answered += 1
             if candidate[0] == answer:
                 correct += 1
         else:
-            answered += 1
-            if choice[np.random.randint(5)] == answer:
-                correct += 1
+            if rand:
+                answered += 1
+                if choice[np.random.randint(5)] == answer:
+                    correct += 1
 
     return float(correct)/float(answered), float(correct)/len(gre)
+
 
 def predict(gre, embed, T, oov_embed=None, tag=False):
     rand = True
@@ -171,41 +175,58 @@ def predict(gre, embed, T, oov_embed=None, tag=False):
 def random_choice():
     return np.random.randint(5)
 
-def predict_avg(gre, embed, T, oov_embed=None):
+def predict_avg(gre, embed, T, oov_embed=None, mean_vec=False):
     def score(a, b, T):
         return np.dot(T*a, b)
     pred = []
     n = len(embed)
+    if mean_vec:
+        T = np.array(T).mean(0)
     for q in gre:
         target, choice, answer = q
         if target not in embed[0]:
             if oov_embed != None:
-                if target not in oov_embed:
+                if target not in oov_embed[0]:
                     pred.append(None)
                     continue
                 else:
-                    target = oov_embed[target]
+                    target = [e[target] for e in oov_embed]
+                    if mean_vec:
+                        target = np.array(target).mean(0)
             else:
                 pred.append(None)
                 continue
         else:
             target = [e[target] for e in embed]
-            target = np.array(target).mean(0)
+            if mean_vec:
+                target = np.array(target).mean(0)
         min_sim = np.inf
         argmin = None
         for c in choice:
             co = c
             if c in embed[0]:
                 c = [e[c] for e in embed]
-                c = np.array(c).mean(0)
+                if mean_vec:
+                    c = np.array(c).mean(0)
             elif oov_embed != None:
-                if c in oov_embed:
-                    c = oov_embed[c]
+                if c in oov_embed[0]:
+                    c = [e[c] for e in oov_embed]
+                    if mean_vec:
+                        c = np.array(c).mean(0)
                 else:
                     continue
             else:
                 continue
-            s = score(target, c, T)
+            if not mean_vec:
+                N = len(T)
+                assert N == len(c)
+                assert N == len(target)
+                s = 0.0
+                for i in xrange(N):
+                    s += score(target[i], c[i], T[i])
+                s /= N
+            else:
+                s = score(target, c, T)
             if s < min_sim:
                 min_sim = s
                 argmin = co
@@ -232,9 +253,11 @@ def score(gre, embed, T, oov_embed=None, AVG=False, tag=False):
                 correct += 1
     p = float(correct)/answered
     r = float(correct)/len(gre)
+    '''
     print correct
     print answered
     print len(gre)
+    '''
     return p, r, 2*p*r/(p+r)
 
 def get_question_pos(question):
@@ -263,16 +286,21 @@ def get_question_pos(question):
     return max(tag.iteritems(), key=operator.itemgetter(1))[0]
 
 if __name__ == "__main__":
-    embedding = False
+    embedding = True
+    questionPath = '../data/test-data/devset.txt'
     questionPath = '../data/test-data/testset.txt'
     gre = load_gre_test(questionPath)
 
     #ants, word = load_th_pair('mohammad/AntonymsLexicon-OppCats')
 
     dicPath = '../data/Rogets/antonym.txt'
+    dicPath = '../data/WordNet-3.0/moresyn_antonym.txt'
+    dicPath = '../data/WordNet-3.0/realsyn_antonym.txt'
+    dicPath = '../data/WordNet-3.0/real_antonym.txt'
     dicPath = '../data/WordNet-3.0/antonym.txt'
+    dicPath = '../data/WordNet-3.0/new_antonym.txt'
     dicPath = '../data/combine/antonym.txt'
-    if False:
+    if not embedding:
         ants, word = load_th(dicPath)
         '''
         p,r = lookup_wordnet(gre)
@@ -281,36 +309,36 @@ if __name__ == "__main__":
         print wrong
         exit()
         '''
-        p,r= lookup(gre, ants)
+        P = 0
+        R = 0
+        for i in range(1000):
+            p,r= lookup(gre, ants, False)
+            P += p
+            R += r
+        p = P/1000
+        r = R/1000
         print p,r,2*p*r/(p+r)
         exit()
 
-    pmfPath = "../data/bptf/roget_mm"
-    matVocPath = "../data/bptf/roget_mm-58_voc"
-    oovPath = "../data/bptf/gre_oov.txt"
-    oov_embed, word = load_embedding(oovPath+".voc", oovPath)
+    root = "../data/combine/"
+    pmfPath = root + "combine_mm"
+    matVocPath = pmfPath + "-voc"
+
     voc = load_dic(matVocPath)
     prec = []
     recall = []
     f1 = []
-    for i in range(58,59):
-        U, T, A, mu, alpha = readParam(pmfPath, i, 0)
-        embed = dict(zip(voc, U))
-        if not embedding:
-            oov_embed = None
-        p,r,f = score(gre, embed, T, oov_embed, tag=False)
-        print i,p,r,f
-        prec.append(p)
-        recall.append(r)
-        f1.append(f)
-    i = np.argmax(np.array(recall))
-    print i, prec[i], recall[i], f1[i]
-    exit()
 
     embed = []
-    for i in range(41):
-        U, T, A, mu, alpha = readParam(pmfPath, i, 0)
+    oov_embed = []
+    T = []
+    for i in range(20, 50):
+        i *= 10
+        U, t, _, _, _ = readParam(pmfPath, i, 0)
         embed.append(dict(zip(voc, U)))
-    print score(gre, embed, T, AVG=True)
-
-    #print score(gre, embed, oov_embed)
+        oovPath = root + "gre_oov-" + str(i)
+        oovembed, word = load_embedding(oovPath+".voc", oovPath)
+        oov_embed.append(oovembed)
+        T.append(t)
+        print score(gre, embed[-1], t, oovembed, AVG=False)
+    print score(gre, embed, T, oov_embed, AVG=True)

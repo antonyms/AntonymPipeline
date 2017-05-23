@@ -6,10 +6,12 @@ rootPath = '../data/'
 thPath = rootPath + 'combine/'
 antPath = thPath + 'antonym.txt'
 synPath = thPath + 'synonym.txt'
-vocPath = '../data/bptf/roget_mm-voc'
 grePath = rootPath + 'test-data/gre_wordlist.txt'
 commonPath = rootPath + 'test-data/test_wordlist.txt'
 topPath = '../data/Rogets/top' #TODO
+
+outPath = thPath + 'combine_mm'
+vocPath = outPath + '-voc'
 
 zero_proportion = 3
 sim_proportion = 1#TODO
@@ -40,14 +42,11 @@ word2id, N = get_voc_dic(voc)
 Calculate pair-wise cosine product of morpho vectors.
 """
 savePath = thPath + "sim.txt"
-#mm.vec2sim(vocPath, savePath, sample_rate=.05)
+mm.vec2sim(vocPath, savePath, sample_rate=.05,tag=False)
 
 """
 Generate MatrixMarket format file for training.
 """
-
-outPath = 'bptf/roget_mm'
-outPath = rootPath + outPath
 
 simPath = thPath + 'sim.txt'
 
